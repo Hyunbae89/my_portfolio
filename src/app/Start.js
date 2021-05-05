@@ -37,7 +37,7 @@ export class Start extends Component {
                             As a guest
                         </label>
                     </div>
-                    <button className="btn btn-primary btn-block" type={"button"} onClick={this.getName}>Enter</button>
+                    <button id={'enter'} className="btn btn-primary btn-block" type={"button"} onClick={this.getName}>Enter</button>
                     <p className="mt-5 mb-3 text-muted">© Hyunbae Jeon</p>
                 </form>
             </div>

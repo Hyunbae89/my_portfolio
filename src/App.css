@@ -51,3 +51,16 @@
   -ms-box-pack:center;
   -ms-box-align:center;
 }
+
+#toggle_mode{
+  position: fixed;
+  right: 2%;
+  bottom: 100px;
+  /*display: none;*/
+  /*z-index: 9999;*/
+}
+
+body.dark{
+  background-color: #3e3e3e;
+  color: #999;
+}
