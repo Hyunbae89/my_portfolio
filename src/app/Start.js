@@ -10,7 +10,23 @@ export class Start extends Component {
             name:''
         };
         this.getName = this.getName.bind(this);
+        this.checkbox = this.checkbox.bind(this);
     }
+
+    checkbox(e){
+        const check = e.target.checked;
+        const textbox = document.getElementById('input_nickname');
+        if (check){
+            textbox.placeholder ="Guest";
+            textbox.value = "Guest";
+            textbox.disabled= true;
+        }else{
+            textbox.placeholder ="Username";
+            textbox.value = "";
+            textbox.disabled= false;
+        }
+    }
+
     getName(){
         const name = document.getElementById('input_nickname').value;
         console.log(name);
@@ -31,9 +47,9 @@ export class Start extends Component {
                         <input type="text" className="form-control  text-center"  id="input_nickname" placeholder="Username" aria-label="Username"
                                aria-describedby="addon-wrapping"/>
                     </div>
-                    <div className="mb-3">
-                        <label htmlFor="check_guest" >
-                            <input type="checkbox" id="check_guest" value="Connect as a guest"/>
+                    <div className="mb-3"  data-toggle="buttons">
+                        <label className='active' htmlFor="check_guest" >
+                            <input type="checkbox" id="check_guest" onChange={this.checkbox}/>
                             As a guest
                         </label>
                     </div>
