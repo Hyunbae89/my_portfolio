@@ -14,7 +14,9 @@
   },
   "devDependencies": {
     "bootstrap": "^4.6.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "react-router-dom": "^5.2.0",
+    "query-string": "^7.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

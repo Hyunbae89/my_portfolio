@@ -15,11 +15,11 @@ export class Dark_mode extends Component{
         if(body === 'dark'){
             dark.className = 'btn btn-dark';
             dark.innerHTML = 'Dark Mode'
-            enter.className = 'btn btn-primary btn-block';
+            // enter.className = 'btn btn-primary btn-block';
         }else{
             dark.className = 'btn btn-light';
             dark.innerHTML = 'Light Mode';
-            enter.className = 'btn btn-success btn-block';
+            // enter.className = 'btn btn-success btn-block';
 
         }
         // console.log(dark)

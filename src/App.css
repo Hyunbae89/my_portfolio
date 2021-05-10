@@ -64,3 +64,4 @@ body.dark{
   background-color: #3e3e3e;
   color: #999;
 }
+.btn[disabled] { cursor: not-allowed; }
