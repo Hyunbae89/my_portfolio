@@ -1,8 +1,7 @@
 import React from "react";
 
-import Component from "../components/Component";
 
-export class Dark_mode extends Component{
+export class Dark_mode extends React.Component{
     constructor(props) {
         super(props);
         this.toggle_dark_mode = this.toggle_dark_mode.bind(this);

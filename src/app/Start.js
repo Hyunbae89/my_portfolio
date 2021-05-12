@@ -1,9 +1,8 @@
 import React from "react";
 
-import Component from "../components/Component";
 import { Link } from "react-router-dom";
 
-export class Start extends Component {
+export class Start extends React.Component {
     constructor(props) {
         super(props);
         this.state ={
@@ -19,6 +18,9 @@ export class Start extends Component {
         const username = document.getElementById('input_nickname').value;
         const check = document.getElementById('check_guest').checked;
         const submit = document.getElementById('enter');
+        const guest = document.getElementById('guest');
+
+        guest.style.display='none';
 
         console.log(username);
         console.log(check);
@@ -35,19 +37,23 @@ export class Start extends Component {
         const textbox = document.getElementById('input_nickname');
         const check = document.getElementById('check_guest');
         const submit = document.getElementById('enter');
+        const guest = document.getElementById('guest');
 
         if (checked){
             textbox.placeholder ="Guest";
             textbox.value = "Guest";
             textbox.disabled= true;
             check.setAttribute("checked","");
-            submit.removeAttribute('disabled');
+            submit.style.display='none';
+            guest.style.display='block';
         }else{
             textbox.placeholder ="Username";
             textbox.value = "";
             textbox.disabled= false;
             check.removeAttribute("checked");
+            submit.style.display='block';
             submit.setAttribute('disabled',true);
+            guest.style.display='none';
         }
     }
 
@@ -63,14 +69,14 @@ export class Start extends Component {
         this.setState({
             name: name
         });
-        return window.location.href='/te/'+ name;
+        return window.location.href='/'+ name +'/';
     }
 
     changeName(e){
         const text = e.target.value;
         const submit = document.getElementById('enter');
         console.log(text);
-        if(text){
+        if(text !== ""){
             submit.removeAttribute('disabled');
         }else{
             submit.setAttribute('disabled',true);
@@ -105,8 +111,11 @@ export class Start extends Component {
 
                     </div>
 
-                    <button id={'enter'} className="btn btn-primary btn-block " type={"button"} onClick={this.getName}>Enter</button>
-                    <Link type="button" to={'/te'} className="btn btn-primary btn-block " >submit</Link>
+                    <div id="submit_user_area">
+                        <button id={'enter'} className="btn btn-primary btn-block " type={"button"} onClick={this.getName}>Enter</button>
+                        <Link id='guest' type="button" to='/guest/' className="btn btn-primary btn-block " >Enter</Link>
+                    </div>
+
                     <p className="mt-5 mb-3 text-muted">© Hyunbae Jeon</p>
                 </form>
             </div>

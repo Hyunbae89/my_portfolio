@@ -1,3 +1,8 @@
+#Thank you for visit my portfolio page
+먼저 제 포토폴리오 웹 페이지에 찾아와주셔서 감사합니다.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
