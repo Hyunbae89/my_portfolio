@@ -1,10 +1,11 @@
 {
   "name": "webportfolio",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
     "client": "cd client && yarn start",
-    "server": "nodemon server.js",
-    "dev": "concurrently --kill-other-on-fail \"yarn server\" \"yarn client\""
+    "server": "node server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
     "body-parser": "^1.19.0",
