@@ -65,3 +65,9 @@ body.dark{
   color: #999;
 }
 .btn[disabled] { cursor: not-allowed; }
+
+.fa-dragon, .title{
+  color: white;
+  font-size: xxx-large;
+}
+
