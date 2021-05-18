@@ -18,7 +18,7 @@ export class RouteApp extends React.Component{
                     <Route exact path='/guest'>
                         <RootGuest/>
                     </Route>
-                    <Route exact path='/:userId/'>
+                    <Route exact path='/:username/'>
                         <RootUser/>
                     </Route>
 

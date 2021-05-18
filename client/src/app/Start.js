@@ -1,35 +1,22 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export class Start extends React.Component {
     constructor(props) {
         super(props);
         this.state ={
-            name:'',
-            submit_disable:false
+            name:''
         };
         this.getName = this.getName.bind(this);
         this.checkbox = this.checkbox.bind(this);
         this.changeName = this.changeName.bind(this);
+        this.handleFormSubmit = this.handleFormSubmit.bind(this);
     }
 
     componentDidMount() {
-        const username = document.getElementById('input_nickname').value;
-        const check = document.getElementById('check_guest').checked;
-        const submit = document.getElementById('enter');
         const guest = document.getElementById('guest');
-
         guest.style.display='none';
-
-        console.log(username);
-        console.log(check);
-        if(username === ""){
-            if(check===false){
-                submit.setAttribute('disabled',true);
-            }
-        }
-
     }
 
     checkbox(e){
@@ -52,7 +39,6 @@ export class Start extends React.Component {
             textbox.disabled= false;
             check.removeAttribute("checked");
             submit.style.display='block';
-            submit.setAttribute('disabled',true);
             guest.style.display='none';
         }
     }
@@ -74,34 +60,70 @@ export class Start extends React.Component {
 
     changeName(e){
         const text = e.target.value;
-        const submit = document.getElementById('enter');
-        console.log(text);
-        if(text !== ""){
-            submit.removeAttribute('disabled');
-        }else{
-            submit.setAttribute('disabled',true);
-        }
+        this.setState(()=>{
+            return {name : text}
+        });
+
+        // if(text !== ""){
+        //     submit.removeAttribute('disabled');
+        // }else{
+        //     submit.setAttribute('disabled',true);
+        // }
     }
 
+    handleFormSubmit =(e)=>{
+        e.preventDefault()
+        const data = { name: this.state.name };
+
+        axios({
+            method: "post",
+            url: "/api/users",
+            data: data,
+            header: { 'content-text': 'multipart/form-data' },
+        }).catch(function (response){
+            console.log(response);
+        }).then(()=> {
+            return window.location.href = `/:?name=` + this.state.name;
+        });
+
+
+        // this.addUser()
+        //     .then((response)=>{
+        //         console.log(response);
+        //         console.log(response.data);
+        //     })
+    }
+
+    // addUser = () =>{
+    //     const url = '/api/users';
+    //     const formData = new FormData();
+    //     formData.append('name', this.state.name);
+    //     const config ={
+    //         headers:{
+    //             'content-text': 'application/json'
+    //         }
+    //     }
+    //     return post(url, formData, config);
+    // }
 
 
     render() {
 
         return(
             <div className="layer">
-                <form className="text-center form-signin ">
+                <form className="text-center form-signin " onSubmit={this.handleFormSubmit}>
                     <h3 className="mb-3 font-weight-normal">Welcome in</h3>
 
                     <div className="input-group flex-nowrap mb-4">
                         <div className="input-group-prepend">
                             <span className="input-group-text" id="addon-wrapping">@</span>
                         </div>
-                        <input type="text" className="form-control text-center"  id="input_nickname" placeholder="Username" aria-label="Username"
+                        <input type="text" className="form-control text-center" name="name" value={this.state.name}  id="input_nickname" placeholder="Username" aria-label="Username"
                                onChange={this.changeName} aria-describedby="addon-wrapping" required/>
 
 
                     </div>
-                    <div className="invalid-feedback"></div>
+                    <div className="invalid-feedback"/>
 
                     <div className="mb-3"  data-toggle="buttons">
                         <label className='active' htmlFor="check_guest" >
@@ -112,7 +134,7 @@ export class Start extends React.Component {
                     </div>
 
                     <div id="submit_user_area">
-                        <button id={'enter'} className="btn btn-primary btn-block " type={"button"} onClick={this.getName}>Enter</button>
+                        <button id={'enter'} className="btn btn-primary btn-block " type='submit' >Enter</button>
                         <Link id='guest' type="button" to='/guest/' className="btn btn-primary btn-block " >Enter</Link>
                     </div>
 
@@ -122,3 +144,4 @@ export class Start extends React.Component {
         );
     }
 }
+export default Start;

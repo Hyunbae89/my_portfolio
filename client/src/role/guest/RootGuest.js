@@ -7,22 +7,23 @@ export class RootGuest extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            guest: ""
+            guest_name: ""
         }
     this.callApi = this.callApi.bind(this);
     }
 
     componentDidMount() {
         this.callApi()
-            .then(res => this.setState({guest : res}))
+            .then(res =>this.setState({guest_name : res.name}))
             .catch(err => console.log(err));
-
-
     }
 
     callApi = async () =>{
         const response = await fetch('/api/guest');
+        console.log(response);
         const body = await response.json();
+        console.log(body);
+            // body = {id:1, NAME: "Guest }
         return body;
     }
     render() {
@@ -32,7 +33,7 @@ export class RootGuest extends React.Component{
                 <Header/>
                 <div className='jumbotron text-center'>
                     <div className='container'>
-                        <h1>Hi {this.state.guest.name}</h1>
+                        <h1>Hi {this.state.guest_name}</h1>
                     </div>
                 </div>
                 <div>

@@ -17,7 +17,7 @@ export class Header extends React.Component{
 
                         <Dropdown>
                             <Dropdown.Toggle bsPrefix='navbar-toggler bg-dark ' id="dropdown-basic">
-                                <span className='navbar-toggler-icon'></span>
+                                <span className='navbar-toggler-icon'/>
                               </Dropdown.Toggle>
 
                               <Dropdown.Menu>

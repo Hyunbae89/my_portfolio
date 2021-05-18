@@ -1,14 +1,40 @@
 import React from "react";
 import {Header} from "../../app/Header";
+import axios from "axios";
 
 export class RootUser extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state ={
+            user_name: ""
+        }
+    }
+    componentDidMount() {
+        const query = window.location.search.substring(1);
+        const vars = query.split("=");
+        const name = vars[1];
+
+
+        axios({
+            method: "get",
+            url: "/api/users/"+name,
+        }).catch(function (response){
+            console.log(response);
+        }).then(res =>this.setState({user_name : res.data.name}));
+
+
+    }
+
+
+
+
     render() {
         return(
             <div >
                 <Header/>
                 <div className='jumbotron text-center'>
                     <div className='container'>
-                        <h1>Hi</h1>
+                        <h1>Hi {this.state.user_name}</h1>
                     </div>
                 </div>
                 <div>
