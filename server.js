@@ -22,33 +22,42 @@ app.get('/api/guest',(req,res)=>{
    )
 });
 
-app.get('/api/users',(req,res)=>{
+// app.get('/api/users',(req,res)=>{
+//    connection.query(
+//        "SELECT * FROM USERS",
+//        (err,rows,fields)=>{
+//            res.send(rows);
+//        }
+//    )
+// });
+app.get('/api/users/:id',(req,res)=>{
+    console.log(req.params.id);
    connection.query(
-       "SELECT * FROM USERS",
-       (err,rows,fields)=>{
-           res.send(rows);
-       }
-   )
-});
-app.get('/api/users/:username',(req,res)=>{
-   console.log(req.params);
-   connection.query(
-       "SELECT * FROM USERS where name="+"'"+req.params.username+"'",
+       "SELECT * FROM USERS where id="+"'"+req.params.id+"'",
        (err,rows,fields)=>{
            res.send(rows[0]);
        }
    )
 });
+// app.get('/api/users/:username',(req,res)=>{
+//    console.log(req.params);
+//    connection.query(
+//        "SELECT * FROM USERS where name="+"'"+req.params.username+"'",
+//        (err,rows,fields)=>{
+//            res.send(rows[0]);
+//        }
+//    )
+// });
 
 
 app.post('/api/users',(req,res)=>{
 
-    console.log(req.body);
+
    let sql = 'INSERT INTO USERS VALUES (NULL, ?)';
+
    let name = req.body.name;
    let params = [name];
-   console.log(name);
-   console.log(params);
+
    connection.query(sql,params,
        (err, rows, fields) =>{
        res.send(rows);

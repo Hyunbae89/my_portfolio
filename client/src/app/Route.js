@@ -15,15 +15,29 @@ export class RouteApp extends React.Component{
                     <Route exact path='/'>
                         <Start/>
                     </Route>
-                    <Route exact path='/guest'>
+                    <Route exact path='/guest/'>
                         <RootGuest/>
                     </Route>
-                    <Route exact path='/:username/'>
-                        <RootUser/>
-                    </Route>
+                    <Route exact path='/user/:id' component={User}/>
+
+
 
                 </Switch>
             </Router>
         )
     }
 }
+const User = ({ match }) => {
+
+    return (
+        <Route
+            exact
+            path={match.url}
+            render={() =>
+                <RootUser
+                    id={match.params.id}
+                />
+            }
+        />
+    );
+};

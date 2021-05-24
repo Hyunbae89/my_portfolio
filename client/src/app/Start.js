@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import api from "../lib/api";
 
 export class Start extends React.Component {
     constructor(props) {
         super(props);
         this.state ={
+            id:'',
             name:''
         };
         this.getName = this.getName.bind(this);
@@ -75,16 +76,17 @@ export class Start extends React.Component {
         e.preventDefault()
         const data = { name: this.state.name };
 
-        axios({
-            method: "post",
-            url: "/api/users",
-            data: data,
-            header: { 'content-text': 'multipart/form-data' },
-        }).catch(function (response){
-            console.log(response);
-        }).then(()=> {
-            return window.location.href = `/:?name=` + this.state.name;
-        });
+        api.postUser(data).catch(error =>{
+            console.log(error)
+        }).then(
+            response => {
+                console.log(response);
+                let id = response.data.insertId;
+                return window.location.href = `/user/` + id;
+
+            }
+        )
+
 
 
         // this.addUser()
