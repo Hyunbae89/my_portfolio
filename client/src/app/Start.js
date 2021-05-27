@@ -1,4 +1,7 @@
 import React from "react";
+
+import { faDragon } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import api from "../lib/api";
 
@@ -56,7 +59,7 @@ export class Start extends React.Component {
         this.setState({
             name: name
         });
-        return window.location.href='/'+ name +'/';
+        return window.location.href='/user/'+ name +'/';
     }
 
     changeName(e){
@@ -114,6 +117,7 @@ export class Start extends React.Component {
         return(
             <div className="layer">
                 <form className="text-center form-signin " onSubmit={this.handleFormSubmit}>
+                    <FontAwesomeIcon className="fa-start mb-2" icon={faDragon} />
                     <h3 className="mb-3 font-weight-normal">Welcome in</h3>
 
                     <div className="input-group flex-nowrap mb-4">
@@ -137,7 +141,7 @@ export class Start extends React.Component {
 
                     <div id="submit_user_area">
                         <button id={'enter'} className="btn btn-primary btn-block " type='submit' >Enter</button>
-                        <Link id='guest' type="button" to='/guest/' className="btn btn-primary btn-block " >Enter</Link>
+                        <Link id='guest' type="button" to='/user/guest' className="btn btn-primary btn-block " >Enter</Link>
                     </div>
 
                     <p className="mt-5 mb-3 text-muted">© Hyunbae Jeon</p>

@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 const connection = mysql.createConnection(config);
 connection.connect();
 
-app.get('/api/guest',(req,res)=>{
+app.get('/api/user/:guest',(req,res)=>{
    connection.query(
        "SELECT * FROM GUEST",
        (err,rows,fields)=>{

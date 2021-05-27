@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ba34c63-e1c2-4845-8f9e-3d83a242eadc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/public/dragon-solid.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/role/common/MainBoard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/Route.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/Start.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Start.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/lib/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/lib/consts.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/consts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/role/guest/RootGuest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/guest/RootGuest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/role/user/RootUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/user/RootUser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
@@ -46,6 +55,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zxcv6\Desktop\my_portfolio\client\public" />
       <recent name="C:\Users\zxcv6\Desktop\my_portfolio" />
     </key>
   </component>
@@ -62,7 +72,10 @@
       <workItem from="1621215693758" duration="21710000" />
       <workItem from="1621300759344" duration="1201000" />
       <workItem from="1621315245787" duration="19631000" />
-      <workItem from="1621837484780" duration="14528000" />
+      <workItem from="1621837484780" duration="15179000" />
+      <workItem from="1621924936496" duration="5103000" />
+      <workItem from="1622012160044" duration="3459000" />
+      <workItem from="1622092819433" duration="8620000" />
     </task>
     <servers />
   </component>

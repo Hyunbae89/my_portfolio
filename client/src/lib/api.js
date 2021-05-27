@@ -12,13 +12,13 @@ export class PortfolioRest{
     // }
 
     static async getGuest(){
-        return await axios.get('api/guest/',API_AUTH);
+        return await axios.get('user/guest',API_AUTH);
     }
     static async getUser(id) {
-        return await axios.get('/api/users/'+ id , API_AUTH);
+        return await axios.get('users/'+ id , API_AUTH);
     }
     static async postUser(object){
-        return await axios.post('/api/users/', object, API_AUTH);
+        return await axios.post('users/', object, API_AUTH);
     }
 }
 export default PortfolioRest;

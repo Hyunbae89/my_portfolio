@@ -60,14 +60,30 @@
   /*z-index: 9999;*/
 }
 
-body.dark{
+body.dark, body.dark .fa-start{
   background-color: #3e3e3e;
   color: #999;
 }
-.btn[disabled] { cursor: not-allowed; }
 
 .fa-dragon, .title{
   color: white;
+  font-size: xx-large;
+}
+
+.fa-start {
+  color: #3e3e3e;
+  text-align: center;
   font-size: xxx-large;
 }
 
+.home{
+  cursor: pointer;
+}
+
+.footer{
+  background-color: #e9ecef;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+}

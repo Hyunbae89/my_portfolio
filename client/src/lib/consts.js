@@ -1,2 +1,5 @@
 
-export const API_AUTH = { headers:{ "content-text": 'multipart/form-data' } };
+export const API_AUTH = {
+    baseURL: '/api/',
+    headers:{ "content-text": 'multipart/form-data' }
+};

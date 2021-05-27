@@ -5,6 +5,7 @@ import './App.css';
 import {RouteApp} from "./app/Route";
 // import {Start} from './app/Start';
 import {Dark_mode} from './app/Dark_mode';
+import {Footer} from './app/Footer';
 
 class App extends React.Component{
 
@@ -14,6 +15,7 @@ class App extends React.Component{
             <RouteApp/>
 
             <Dark_mode/>
+            <Footer/>
         </div>
 
     );
