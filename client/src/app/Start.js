@@ -49,13 +49,7 @@ export class Start extends React.Component {
 
     getName(){
         const name = document.getElementById('input_nickname').value;
-        const submit = document.getElementById('enter');
-         const check = document.getElementById('check_guest').checked;
-        console.log(name);
-        console.log(submit);
 
-        // check.setAttribute("checked","");
-        console.log(check);
         this.setState({
             name: name
         });
@@ -67,12 +61,6 @@ export class Start extends React.Component {
         this.setState(()=>{
             return {name : text}
         });
-
-        // if(text !== ""){
-        //     submit.removeAttribute('disabled');
-        // }else{
-        //     submit.setAttribute('disabled',true);
-        // }
     }
 
     handleFormSubmit =(e)=>{
@@ -83,34 +71,13 @@ export class Start extends React.Component {
             console.log(error)
         }).then(
             response => {
-                console.log(response);
                 let id = response.data.insertId;
                 return window.location.href = `/user/` + id;
 
             }
         )
 
-
-
-        // this.addUser()
-        //     .then((response)=>{
-        //         console.log(response);
-        //         console.log(response.data);
-        //     })
     }
-
-    // addUser = () =>{
-    //     const url = '/api/users';
-    //     const formData = new FormData();
-    //     formData.append('name', this.state.name);
-    //     const config ={
-    //         headers:{
-    //             'content-text': 'application/json'
-    //         }
-    //     }
-    //     return post(url, formData, config);
-    // }
-
 
     render() {
 

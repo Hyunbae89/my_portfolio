@@ -24,14 +24,10 @@ export class Dark_mode extends React.Component{
 
     render() {
         return(
-
-          <div >
-              <button id={'toggle_mode'} className='btn btn-dark' type="button"
-                      onClick={this.toggle_dark_mode}>
-                Dark Mode
-              </button>
-          </div>
-
+          <button id={'toggle_mode'} className='btn btn-dark' type="button"
+                  onClick={this.toggle_dark_mode}>
+            Dark Mode
+          </button>
         );
     }
 }
