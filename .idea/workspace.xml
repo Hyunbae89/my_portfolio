@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ba34c63-e1c2-4845-8f9e-3d83a242eadc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/app/Sidebar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/SidebarData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/NestedRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Dark_mode.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Dark_mode.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/Route.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/RouteApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/SidebarData.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/SidebarData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/Start.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Start.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/role/common/MainBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/common/MainBoard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/role/guest/RootGuest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/guest/RootGuest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/role/user/RootUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/user/RootUser.js" afterDir="false" />
     </list>
@@ -79,6 +79,10 @@
       <workItem from="1622701248140" duration="10245000" />
       <workItem from="1622767894078" duration="6188000" />
       <workItem from="1622793035715" duration="4344000" />
+      <workItem from="1622856131533" duration="3397000" />
+      <workItem from="1622875842058" duration="14170000" />
+      <workItem from="1622940197861" duration="13428000" />
+      <workItem from="1622963971677" duration="6389000" />
     </task>
     <servers />
   </component>

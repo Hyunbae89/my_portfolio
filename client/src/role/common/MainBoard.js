@@ -48,3 +48,4 @@ export class MainBoard extends React.Component{
         );
     }
 }
+export default MainBoard;

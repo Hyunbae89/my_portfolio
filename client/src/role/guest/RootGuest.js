@@ -1,18 +1,12 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {BrowserRouter as Route, Switch, Link} from "react-router-dom";
 
 import {Header} from "../../app/Header";
 import api from "../../lib/api";
 import {MainBoard} from "../common/MainBoard";
-import {Footer} from "../../app/Footer";
-import {Dark_mode} from "../../app/Dark_mode";
 import {SidebarData} from "../../app/SidebarData";
-import {Sidebar} from "../../app/Sidebar";
-import Dropdown from 'react-bootstrap/Dropdown';
-
 
 export class RootGuest extends React.Component{
-
     constructor(props) {
         super(props);
         this.state = {
@@ -20,16 +14,6 @@ export class RootGuest extends React.Component{
             setSidebar : false
         }
         this.showSidebar = this.showSidebar.bind(this);
-    }
-
-    showSidebar = (e) => {
-        const sidebar = this.state.setSidebar;
-            if(e === sidebar){
-                this.setState( {setSidebar : !e})
-            }else{
-                this.setState( {setSidebar : e})
-            }
-
     }
 
     componentDidMount() {
@@ -45,13 +29,23 @@ export class RootGuest extends React.Component{
         );
     }
 
+    showSidebar = (e) => {
+        const sidebar = this.state.setSidebar;
+        if(e === sidebar){
+            this.setState( {setSidebar : !e})
+        }else{
+            this.setState( {setSidebar : e})
+        }
+    }
+
     render() {
+
         const sidebar = this.state.setSidebar;
 
         return(
             <div >
+                <Header id={null}  control={e => this.showSidebar(e)}/>
 
-                <Header id={null} name={this.state.guest_name} control={e => this.showSidebar(e)}/>
                 <nav className={sidebar ? 'nav-menu active':'nav-menu'}>
                     <ul className='nav-menu-items'>
                         {SidebarData.map((item, index) => {
@@ -66,20 +60,31 @@ export class RootGuest extends React.Component{
                         })}
                     </ul>
                 </nav>
+
                 <div className='jumbotron text-center ml-4 mr-4 mt-4'>
                     <div className='container'>
                         <h1>Hi {this.state.guest_name}</h1>
                     </div>
                 </div>
 
+                {/*<Route path={params.pathname} component={MainBoard}/>*/}
+                {/*<Route path={`${params.pathname}/test`} component={MainBoard}/>*/}
+                <Switch>
+                    <Route path="/user/guest/main">
+                        <MainBoard/>
+                    </Route>
+                    <Route path="/user/guest/test">
+                        <div>test</div>
+                    </Route>
 
-                <MainBoard/>
+                </Switch>
+                {/*<Route exact path='/user/:id' component={}/>*/}
 
 
-                <Dark_mode/>
-                <Footer/>
+
 
             </div>
         );
     }
 }
+export default RootGuest;

@@ -2,42 +2,47 @@ import React from "react";
 import { faDragon, faAddressCard } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Dropdown from 'react-bootstrap/Dropdown';
+import {Link} from 'react-router-dom';
 
 export class Header extends React.Component{
     constructor(props) {
         super(props);
         this.state ={
             id:'',
-            name:'',
             sidebar : false
         };
-        this.homeButton = this.homeButton.bind(this);
     }
 
 
     componentDidUpdate(prevProps) {
-        const {id, name} = this.props;
+        const {id} = this.props;
 
         if (this.state.id !== prevProps.id) {
             this.setState({
-                id : id,
-                name : name
+                id : id
             });
           }
     }
 
-    homeButton(){
-        const {id, name} = this.props;
+    home = () =>{
+        const id = this.state.id;
 
-        if(id !== null){
-            return window.location.href = `/user/` + id;
-        }else if(name !== null){
-            return window.location.href = `/user/guest`;
+        if(id){
+            return <Link to={'/user/'+id}>
+                            <button className='navbar-brand home'  >
+                                <FontAwesomeIcon className="mr-3" icon={faDragon} />
+                                <strong className='title' >James works </strong>
+                            </button>
+                        </Link>
         }else{
-            return window.location.href = `/`;
+            return <Link to={'/user/guest'}>
+                            <button className='navbar-brand home'  >
+                                <FontAwesomeIcon className="mr-3" icon={faDragon} />
+                                <strong className='title' >James works </strong>
+                            </button>
+                        </Link>
         }
     }
-
     render() {
         return(
             <header>
@@ -48,10 +53,7 @@ export class Header extends React.Component{
                            <span className='navbar-toggler-icon'/>
                        </Dropdown.Toggle>
 
-                        <a className='navbar-brand home' onClick={this.homeButton}>
-                            <FontAwesomeIcon className="mr-3" icon={faDragon} />
-                            <strong className='title' >James works </strong>
-                        </a>
+                       {this.home()}
 
                         <Dropdown>
                             <Dropdown.Toggle bsPrefix='navbar-toggler bg-dark ' id="dropdown-basic">
@@ -59,7 +61,7 @@ export class Header extends React.Component{
                               </Dropdown.Toggle>
 
                               <Dropdown.Menu className="dropdown-menu-center">
-                                <Dropdown.Item href="/">Log out</Dropdown.Item>
+                                <Dropdown.Item as={Link} to="/">Log out</Dropdown.Item>
 
                               </Dropdown.Menu>
                         </Dropdown>

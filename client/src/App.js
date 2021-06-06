@@ -2,7 +2,7 @@ import React from "react";
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
-import {RouteApp} from "./app/Route";
+import {RouteApp} from "./app/RouteApp";
 
 class App extends React.Component{
 

@@ -82,7 +82,8 @@ body.dark, body.dark .fa-start{
 }
 
 .home{
-  cursor: pointer;
+  background-color: #343a40;
+  border: 0;
 }
 
 .footer{
@@ -140,7 +141,6 @@ body.dark, body.dark .fa-start{
 
 .nav-text {
   display: flex;
-  justify-content: start;
   align-items: center;
   padding:  8px 16px 8px 16px;
   list-style: none;
