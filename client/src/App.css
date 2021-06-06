@@ -7,12 +7,6 @@
   top:0;right:0;bottom:0;left:0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -70,7 +64,7 @@ body.dark, body.dark .fa-start{
   color: #999;
 }
 
-.fa-dragon, .title, .log-out-icon{
+.fa-dragon, .title, .log-out-icon, body.dark .logo{
   color: white;
   font-size: xx-large;
 }
@@ -167,4 +161,9 @@ body.dark, body.dark .fa-start{
 .nav-menu-items{
   width: 100%;
   padding: 0;
+}
+
+.logo{
+  color: #343a40;
+  font-size: xx-large;
 }

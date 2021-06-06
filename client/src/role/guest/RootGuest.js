@@ -61,15 +61,16 @@ export class RootGuest extends React.Component{
                     </ul>
                 </nav>
 
-                <div className='jumbotron text-center ml-4 mr-4 mt-4'>
-                    <div className='container'>
-                        <h1>Hi {this.state.guest_name}</h1>
-                    </div>
-                </div>
 
-                {/*<Route path={params.pathname} component={MainBoard}/>*/}
-                {/*<Route path={`${params.pathname}/test`} component={MainBoard}/>*/}
+
                 <Switch>
+                    <Route exact path="/user/guest">
+                        <div className='jumbotron text-center ml-4 mr-4 mt-4'>
+                            <div className='container'>
+                                <h1>Hi {this.state.guest_name}</h1>
+                            </div>
+                        </div>
+                    </Route>
                     <Route path="/user/guest/main">
                         <MainBoard/>
                     </Route>
@@ -78,10 +79,6 @@ export class RootGuest extends React.Component{
                     </Route>
 
                 </Switch>
-                {/*<Route exact path='/user/:id' component={}/>*/}
-
-
-
 
             </div>
         );
