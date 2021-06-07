@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ba34c63-e1c2-4845-8f9e-3d83a242eadc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/app/NestedRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/image/IMG_1233.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/image/IMG_1234.JPG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/Dark_mode.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Dark_mode.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Route.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/RouteApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/SidebarData.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/SidebarData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Start.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Start.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/Sidebar.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/role/common/MainBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/common/MainBoard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/role/guest/RootGuest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/guest/RootGuest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/role/user/RootUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/user/RootUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routers/NestedRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routers/NestedRouter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +50,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zxcv6\Desktop\my_portfolio\client\src\image" />
       <recent name="C:\Users\zxcv6\Desktop\my_portfolio\client\public" />
       <recent name="C:\Users\zxcv6\Desktop\my_portfolio" />
     </key>
@@ -86,6 +85,10 @@
       <workItem from="1622875842058" duration="14170000" />
       <workItem from="1622940197861" duration="13428000" />
       <workItem from="1622963971677" duration="13050000" />
+      <workItem from="1623042784134" duration="2763000" />
+      <workItem from="1623048810236" duration="50000" />
+      <workItem from="1623048869390" duration="15154000" />
+      <workItem from="1623067756800" duration="139000" />
     </task>
     <servers />
   </component>

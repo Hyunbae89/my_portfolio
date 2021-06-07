@@ -5,6 +5,7 @@
 #root{
   position:absolute;
   top:0;right:0;bottom:0;left:0;
+
 }
 
 .App-header {
@@ -64,7 +65,7 @@ body.dark, body.dark .fa-start{
   color: #999;
 }
 
-.fa-dragon, .title, .log-out-icon, body.dark .logo{
+.fa-dragon, .title, .log-info-icon, body.dark .logo{
   color: white;
   font-size: xx-large;
 }
@@ -166,4 +167,24 @@ body.dark, body.dark .fa-start{
 .logo{
   color: #343a40;
   font-size: xx-large;
+}
+.log-out-icon{
+  color: #343a40;
+  font-size: medium;
+}
+
+#testpage{
+  position: fixed;
+  width: 100%;
+    height: calc(100% - 144px);
+}
+
+.testsize {
+ padding: 20px;
+  margin: 100px;
+
+}
+.testscroll{
+  overflow: auto;
+  height:100%;
 }

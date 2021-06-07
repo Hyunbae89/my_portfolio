@@ -1,5 +1,5 @@
 import React from "react";
-import { faDragon, faAddressCard } from "@fortawesome/free-solid-svg-icons";
+import { faDragon, faAddressCard,faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Dropdown from 'react-bootstrap/Dropdown';
 import {Link} from 'react-router-dom';
@@ -57,11 +57,14 @@ export class Header extends React.Component{
 
                         <Dropdown>
                             <Dropdown.Toggle bsPrefix='navbar-toggler bg-dark ' id="dropdown-basic">
-                                <FontAwesomeIcon className='log-out-icon'  icon={faAddressCard} />
+                                <FontAwesomeIcon className='log-info-icon'  icon={faAddressCard} />
                               </Dropdown.Toggle>
 
                               <Dropdown.Menu className="dropdown-menu-center">
-                                <Dropdown.Item as={Link} to="/">Log out</Dropdown.Item>
+                                <Dropdown.Item as={Link} to="/">
+                                    <FontAwesomeIcon className='log-out-icon mr-3'  icon={faSignOutAlt} />
+                                    <span>Sign out</span>
+                                </Dropdown.Item>
 
                               </Dropdown.Menu>
                         </Dropdown>
