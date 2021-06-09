@@ -9,41 +9,46 @@ export class Header extends React.Component{
         super(props);
         this.state ={
             id:'',
-            sidebar : false
+            name:'',
+            sidebar : false,
+            view:true
         };
     }
 
 
-    componentDidUpdate(prevProps) {
-        const {id} = this.props;
+    componentDidMount() {
+        const {id,name} = this.props;
 
-        if (this.state.id !== prevProps.id) {
-            this.setState({
-                id : id
-            });
-          }
+        this.setState({
+            id : id,
+            name: name
+        });
+
     }
 
     home = () =>{
-        const id = this.state.id;
+        const id = this.props.id;
 
-        if(id){
-            return <Link to={'/user/'+id}>
-                            <button className='navbar-brand home'  >
-                                <FontAwesomeIcon className="mr-3" icon={faDragon} />
-                                <strong className='title' >James works </strong>
-                            </button>
-                        </Link>
+
+        if(id !== null){
+            return <Link to={'/user/'+id} onClick={this.props.enable}>
+                        <button className='navbar-brand home'  >
+                            <FontAwesomeIcon className="mr-3" icon={faDragon} />
+                            <strong className='title' >James works </strong>
+                        </button>
+                    </Link>
         }else{
-            return <Link to={'/user/guest'}>
-                            <button className='navbar-brand home'  >
-                                <FontAwesomeIcon className="mr-3" icon={faDragon} />
-                                <strong className='title' >James works </strong>
-                            </button>
-                        </Link>
+            return <Link to={'/user/guest'} onClick={this.props.enable}>
+                        <button className='navbar-brand home'  >
+                            <FontAwesomeIcon className="mr-3" icon={faDragon} />
+                            <strong className='title' >James works </strong>
+                        </button>
+                    </Link>
         }
     }
     render() {
+
+        const name = this.props.name;
         return(
             <header>
 
@@ -61,6 +66,7 @@ export class Header extends React.Component{
                               </Dropdown.Toggle>
 
                               <Dropdown.Menu className="dropdown-menu-center">
+                                  <Dropdown.ItemText className='text-center'>Hi, {name}</Dropdown.ItemText>
                                 <Dropdown.Item as={Link} to="/">
                                     <FontAwesomeIcon className='log-out-icon mr-3'  icon={faSignOutAlt} />
                                     <span>Sign out</span>

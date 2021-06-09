@@ -115,7 +115,7 @@ body.dark, body.dark .fa-start{
     z-index: 1;
   }
 }
-@media ( min-width: 1700px) {
+@media ( min-width: 1600px) {
   .nav-menu{
    background-color: #343a40 ;
     position: fixed;
@@ -126,6 +126,10 @@ body.dark, body.dark .fa-start{
     transition: 850ms;
     width: 10vw;
     z-index: 1;
+  }
+
+  .container{
+    max-width: 80%;
   }
 }
 
@@ -181,10 +185,13 @@ body.dark, body.dark .fa-start{
 
 .testsize {
  padding: 20px;
-  margin: 100px;
 
 }
 .testscroll{
   overflow: auto;
   height:100%;
+}
+.ani-test{
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
 }
