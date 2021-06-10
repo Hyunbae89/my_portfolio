@@ -1,10 +1,12 @@
 import React from "react";
+import {Route, Switch,Link} from "react-router-dom";
+
 import {Header} from "../../app/Header";
 import api from "../../lib/api";
 import {MainBoard} from "../common/MainBoard"
+import {SidebarData_user} from "../../app/SidebarData_user";
+import NotFound from "../../routers/NotFound";
 
-import {SidebarData} from "../../app/SidebarData";
-import {Link} from "react-router-dom";
 
 export class RootUser extends React.Component{
     constructor(props) {
@@ -12,8 +14,11 @@ export class RootUser extends React.Component{
         this.state ={
             id:"",
             user_name: "",
-            setSidebar : false
+            setSidebar : false,
+            sidebar_enable_check : true
         }
+        this.showSidebar = this.showSidebar.bind(this);
+        this.OnclickScreen = this.OnclickScreen.bind(this);
     }
     componentDidMount() {
 
@@ -34,28 +39,43 @@ export class RootUser extends React.Component{
         )
     }
 
-    showSidebar = (e) => {
-        const sidebar = this.state.setSidebar;
-        if(e === sidebar){
-            this.setState( {setSidebar : !e})
-        }else{
-            this.setState( {setSidebar : e})
+    componentDidUpdate() {
+        const sidebar_enable = this.state.sidebar_enable_check;
+        if(sidebar_enable === true){
+            document.getElementById('testpage').addEventListener('click',this.OnclickScreen);
         }
     }
 
+    showSidebar = (e) => {
+        const sidebar = this.state.setSidebar;
+        this.setState({sidebar_enable_check: true});
+
+        if(sidebar === e){
+            this.setState( {setSidebar : true})
+        }else{
+            this.setState( {setSidebar : false})
+        }
+    }
+    OnclickScreen = () =>{
+        this.setState({setSidebar:false, sidebar_enable_check: false});
+    }
+
     render() {
-         const sidebar = this.state.setSidebar;
+
+        const {url} = this.props.match;
+         const {id,user_name,setSidebar,sidebar_enable_check} = this.state;
+
 
         return(
             <div >
-                <Header id={this.state.id} control={e => this.showSidebar(e)}/>
+                <Header id={id} name={user_name} control={e => this.showSidebar(e)}/>
 
-                <nav className={sidebar ? 'nav-menu active':'nav-menu'}>
+                <nav className={setSidebar && sidebar_enable_check ? 'nav-menu active':'nav-menu'}>
                     <ul className='nav-menu-items'>
-                        {SidebarData.map((item, index) => {
+                        {SidebarData_user.map((item, index) => {
                             return(
                                 <li key={index} className={item.className}>
-                                    <Link to={item.path}>
+                                    <Link to={`${url}/`+item.path}>
                                         {item.icon}
                                         <span>{item.title}</span>
                                     </Link>
@@ -65,15 +85,30 @@ export class RootUser extends React.Component{
                     </ul>
                 </nav>
 
-                <div className='jumbotron text-center'>
-                    <div className='container'>
-                        <h1>Hi {this.state.user_name}</h1>
+                <div id={'testpage'} className={'testscroll '}>
+
+                    <Switch>
+                         <Route exact path={`${url}/test1`}>
+                            <div>   test 1  </div>
+                        </Route>
+                        <Route exact path={`${url}/test2`}>
+                            <div>   test 2  </div>
+                        </Route>
+                         <Route exact path={`${url}/test3`}>
+                            <div>   test 3  </div>
+                        </Route>
+                        <Route exact path={`${url}/test4`}>
+                            <div>   test 4  </div>
+                        </Route>
+                        <Route exact path={`${url}`}>
+                            <MainBoard url={url} name={user_name}/>
+                        </Route>
+
+                        <Route component={NotFound} />
+                    </Switch>
                     </div>
-                </div>
+             </div>
 
-                <MainBoard/>
-
-            </div>
         );
     }
 }

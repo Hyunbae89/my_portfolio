@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter as Route, Switch, Link} from "react-router-dom";
+import {Route, Switch, Link} from "react-router-dom";
 
 import {Header} from "../../app/Header";
 import api from "../../lib/api";
@@ -13,13 +13,10 @@ export class RootGuest extends React.Component{
         this.state = {
             guest_name: "",
             setSidebar : false,
-            sidebar_enable_check : true,
-            isRendering: true
+            sidebar_enable_check : true
         }
         this.showSidebar = this.showSidebar.bind(this);
         this.OnclickScreen = this.OnclickScreen.bind(this);
-        this.disableView = this.disableView.bind(this);
-        this.enableView = this.enableView.bind(this);
     }
 
     componentDidMount() {
@@ -56,29 +53,23 @@ export class RootGuest extends React.Component{
         this.setState({setSidebar:false, sidebar_enable_check: false});
     }
 
-    disableView(){
-        this.setState({isRendering: false});
-    }
-    enableView(){
-        this.setState({isRendering: true});
-    }
 
 
     render() {
-        const {isRendering,setSidebar,sidebar_enable_check}  = this.state;
+        const {setSidebar,sidebar_enable_check,guest_name}  = this.state;
+        const {url} = this.props.match
 
-        console.log(this.props.match.url);
 
         return(
             <div>
-                <Header id={null} name={this.state.guest_name}  control={e => this.showSidebar(e)} enable={this.enableView}/>
+                <Header id={null} name={guest_name}  control={e => this.showSidebar(e)} />
 
                 <nav className={setSidebar && sidebar_enable_check ? 'nav-menu active':'nav-menu'}>
                     <ul className='nav-menu-items'>
                         {SidebarData_guest.map((item, index) => {
                             return(
                                 <li key={index} className={item.className}>
-                                    <Link to={item.path} onClick={this.disableView}>
+                                    <Link to={item.path} >
                                         {item.icon}
                                         <span>{item.title}</span>
                                     </Link>
@@ -88,80 +79,29 @@ export class RootGuest extends React.Component{
                     </ul>
                 </nav>
                 <div id={'testpage'} className={'testscroll '}>
-                    {isRendering &&
-                     <div className='container '>
-                        <div className="text-center pt-4">
-                            <div className={"jumbotron"}>
-                                <h1 >Welcoming, {this.state.guest_name}!!!</h1>
-                                <div className="animated infinite pulse">
-                                    <span>(현재 게스트 이용중이십니다.)</span>
-                                </div>
-                            </div>
-                        </div>
-                         <div className="row">
-                                <div className='col-6 col-md-3'>
-                                    <Link to={'/user/guest/test1'} onClick={this.disableView} >
-                                        <div className={'jumbotron bg-secondary'}>
-                                            <div className="text-center text-white">
-                                                test1
-                                            </div>
-                                        </div>
-                                    </Link>
 
-                                </div>
-                                <div className='col-6 col-md-3'>
-                                    <Link to="/user/guest/test2" onClick={this.disableView}>
-                                        <div className={'jumbotron bg-primary'}>
-                                            <div className="text-center text-white">
-                                                test2
-                                            </div>
-                                        </div>
-                                    </Link>
-                                </div>
-                                <div className='col-6 col-md-3'>
-                                    <Link to="/user/guest/test3" onClick={this.disableView}>
-                                        <div className={'jumbotron bg-danger'}>
-                                            <div className="text-center text-white">
-                                                test3
-                                            </div>
-                                        </div>
-                                    </Link>
-                                </div>
-                                <div className='col-6 col-md-3'>
-                                    <Link to="/user/guest/test4" onClick={this.disableView}>
-                                        <div className={'jumbotron bg-success'}>
-                                            <div className="text-center text-white">
-                                                test4
-                                            </div>
-                                        </div>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    }
                     <Switch>
 
-                        <Route path="/user/guest/test1">
+                        <Route exact path={`${url}/test1`}>
                             <div>   test 1  </div>
                         </Route>
-                        <Route path="/user/guest/test2">
+                        <Route exact path={`${url}/test2`}>
                             <div>   test 2  </div>
                         </Route>
-                         <Route path="/user/guest/test3">
+                         <Route exact path={`${url}/test3`}>
                             <div>   test 3  </div>
                         </Route>
-                        <Route path="/user/guest/test4">
+                        <Route exact path={`${url}/test4`}>
                             <div>   test 4  </div>
                         </Route>
-                        <Route path="/user/guest">
-
+                        <Route exact path="/user/guest">
+                            <MainBoard url={url} name={guest_name} />
                         </Route>
 
                         <Route component={NotFound} />
 
                     </Switch>
                 </div>
-
             </div>
         );
     }
