@@ -1,8 +1,8 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import Carousel from "react-bootstrap/Carousel";
-import IMG_1233 from "../../image/IMG_1233.JPG";
-import IMG_1234 from "../../image/IMG_1234.JPG";
+import IMG_1233 from "../../file/IMG_1233.JPG";
+import IMG_1234 from "../../file/IMG_1234.JPG";
 
 export class MainBoard extends React.Component{
 
@@ -11,45 +11,45 @@ export class MainBoard extends React.Component{
         return (
             <div className='container'>
                 <div className="text-center pt-4">
-                    <div className={"jumbotron"}>
+                    <div className={"jumbotron shadow"}>
                         <h1 >Welcoming, {name}!!!</h1>
                     </div>
                 </div>
                 <div className="row">
-                        <div className='col-6 col-md-3'>
-                            <Link to={`${url}/test1`}  >
-                                <div className={'jumbotron bg-secondary'}>
-                                    <div className="text-center text-white">
-                                        test1
-                                    </div>
+                        <div className='col-6 col-sm-6 col-md-12 col-lg-3'>
+                            <Link to={`${url}/about_me`}  className={"btn btn-block"}>
+                                <div className={'jumbotron about-me-color shadow'}>
+                                    <h5 className="text-center text-white">
+                                        About Me
+                                    </h5>
                                 </div>
                             </Link>
 
                         </div>
-                        <div className='col-6 col-md-3'>
-                            <Link to={`${url}/test2`} >
-                                <div className={'jumbotron bg-primary'}>
-                                    <div className="text-center text-white">
-                                        test2
-                                    </div>
+                        <div className='col-6 col-sm-6 col-md-4 col-lg-3'>
+                            <Link to={`${url}/test2`} className={"btn btn-block"}>
+                                <div className={'jumbotron picture-color shadow'}>
+                                    <h5 className="text-center text-dark">
+                                        Picture
+                                    </h5>
                                 </div>
                             </Link>
                         </div>
-                        <div className='col-6 col-md-3'>
-                            <Link to={`${url}/test3`} >
-                                <div className={'jumbotron bg-danger'}>
-                                    <div className="text-center text-white">
-                                        test3
-                                    </div>
+                        <div className='col-6 col-sm-6 col-md-4 col-lg-3'>
+                            <Link to={`${url}/test3`} className={"btn btn-block"}>
+                                <div className={'jumbotron quote-color shadow'}>
+                                    <h5 className="text-center text-white">
+                                        Quote
+                                    </h5>
                                 </div>
                             </Link>
                         </div>
-                        <div className='col-6 col-md-3'>
-                            <Link to={`${url}/test4`} >
-                                <div className={'jumbotron bg-success'}>
-                                    <div className="text-center text-white">
+                        <div className='col-6 col-sm-6 col-md-4 col-lg-3'>
+                            <Link to={`${url}/test4`} className={"btn btn-block"}>
+                                <div className={'jumbotron test-color shadow'}>
+                                    <h5 className="text-center text-white">
                                         test4
-                                    </div>
+                                    </h5>
                                 </div>
                             </Link>
                         </div>

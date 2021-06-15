@@ -12,7 +12,7 @@ export class NestedRouter extends React.Component {
 render() {
 
     return (
-        <div>
+        <div >
             <Switch>
                 <Route path='/user/guest' component={RootGuest} />
                 <Route path='/user/:id' component={RootUser} />

@@ -3,8 +3,8 @@ import * as FaIcons from "react-icons/fa";
 
 export const SidebarData_user =[
     {
-        title: "test1",
-        path: 'test1',
+        title: "About Me",
+        path: 'about_me',
         icon: <FaIcons.FaCartPlus className='mr-3'/>,
         className: 'nav-text'
     },

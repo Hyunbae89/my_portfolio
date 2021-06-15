@@ -88,9 +88,71 @@ body.dark, body.dark .fa-start{
   height: 70px;
   bottom: 0;
 }
-@media ( min-width: 480px) {
+
+.nav-menu{
+    background-color: #343a40 ;
+    position: fixed;
+    height: calc(100% - 144px);
+    display: flex;
+    justify-content: center;
+    left: -100%;
+    transition: 850ms;
+    width: 35vw;
+    z-index: 1;
+  }
+  .imageArea{
+  display: inline-block;
+  margin: auto;
+    width: 100%;
+  /*height: 300px;*/
+  overflow: hidden;
+  object-fit: cover;
+}
+
+@media ( min-width: 576px) {
   .nav-menu{
     background-color: #343a40 ;
+    position: fixed;
+    height: calc(100% - 144px);
+    display: flex;
+    justify-content: center;
+    left: -100%;
+    transition: 850ms;
+    width: 25vw;
+    z-index: 1;
+  }
+  .imageArea{
+    padding: 40px 20px;
+    width: 100%;
+    height: auto;
+  overflow: hidden;
+  object-fit: cover;
+  }
+}
+
+@media ( min-width: 768px) {
+  .nav-menu{
+    background-color: #343a40 ;
+    position: fixed;
+    height: calc(100% - 144px);
+    display: flex;
+    justify-content: center;
+    left: -100%;
+    transition: 850ms;
+    width: 25vw;
+    z-index: 1;
+  }
+  .imageArea{
+  display: inline-block;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  object-fit: cover;
+}
+}
+@media ( min-width: 992px) {
+  .nav-menu{
+   background-color: #343a40 ;
     position: fixed;
     height: calc(100% - 144px);
     display: flex;
@@ -100,37 +162,19 @@ body.dark, body.dark .fa-start{
     width: 20vw;
     z-index: 1;
   }
-}
-
-@media ( min-width: 1030px) {
-  .nav-menu{
-    background-color: #343a40 ;
-    position: fixed;
-    height: calc(100% - 144px);
-    display: flex;
-    justify-content: center;
-    left: -100%;
-    transition: 850ms;
-    width: 15vw;
-    z-index: 1;
-  }
-}
-@media ( min-width: 1600px) {
-  .nav-menu{
-   background-color: #343a40 ;
-    position: fixed;
-    height: calc(100% - 144px);
-    display: flex;
-    justify-content: center;
-    left: -100%;
-    transition: 850ms;
-    width: 10vw;
-    z-index: 1;
-  }
 
   .container{
     max-width: 80%;
   }
+  .imageArea{
+    display: inline-block;
+    padding: 5px 40px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    object-fit: cover;
+
+}
 }
 
 .nav-menu.active{
@@ -150,7 +194,7 @@ body.dark, body.dark .fa-start{
 .nav-text a{
   text-decoration: none;
   color: #f5f5f5;
-  font-size: 20px;
+  font-size: 15px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -194,4 +238,21 @@ body.dark, body.dark .fa-start{
 .ani-test{
   animation: bounce; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.about-me-color{
+  background-color: #c7d1ff;
+}
+.picture-color{
+  background-color: #fff2ff;
+  }
+.quote-color{
+  background-color: #181934;
+}
+.test-color{
+  background-color: #77767c;
+}
+
+.componentBlank{
+  height: 80px;
 }

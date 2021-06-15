@@ -4,7 +4,7 @@ import {Route, Switch, Link} from "react-router-dom";
 import {Header} from "../../app/Header";
 import api from "../../lib/api";
 import {MainBoard} from "./template/MainBoard";
-import {SidebarData_guest} from "../../app/SidebarData_guest";
+import {SidebarData_guest} from "../../data/SidebarData_guest";
 import NotFound from "../../routers/NotFound";
 
 export class RootGuest extends React.Component{
@@ -34,7 +34,7 @@ export class RootGuest extends React.Component{
     componentDidUpdate() {
         const sidebar_enable = this.state.sidebar_enable_check;
         if(sidebar_enable === true){
-            document.getElementById('testpage').addEventListener('click',this.OnclickScreen);
+            document.getElementById('james').addEventListener('click',this.OnclickScreen);
         }
     }
 
@@ -61,8 +61,8 @@ export class RootGuest extends React.Component{
 
 
         return(
-            <div>
-                <Header id={null} name={guest_name}  control={e => this.showSidebar(e)} />
+            <div id={"james"}>
+                <Header id={null} name={guest_name}  control={e => this.showSidebar(e)} reset={()=>this.OnclickScreen} />
 
                 <nav className={setSidebar && sidebar_enable_check ? 'nav-menu active':'nav-menu'}>
                     <ul className='nav-menu-items'>

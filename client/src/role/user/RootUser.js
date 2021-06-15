@@ -4,7 +4,8 @@ import {Route, Switch,Link} from "react-router-dom";
 import {Header} from "../../app/Header";
 import api from "../../lib/api";
 import {MainBoard} from "../common/MainBoard"
-import {SidebarData_user} from "../../app/SidebarData_user";
+import {AboutMe} from "../common/AboutMe";
+import {SidebarData_user} from "../../data/SidebarData_user";
 import NotFound from "../../routers/NotFound";
 
 
@@ -68,7 +69,7 @@ export class RootUser extends React.Component{
 
         return(
             <div >
-                <Header id={id} name={user_name} control={e => this.showSidebar(e)}/>
+                <Header id={id} name={user_name} control={e => this.showSidebar(e)} reset={()=>this.OnclickScreen} />
 
                 <nav className={setSidebar && sidebar_enable_check ? 'nav-menu active':'nav-menu'}>
                     <ul className='nav-menu-items'>
@@ -88,8 +89,8 @@ export class RootUser extends React.Component{
                 <div id={'testpage'} className={'testscroll '}>
 
                     <Switch>
-                         <Route exact path={`${url}/test1`}>
-                            <div>   test 1  </div>
+                         <Route exact path={`${url}/about_me`}>
+                            <AboutMe/>
                         </Route>
                         <Route exact path={`${url}/test2`}>
                             <div>   test 2  </div>
