@@ -1,7 +1,7 @@
 import React from "react";
 import FileViewer from "react-file-viewer";
 import myresume from "../../file/HyunBae.resume_new_KOREAN_2021.pdf";
-import {Carousel,Image} from "react-bootstrap";
+import {Carousel,Image,Modal} from "react-bootstrap";
 import image1 from '../../file/aboutME/1.JPG';
 import image2 from '../../file/aboutME/2.JPG';
 import image3 from '../../file/aboutME/3.JPG';
@@ -17,6 +17,7 @@ import python from '../../file/logo/python-seeklogo.com.svg';
 import jquery from '../../file/logo/jquery-seeklogo.com.svg';
 import django from '../../file/logo/django-seeklogo.com.svg';
 import bootstrap from '../../file/logo/bootstrap-seeklogo.com.svg';
+import PDF_Viewer from "../../app/PDF_Viewer";
 
 export class AboutMe extends React.Component{
      constructor(props) {
@@ -121,32 +122,61 @@ export class AboutMe extends React.Component{
                       <img src={html} className="w-100" alt="html"/>
                   </div>
                   <div className='col-6 col-md-1 '>
-                      <img src={css} className="w-75 " alt="html"/>
+                      <img src={css} className="w-75 " alt="css"/>
                   </div>
                   <div className='col-6 col-md-1 align-self-center'>
-                      <img src={javascript} className="w-100 " alt="html"/>
+                      <img src={javascript} className="w-100 " alt="javascript"/>
                   </div>
                   <div className='col-6 col-md-1'>
-                      <img src={python} className="w-100 h-100" alt="html"/>
+                      <img src={python} className="w-100 h-100" alt="python"/>
                   </div>
                   <div className="col-md-1"/>
                   <div className='col-6 col-md-1'>
-                      <img src={jquery} className="w-100 h-100" alt="html"/>
+                      <img src={jquery} className="w-100 h-100" alt="jquery"/>
                   </div>
                   <div className='col-6 col-md-1'>
-                      <img src={nodejs} className="w-100 h-100" alt="html"/>
+                      <img src={nodejs} className="w-100 h-100" alt="nodejs"/>
                   </div>
                   <div className='col-6 col-md-1'>
-                      <img src={django} className="w-100 h-100" alt="html"/>
+                      <img src={django} className="w-100 h-100" alt="django"/>
                   </div>
                   <div className='col-6 col-md-1'>
-                      <img src={react} className="w-100 h-100" alt="html"/>
+                      <img src={react} className="w-100 h-100" alt="react"/>
                   </div>
                   <div className='col-6 col-md-1'>
-                      <img src={bootstrap} className="w-100 h-100" alt="html"/>
+                      <img src={bootstrap} className="w-100 h-100" alt="bootstrap"/>
                   </div>
                   <div className="col-md-1"/>
 
+              </div>
+              <div className="row my-3 text-center">
+                  <table className="table table-hover">
+                      <tbody>
+                      <tr>
+                          <td>워드프로세서 1급</td>
+                      </tr>
+                      <tr>
+                          <td>컴퓨터활용능력 2급</td>
+                      </tr>
+                      <tr>
+                          <td>정보기기운용기능사</td>
+                      </tr>
+                      <tr>
+                          <td>정보처리기능사</td>
+                      </tr>
+                      <tr>
+                          <td>전자기기기능사</td>
+                      </tr>
+                      <tr>
+                          <td>운전면허 2종 보통</td>
+                      </tr>
+
+                      </tbody>
+                  </table>
+
+              </div>
+              <div className="row">
+                  <PDF_Viewer/>
               </div>
               <div className="row">
                   <div className="componentBlank"/>

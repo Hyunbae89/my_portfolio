@@ -5,40 +5,20 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import {Link} from 'react-router-dom';
 
 export class Header extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state ={
-            id:'',
-            name:'',
-            sidebar : false,
-            view:true
-        };
-    }
 
-
-    componentDidMount() {
-        const {id,name} = this.props;
-
-        this.setState({
-            id : id,
-            name: name
-        });
-
-    }
-
-    home = () =>{
-        const {id, reset} = this.props;
+    home() {
+        const {id,reset} = this.props;
 
 
         if(id !== null){
-            return <Link to={'/user/'+id} onClick={this.props.enable} onClick={()=>reset}>
+            return <Link to={'/user/'+id}  onClick={reset}>
                         <button className='navbar-brand home'  >
                             <FontAwesomeIcon className="mr-3" icon={faDragon} />
                             <strong className='title' >James works </strong>
                         </button>
                     </Link>
         }else{
-            return <Link to={'/user/guest'} onClick={this.props.enable} onClick={()=>reset}>
+            return <Link to={'/user/guest'} onClick={reset}>
                         <button className='navbar-brand home'  >
                             <FontAwesomeIcon className="mr-3" icon={faDragon} />
                             <strong className='title' >James works </strong>
@@ -56,7 +36,7 @@ export class Header extends React.Component{
                    <div className='container-fluid '>
                        <div className="row w-100 text-center">
                            <div className="col-2 align-self-center">
-                               <Dropdown.Toggle bsPrefix='navbar-toggler bg-dark sidebar-icon' onClick={e => this.props.control(this.state.sidebar)} >
+                               <Dropdown.Toggle bsPrefix='navbar-toggler bg-dark sidebar-icon' onClick={e => this.props.control(false)} >
                                    <span className='navbar-toggler-icon'/>
                                </Dropdown.Toggle>
                            </div>

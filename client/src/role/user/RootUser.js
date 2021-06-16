@@ -7,6 +7,7 @@ import {MainBoard} from "../common/MainBoard"
 import {AboutMe} from "../common/AboutMe";
 import {SidebarData_user} from "../../data/SidebarData_user";
 import NotFound from "../../routers/NotFound";
+import PDF_Viewer from "../../app/PDF_Viewer";
 
 
 export class RootUser extends React.Component{
@@ -47,7 +48,7 @@ export class RootUser extends React.Component{
         }
     }
 
-    showSidebar = (e) => {
+    showSidebar(e){
         const sidebar = this.state.setSidebar;
         this.setState({sidebar_enable_check: true});
 
@@ -57,7 +58,7 @@ export class RootUser extends React.Component{
             this.setState( {setSidebar : false})
         }
     }
-    OnclickScreen = () =>{
+    OnclickScreen(){
         this.setState({setSidebar:false, sidebar_enable_check: false});
     }
 
@@ -93,7 +94,7 @@ export class RootUser extends React.Component{
                             <AboutMe/>
                         </Route>
                         <Route exact path={`${url}/test2`}>
-                            <div>   test 2  </div>
+                            <PDF_Viewer/>
                         </Route>
                          <Route exact path={`${url}/test3`}>
                             <div>   test 3  </div>

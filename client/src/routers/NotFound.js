@@ -1,7 +1,7 @@
-import React,{useEffect} from "react";
+import React from "react";
 import { faDragon} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {Link} from 'react-router-dom';
+
 
 const NotFound = ({history}) =>{
     const goBack = () =>{

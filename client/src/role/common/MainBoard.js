@@ -1,8 +1,5 @@
 import React from "react";
 import {Link} from 'react-router-dom';
-import Carousel from "react-bootstrap/Carousel";
-import IMG_1233 from "../../file/IMG_1233.JPG";
-import IMG_1234 from "../../file/IMG_1234.JPG";
 
 export class MainBoard extends React.Component{
 

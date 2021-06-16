@@ -3,7 +3,6 @@ import React from "react";
 import { faDragon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import api from "../lib/api";
-import {Redirect} from "react-router-dom";
 
 
 export class Start extends React.Component {
@@ -13,7 +12,6 @@ export class Start extends React.Component {
             id: null,
             name:'',
             guest_check: false,
-            check:false
 
         };
         this.guestCheck = this.guestCheck.bind(this);
@@ -28,15 +26,15 @@ export class Start extends React.Component {
         const check = document.getElementById('check_guest');
 
         if (checked){
-            username.placeholder ="Guest";
-            username.value = "Guest";
-            username.disabled= true;
+            username.setAttribute("disabled","");
+            username.setAttribute("placeholder","Guest");
+            username.setAttribute("value","Guest");
             check.setAttribute("checked","");
             this.setState({guest_check : true});
         }else{
-            username.placeholder ="Username";
-            username.value = "";
-            username.disabled= false;
+            username.removeAttribute("disabled");
+            username.setAttribute("placeholder","Username");
+            username.setAttribute("value","");
             check.removeAttribute("checked");
             this.setState({guest_check : false});
         }
@@ -56,33 +54,20 @@ export class Start extends React.Component {
 
 
         if(guest_check){
-            this.setState({check: true})
+            this.props.history.push('/user/guest');
         }else{
             api.postUser(data).catch(error =>{
                 console.log(error)
             }).then(
                 response => {
                     let id = response.data.insertId;
-                    this.setState({id: id, check: true});
+                    this.props.history.push('/user/'+id);
                 }
             )
         }
-
     }
 
     render() {
-        const id = this.state.id;
-        const role = this.state.check;
-
-        if(role){
-            if(id !== null){
-                return <Redirect to={'/user/'+id} />
-            }else{
-                return <Redirect to={'/user/guest'} />
-            }
-
-        }
-
         return(
             <div className="layer">
                 <form className="text-center form-signin " onSubmit={this.handleFormSubmit}>
@@ -115,4 +100,3 @@ export class Start extends React.Component {
         );
     }
 }
-export default Start;
