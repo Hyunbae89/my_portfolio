@@ -1,7 +1,7 @@
 import React from "react";
 import {Route, Switch, Link} from "react-router-dom";
 
-import {Header} from "../../app/Header";
+import Header from "../../app/Header";
 import api from "../../lib/api";
 import {MainBoard} from "./template/MainBoard";
 import {SidebarData_guest} from "../../data/SidebarData_guest";

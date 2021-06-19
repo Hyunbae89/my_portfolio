@@ -21,8 +21,8 @@ export const SidebarData_user =[
         className: 'nav-text'
     },
     {
-        title: "test4",
-        path: 'test4',
+        title: "URL Picker",
+        path: 'url_picker',
         icon: <FaIcons.FaCartPlus className='mr-3'/>,
         className: 'nav-text'
     }

@@ -14,6 +14,7 @@
     "@testing-library/user-event": "^12.1.10",
     "@trendmicro/react-sidenav": "^0.5.0",
     "animate.css": "^4.1.1",
+    "pdfjs-dist": "^2.6.347",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
@@ -21,13 +22,15 @@
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
+    "@react-pdf-viewer/core": "^2.5.0",
+    "@react-pdf-viewer/default-layout": "^2.5.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "lodash": "^4.17.21",
     "query-string": "^7.0.0",
     "react-bootstrap": "^1.6.0",
     "react-router-dom": "^5.2.0",
-    "react-file-viewer": "^1.2.1"
+    "react-file-viewer-extended": "^2.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

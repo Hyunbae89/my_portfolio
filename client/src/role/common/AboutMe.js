@@ -1,6 +1,4 @@
 import React from "react";
-import FileViewer from "react-file-viewer";
-import myresume from "../../file/HyunBae.resume_new_KOREAN_2021.pdf";
 import {Carousel,Image,Modal} from "react-bootstrap";
 import image1 from '../../file/aboutME/1.JPG';
 import image2 from '../../file/aboutME/2.JPG';

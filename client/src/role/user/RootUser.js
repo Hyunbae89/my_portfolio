@@ -1,13 +1,15 @@
 import React from "react";
-import {Route, Switch,Link} from "react-router-dom";
-
-import {Header} from "../../app/Header";
+import {Route, Switch} from "react-router-dom";
 import api from "../../lib/api";
-import {MainBoard} from "../common/MainBoard"
-import {AboutMe} from "../common/AboutMe";
-import {SidebarData_user} from "../../data/SidebarData_user";
+
+import Header from "../../app/Header";
+import MainBoard from "../common/MainBoard"
+import Sidebar from "../../app/Sidebar";
 import NotFound from "../../routers/NotFound";
+
+import {AboutMe} from "../common/AboutMe";
 import PDF_Viewer from "../../app/PDF_Viewer";
+import URLPicker from "../../app/URL_Picker";
 
 
 export class RootUser extends React.Component{
@@ -16,8 +18,7 @@ export class RootUser extends React.Component{
         this.state ={
             id:"",
             user_name: "",
-            setSidebar : false,
-            sidebar_enable_check : true
+            sidebarCheck : false
         }
         this.showSidebar = this.showSidebar.bind(this);
         this.OnclickScreen = this.OnclickScreen.bind(this);
@@ -42,50 +43,34 @@ export class RootUser extends React.Component{
     }
 
     componentDidUpdate() {
-        const sidebar_enable = this.state.sidebar_enable_check;
-        if(sidebar_enable === true){
+        const {sidebarCheck} = this.state;
+        if(sidebarCheck === true){
             document.getElementById('testpage').addEventListener('click',this.OnclickScreen);
         }
     }
 
-    showSidebar(e){
-        const sidebar = this.state.setSidebar;
-        this.setState({sidebar_enable_check: true});
+    showSidebar(click){
+        const {sidebarCheck} = this.state;
 
-        if(sidebar === e){
-            this.setState( {setSidebar : true})
+        if(sidebarCheck === click){
+            this.setState( {sidebarCheck : true})
         }else{
-            this.setState( {setSidebar : false})
+            this.setState( {sidebarCheck : false})
         }
     }
     OnclickScreen(){
-        this.setState({setSidebar:false, sidebar_enable_check: false});
+        this.setState({sidebarCheck:false});
     }
 
     render() {
 
         const {url} = this.props.match;
-         const {id,user_name,setSidebar,sidebar_enable_check} = this.state;
-
+         const {id,user_name,sidebarCheck} = this.state;
 
         return(
             <div >
-                <Header id={id} name={user_name} control={e => this.showSidebar(e)} reset={()=>this.OnclickScreen} />
-
-                <nav className={setSidebar && sidebar_enable_check ? 'nav-menu active':'nav-menu'}>
-                    <ul className='nav-menu-items'>
-                        {SidebarData_user.map((item, index) => {
-                            return(
-                                <li key={index} className={item.className}>
-                                    <Link to={`${url}/`+item.path}>
-                                        {item.icon}
-                                        <span>{item.title}</span>
-                                    </Link>
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </nav>
+                <Header id={id} name={user_name} control={(click) => this.showSidebar(click)} reset={this.OnclickScreen} />
+                <Sidebar url={url} sidebarCheck={sidebarCheck}  />
 
                 <div id={'testpage'} className={'testscroll '}>
 
@@ -94,14 +79,13 @@ export class RootUser extends React.Component{
                             <AboutMe/>
                         </Route>
                         <Route exact path={`${url}/test2`}>
-                            <PDF_Viewer/>
+                            <PDF_Viewer  />
                         </Route>
                          <Route exact path={`${url}/test3`}>
                             <div>   test 3  </div>
                         </Route>
-                        <Route exact path={`${url}/test4`}>
-                            <div>   test 4  </div>
-                        </Route>
+                        <Route exact path={`${url}/url_picker`} component={URLPicker}/>
+
                         <Route exact path={`${url}`}>
                             <MainBoard url={url} name={user_name}/>
                         </Route>
