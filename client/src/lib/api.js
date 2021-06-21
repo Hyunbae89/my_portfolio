@@ -20,5 +20,8 @@ export class PortfolioRest{
     static async postUser(object){
         return await axios.post('users/', object, API_AUTH);
     }
+    static async postLogin(object){
+        return await axios.post('login/',object,  API_AUTH);
+    }
 }
 export default PortfolioRest;

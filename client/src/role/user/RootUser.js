@@ -9,7 +9,8 @@ import NotFound from "../../routers/NotFound";
 
 import {AboutMe} from "../common/AboutMe";
 import PDF_Viewer from "../../app/PDF_Viewer";
-import URLPicker from "../../app/URL_Picker";
+import URLPicker from "../../app/URLPicker/URL_Picker_main";
+import URLPickerCreate from "../../app/URLPicker/URL_Picker_create";
 
 
 export class RootUser extends React.Component{
@@ -33,10 +34,11 @@ export class RootUser extends React.Component{
         api.getUser(id).catch(error => {
             console.log(error)
         }).then(
-            response => {
+
+            response =>{
                 this.setState({
                     id: response.data.id,
-                    user_name:response.data.name
+                    user_name:response.data.user_name
                 })
             }
         )
@@ -85,6 +87,7 @@ export class RootUser extends React.Component{
                             <div>   test 3  </div>
                         </Route>
                         <Route exact path={`${url}/url_picker`} component={URLPicker}/>
+                        <Route exact path={`${url}/url_picker/add`} component={URLPickerCreate}/>
 
                         <Route exact path={`${url}`}>
                             <MainBoard url={url} name={user_name}/>
