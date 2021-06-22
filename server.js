@@ -23,7 +23,6 @@ app.get('/api/user/:guest',(req,res)=>{
 });
 
 app.get('/api/users',(req,res)=>{
-    console.log(req.params);
    connection.query(
        "SELECT * FROM USERS",
        (err,rows,fields)=>{
@@ -52,11 +51,11 @@ app.get('/api/users/:id',(req,res)=>{
 
 
 app.post('/api/users',(req,res)=>{
-   console.log(req.body);
+
     connection.query(
        "SELECT * FROM USERS where user_name=" + "'" + req.body.user_name + "' and user_password= '" + req.body.user_password + "' ",
        (err,rows)=>{
-           console.log(rows.length);
+
            if(rows.length < 1){
                let sql = 'INSERT INTO USERS VALUES (NULL, ?,?)';
 

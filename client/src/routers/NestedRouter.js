@@ -1,5 +1,6 @@
 import React from "react";
 import {Route,Switch} from 'react-router-dom';
+import AuthRoute from "./AuthRoute";
 import {RootUser} from '../role/user/RootUser';
 import {RootGuest} from "../role/guest/RootGuest";
 import {Darkmode} from "../app/Dark_mode";
@@ -7,15 +8,19 @@ import {Footer} from "../app/Footer";
 import NotFound from "./NotFound";
 
 
-export class NestedRouter extends React.Component {
 
-render() {
+
+export default function NestedRouter({authenticated}) {
 
     return (
         <div >
             <Switch>
                 <Route path='/user/guest' component={RootGuest} />
-                <Route path='/user/:id' component={RootUser} />
+                <AuthRoute
+                    authenticated={authenticated}
+                    path='/user/:id'
+                    render={props => <RootUser {...props}/>}
+                />
                 <Route component={NotFound} />
             </Switch>
 
@@ -23,8 +28,7 @@ render() {
             <Footer/>
         </div>
     )
-  }
+
 }
-export default NestedRouter;
 
 

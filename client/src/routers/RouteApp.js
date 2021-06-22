@@ -1,22 +1,38 @@
-import React from "react";
+import React, {useState} from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 import {Start} from '../app/Start';
 import {StartNewUser} from '../app/Start_new_User';
-import {NestedRouter} from "./NestedRouter"
+import NestedRouter from "./NestedRouter"
 
 
-
-export class RouteApp extends React.Component{
+export default class RouteApp extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state ={
+            value: null
+        }
+        this.CheckValue = this.CheckValue.bind(this);
+    }
+    CheckValue(){
+        this.setState({value: true});
+    }
 
     render() {
 
-        return(
+        const authenticated = this.state.value != null;
+
+        console.log(this.state.value)
+        return (
             <Router>
                 <Switch>
-                    <Route exact path='/' component={Start}/>
-                    <Route exact path='/accounts' component={StartNewUser}/>
-                    <NestedRouter/>
+                    <Route
+                        exact path='/'
+                        render={(props)=> <Start check={this.CheckValue} {...props}/> } />
+                    <Route
+                        exact path='/accounts'
+                        render={(props)=> <StartNewUser check={this.CheckValue} {...props}/> } />
+                    <NestedRouter authenticated={authenticated}/>
 
                 </Switch>
             </Router>

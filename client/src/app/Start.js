@@ -78,21 +78,22 @@ export class Start extends React.Component {
         if(guest_check){
             this.props.history.push('/user/guest');
         }else{
-
             api.postLogin(data).catch(error =>{
                 console.log(error)
             }).then(response =>{
                 let id = response.data.id;
                 if(response.data.id){
+                    this.props.check();
                     this.props.history.push('/user/'+id);
                 }else{
-                    alert("잘못 입력하셨습니다.")
+                    alert("가입하지 않았거나 잘못된 입력을 하셨습니다.")
                 }
             })
         }
     }
 
     render() {
+
         return(
             <div className="layer">
                 <form className="text-center form-signin " onSubmit={this.handleFormSubmit}>
