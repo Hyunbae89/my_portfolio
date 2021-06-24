@@ -76,7 +76,7 @@ export class Start extends React.Component {
 
 
         if(guest_check){
-            this.props.history.push('/user/guest');
+            this.props.history.push('/guest');
         }else{
             api.postLogin(data).catch(error =>{
                 console.log(error)
@@ -84,7 +84,7 @@ export class Start extends React.Component {
                 let id = response.data.id;
                 if(response.data.id){
                     this.props.check();
-                    this.props.history.push('/user/'+id);
+                    this.props.history.push('/'+id);
                 }else{
                     alert("가입하지 않았거나 잘못된 입력을 하셨습니다.")
                 }

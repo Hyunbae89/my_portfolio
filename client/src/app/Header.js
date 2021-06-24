@@ -9,14 +9,14 @@ export default function Header(props){
     function home() {
 
         if(props.id){
-            return <Link to={'/user/'+props.id}  onClick={props.reset}>
+            return <Link to={'/'+props.id}  onClick={props.reset}>
                         <button className='navbar-brand home'  >
                             <FontAwesomeIcon className="mr-3" icon={faDragon} />
                             <strong className='title' >James works </strong>
                         </button>
                     </Link>
         }else{
-            return <Link to={'/user/guest'} onClick={props.reset}>
+            return <Link to={'/guest'} onClick={props.reset}>
                         <button className='navbar-brand home'  >
                             <FontAwesomeIcon className="mr-3" icon={faDragon} />
                             <strong className='title' >James works </strong>

@@ -24,7 +24,7 @@ app.get('/api/user/:guest',(req,res)=>{
 
 app.get('/api/users',(req,res)=>{
    connection.query(
-       "SELECT * FROM USERS",
+       "SELECT * FROM USER",
        (err,rows,fields)=>{
            res.send(rows);
        }
@@ -33,7 +33,7 @@ app.get('/api/users',(req,res)=>{
 app.get('/api/users/:id',(req,res)=>{
 
    connection.query(
-       "SELECT * FROM USERS where id="+"'"+req.params.id+"'",
+       "SELECT * FROM USER where id="+"'"+req.params.id+"'",
        (err,rows,fields)=>{
            res.send(rows[0]);
        }
@@ -53,7 +53,7 @@ app.get('/api/users/:id',(req,res)=>{
 app.post('/api/users',(req,res)=>{
 
     connection.query(
-       "SELECT * FROM USERS where user_name=" + "'" + req.body.user_name + "' and user_password= '" + req.body.user_password + "' ",
+       "SELECT * FROM USER where user_name=" + "'" + req.body.user_name + "' and user_password= '" + req.body.user_password + "' ",
        (err,rows)=>{
 
            if(rows.length < 1){
@@ -74,31 +74,78 @@ app.post('/api/users',(req,res)=>{
        }
    )
 
-
 });
 
 app.post('/api/login',(req,res)=>{
 
     connection.query(
-       "SELECT * FROM USERS where user_name=" + "'" + req.body.name + "' and user_password= '" + req.body.password + "' ",
+       "SELECT * FROM USER where user_name=" + "'" + req.body.name + "' and user_password= '" + req.body.password + "' ",
        (err,rows)=>{
            if(rows !== null){
                res.send(rows[0]);
            }else {
                res.send();
            }
-
        }
    )
-
 });
 
 
-// app.get('/api/hello', (req, res) => {
-//    res.send({message: "Hello Express!"});
-// });
+app.get('/api/users/:id/urls',(req,res)=>{
+
+   connection.query(
+       "SELECT * FROM USER_TO_URL where user_id="+"'"+req.params.id+"'",
+       (err,rows,fields)=>{
+           res.send(rows);
+       }
+   )
+});
+
+app.post('/api/urls',(req,res)=>{
+
+    let sql = 'INSERT INTO URL_PICKER VALUES (NULL, ?,?,?)';
+    let title = req.body.url_title;
+    let address = req.body.url_address;
+    let date = req.body.create_date;
+    let params = [title,address,date];
+
+    connection.query(sql, params,
+        (err, rows) =>{
+        res.send(rows);
+        }
+    )
+});
+
+app.post('/api/users/:id/urls',(req,res)=>{
+
+    let sql = 'INSERT INTO USER_TO_URL VALUES (NULL, ?,?,?,?,?)';
+    let user_id = req.params.id;
+    let url_id = req.body.urlId;
+    let title = req.body.url_title;
+    let address = req.body.url_address;
+    let date = req.body.create_date;
+
+    let params = [user_id,url_id,title,address,date];
+
+    connection.query(sql, params,
+        (err, rows) =>{
+        res.send(rows);
+        }
+    )
+});
+
+app.get('/api/urls/:id',(req,res)=>{
+
+   connection.query(
+       "SELECT * FROM URL_PICKER where id="+"'"+req.params.id+"'",
+       (err,rows,fields)=>{
+           res.send(rows);
+       }
+   )
+});
 
 
-
-
-app.listen(port, () => console.log(`listening on port ${port}`));
+app.listen(port, (err) => {
+    if(err) return console.log(err)
+    return console.log(`listening on port ${port}`)
+});

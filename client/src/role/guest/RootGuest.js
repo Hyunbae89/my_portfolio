@@ -94,7 +94,7 @@ export class RootGuest extends React.Component{
                         <Route exact path={`${url}/test4`}>
                             <div>   test 4  </div>
                         </Route>
-                        <Route exact path="/user/guest">
+                        <Route exact path={`${url}`}>
                             <MainBoard url={url} name={guest_name} />
                         </Route>
 

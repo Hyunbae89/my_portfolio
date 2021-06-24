@@ -10,7 +10,7 @@ export default class RouteApp extends React.Component{
     constructor(props) {
         super(props);
         this.state ={
-            value: null
+            value: false
         }
         this.CheckValue = this.CheckValue.bind(this);
     }
@@ -19,21 +19,20 @@ export default class RouteApp extends React.Component{
     }
 
     render() {
+        const authenticated = this.state.value !== false;
 
-        const authenticated = this.state.value != null;
-
-        console.log(this.state.value)
         return (
             <Router>
                 <Switch>
                     <Route
                         exact path='/'
                         render={(props)=> <Start check={this.CheckValue} {...props}/> } />
+
                     <Route
                         exact path='/accounts'
                         render={(props)=> <StartNewUser check={this.CheckValue} {...props}/> } />
-                    <NestedRouter authenticated={authenticated}/>
 
+                    <NestedRouter authenticated={authenticated}/>
                 </Switch>
             </Router>
         )

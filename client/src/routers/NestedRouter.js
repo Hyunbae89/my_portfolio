@@ -7,20 +7,18 @@ import {Darkmode} from "../app/Dark_mode";
 import {Footer} from "../app/Footer";
 import NotFound from "./NotFound";
 
-
-
-
 export default function NestedRouter({authenticated}) {
 
     return (
         <div >
             <Switch>
-                <Route path='/user/guest' component={RootGuest} />
+                <Route path='/guest' component={RootGuest} />
+
                 <AuthRoute
                     authenticated={authenticated}
-                    path='/user/:id'
-                    render={props => <RootUser {...props}/>}
-                />
+                    path='/:id'
+                    render={props => <RootUser {...props}/>} />
+
                 <Route component={NotFound} />
             </Switch>
 

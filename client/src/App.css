@@ -256,3 +256,10 @@ body.dark, body.dark .fa-start{
 .componentBlank{
   height: 80px;
 }
+
+.url_picker{
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px;
+  height: 100%;
+}

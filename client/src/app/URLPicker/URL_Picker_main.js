@@ -1,8 +1,9 @@
 import {Link} from "react-router-dom";
-import URLPickerList from "./URL_Picker_list";
+import {URLPickerList} from "./URL_Picker_list";
 
 export default function URLPicker(props){
     const url = props.match.url;
+
 
     return(
       <div className="container-fluid">
@@ -26,10 +27,11 @@ export default function URLPicker(props){
                       </div>
                   </div>
                   <div className="row">
-                      <URLPickerList />
+                      <div className='col-12'>
+                          <URLPickerList  {...props}/>
+                      </div>
+
                   </div>
-
-
               </div>
           </div>
 
