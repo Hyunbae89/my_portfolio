@@ -32,32 +32,14 @@ export class URLPickerCreate extends React.Component{
         }
     }
 
-    leadingZeros(n, digits) {
-      let zero = '';
-      n = n.toString();
-
-      if (n.length < digits) {
-        for (let i = 0; i < digits - n.length; i++)
-          zero += '0';
-      }
-      return zero + n;
-    }
-
-
     getTime(){
         const date = new Date();
-
-        return this.leadingZeros(date.getFullYear(), 4) + '-' +
-                this.leadingZeros(date.getMonth() + 1, 2) + '-' +
-                this.leadingZeros(date.getDate(), 2) + ' ' +
-
-                this.leadingZeros(date.getHours(), 2) + ':' +
-                this.leadingZeros(date.getMinutes(), 2) + ':' +
-                this.leadingZeros(date.getSeconds(), 2);
+        return date.toISOString();
     }
+
     getAddress(address){
-        const https = "https://";
         const http = "http://";
+        const https = "https://";
         const https_value = address.indexOf(https);
         const http_value = address.indexOf(http);
 
@@ -66,8 +48,6 @@ export class URLPickerCreate extends React.Component{
         }else {
             return https + address
         }
-
-
     }
 
     handleFormSubmit =(e)=>{

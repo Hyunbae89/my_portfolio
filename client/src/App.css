@@ -69,6 +69,10 @@ body.dark, body.dark .fa-start{
   color: white;
   font-size: xx-large;
 }
+.url-setting-icon, .url-edit-icon, .url-delete-icon{
+  color: black;
+  font-size: x-large;
+}
 
 .fa-start {
   color: #3e3e3e;
@@ -256,7 +260,10 @@ body.dark, body.dark .fa-start{
 .componentBlank{
   height: 80px;
 }
-
+.url_add_input_container{
+  width : 400px;
+  margin: auto;
+}
 .url_picker{
   width: 80%;
   margin: 0 auto;
