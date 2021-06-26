@@ -1,18 +1,34 @@
-import React from "react";
+import React from 'react';
 import api from "../../lib/api";
 
-export class URLPickerCreate extends React.Component{
+export class URLPickerDetail extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
+            url_id: '',
             title:'',
-            address : '',
-            create_date : ''
+            address : ''
         }
         this.goBack = this.goBack.bind(this);
         this.changeInputValue = this.changeInputValue.bind(this);
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
     }
+
+    componentDidMount() {
+        const {url} = this.props.match;
+        const url_parse_object = url.split('/');
+        const url_id = url_parse_object[url_parse_object.length-1];
+
+        api.getUrlPick(url_id).catch(err=>{
+            console.log(err)
+        }).then(
+            response => {
+                const {title, address} = response.data;
+                this.setState({url_id: url_id, title: title, address: address});
+            }
+        )
+    }
+
     goBack(){
         this.props.history.goBack();
     }
@@ -50,14 +66,14 @@ export class URLPickerCreate extends React.Component{
         }
     }
 
+
     handleFormSubmit =(e)=>{
         e.preventDefault()
 
         const user_id = this.props.user_id;
-        const {title,address} = this.state;
+        const {url_id,title,address} = this.state;
 
         const url_address = this.getAddress(address);
-
         const current_time = this.getTime();
         const data = {
             url_title: title,
@@ -65,18 +81,18 @@ export class URLPickerCreate extends React.Component{
             create_date : current_time
         };
 
-        api.postUrlPick(data).catch(error =>{
+        api.patchUrlPick(url_id,data).catch(error =>{
             console.log(error)
-        }).then(response => {
-            let id = response.data.insertId;
+        }).then(() => {
+
             const urlData = {
-                urlId : id,
+                urlId : url_id,
                 url_title: title,
                 url_address : url_address,
                 create_date : current_time
             };
 
-            api.postUserToUrl(user_id, urlData).catch(err =>{
+            api.patchUserToUrl(user_id, urlData).catch(err =>{
                 console.log(err)
             }).then(()=>{
                 this.props.history.goBack();
@@ -86,9 +102,10 @@ export class URLPickerCreate extends React.Component{
         )
     }
 
+
     render() {
 
-        return (
+        return(
             <div className="url_picker">
                 <form onSubmit={this.handleFormSubmit}>
                     <h3 className="mb-3 font-weight-normal text-center">URL Picker</h3>
@@ -114,7 +131,7 @@ export class URLPickerCreate extends React.Component{
                                 </button>
                             </div>
                             <div className="col-8">
-                                <button type='submit' className="btn btn-success btn-block" >S u b m i t</button>
+                                <button type='submit' className="btn btn-warning btn-block" >C h a n g e</button>
                             </div>
                         </div>
                     </div>
@@ -122,5 +139,4 @@ export class URLPickerCreate extends React.Component{
             </div>
         );
     }
-
 }

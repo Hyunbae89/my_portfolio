@@ -134,15 +134,81 @@ app.post('/api/users/:id/urls',(req,res)=>{
     )
 });
 
+app.put('/api/urls/:id',(req,res)=>{
+
+    let sql = 'UPDATE URL_PICKER SET title =?, address=?, create_date=? WHERE id= '+req.params.id;
+    let title = req.body.url_title;
+    let address = req.body.url_address;
+    let date = req.body.create_date;
+
+    let params = [title,address,date,];
+
+    connection.query(sql, params,
+        (err, rows) =>{
+        console.log(rows)
+        res.send(rows);
+        }
+    )
+
+});
+
+app.put('/api/users/:id/urls',(req,res)=>{
+
+    let sql = 'UPDATE USER_TO_URL SET title =?, address=?, create_date=? WHERE id= '+req.params.id;
+
+    let title = req.body.url_title;
+    let address = req.body.url_address;
+    let date = req.body.create_date;
+
+    let params = [title,address,date];
+
+    connection.query(sql, params,
+        (err, rows) =>{
+        console.log(rows)
+        res.send(rows);
+        }
+    )
+});
+
 app.get('/api/urls/:id',(req,res)=>{
 
    connection.query(
        "SELECT * FROM URL_PICKER where id="+"'"+req.params.id+"'",
        (err,rows,fields)=>{
-           res.send(rows);
+
+           res.send(rows[0]);
        }
    )
 });
+
+app.delete('/api/urls/:id',(req,res)=>{
+
+    let sql = 'DELETE FROM URL_PICKER WHERE id= ?';
+    let params = [req.params.id];
+
+    connection.query(sql, params,
+        (err, rows) =>{
+        console.log(rows)
+        res.send(rows);
+        }
+    )
+
+});
+
+app.delete('/api/users/:user_id/urls/:id',(req,res)=>{
+
+    let sql = 'DELETE FROM USER_TO_URL WHERE id= ?';
+    console.log(req.params)
+    let params = [req.params.id];
+
+    connection.query(sql, params,
+        (err, rows) =>{
+        console.log(rows)
+        res.send(rows);
+        }
+    )
+});
+
 
 
 app.listen(port, (err) => {

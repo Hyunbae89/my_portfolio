@@ -11,6 +11,7 @@ import {AboutMe} from "../common/AboutMe";
 import PDF_Viewer from "../../app/PDF_Viewer";
 import URLPicker from "../../app/URLPicker/URL_Picker_main";
 import {URLPickerCreate} from "../../app/URLPicker/URL_Picker_create";
+import {URLPickerDetail} from "../../app/URLPicker/URL_Picker_detail";
 
 
 export class RootUser extends React.Component{
@@ -93,6 +94,10 @@ export class RootUser extends React.Component{
                         <Route
                             exact path={`${url}/url_picker/add`}
                             render={props => <URLPickerCreate user_id={id}  {...props} />} />
+
+                        <Route
+                            exact path={`${url}/url_picker/:id`}
+                            render={props => <URLPickerDetail user_id={id}  {...props} />} />
 
                         <Route exact path={`${url}`}>
                             <MainBoard url={url} name={user_name}/>

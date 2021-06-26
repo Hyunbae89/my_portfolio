@@ -1,6 +1,6 @@
 import React from "react";
 import api from "../../lib/api";
-import Dropdown from 'react-bootstrap/Dropdown';
+import {Modal,Dropdown} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEllipsisH, faPencilAlt, faTrashAlt} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
@@ -10,10 +10,12 @@ export class URLPickerList extends React.Component {
         super(props);
         this.state = {
             data: [],
+            id:'',
             url_id: '',
-            create_date: ''
+            create_date: '',
+            isView: false
         }
-
+    this.deleteURL = this.deleteURL.bind(this);
     }
 
     componentDidMount() {
@@ -49,11 +51,33 @@ export class URLPickerList extends React.Component {
         return formatted_date;
     }
 
+    deleteURL(id,urlId){
+        const user_id = this.props.user_id;
+        const {url} = this.props.match
 
+        api.deleteUserToUrl(user_id, id).catch(err=>{
+            console.log(err);
+        }).then(()=>{
+            api.deleteUrlPick(urlId).catch(err=>{
+                console.log(err);
+            }).then(()=>{
+                this.setState({id:'', url_id:'', isView:false})
+                this.props.history.push("'"+url+"'");
+                this.props.history.goBack();
+            });
+        })
+    }
+    confirmBoxOn = (id,urlId) =>{
+        this.setState({id:id, url_id:urlId, isView:true});
+    }
+    confirmBoxOff = () =>{
+        this.setState({id:'', url_id:'', isView:false});
+    }
 
     render() {
-
-        const {data} = this.state;
+        const {url} = this.props.match;
+        const {data,id,url_id,isView} = this.state;
+        console.log(url)
 
         const list = data.map(
             info => (
@@ -72,18 +96,18 @@ export class URLPickerList extends React.Component {
                         </a>
                     </div>
                     <div className="col-1">
-                            <Dropdown drop='end'>
+                            <Dropdown>
                                 <Dropdown.Toggle bsPrefix='navbar-toggler ' id="dropdown-basic" >
                                     <FontAwesomeIcon className='url-setting-icon'  icon={faEllipsisH} />
                                   </Dropdown.Toggle>
 
                                   <Dropdown.Menu className="dropdown-menu-center">
 
-                                    <Dropdown.Item as={Link} to="/">
+                                    <Dropdown.Item as={Link} to={`${url}/${info.url_id}`}>
                                         <FontAwesomeIcon className='url-edit-icon mr-3'  icon={faPencilAlt} />
                                         <span>편집</span>
                                     </Dropdown.Item>
-                                      <Dropdown.Item as={Link} to="/">
+                                      <Dropdown.Item as="button" key={info.id} onClick={()=>this.confirmBoxOn(info.id,info.url_id)}>
                                         <FontAwesomeIcon className='url-delete-icon mr-3'  icon={faTrashAlt} />
                                         <span>삭제</span>
                                     </Dropdown.Item>
@@ -102,6 +126,18 @@ export class URLPickerList extends React.Component {
                         새 URL을 만들려면 URL 추가하기 버튼을 클릭하세요.
                     </div>}
 
+                <Modal show={isView} size="lg" onHide={this.confirmBoxOff} animation={false} >
+                    <Modal.Header closeButton>
+                      <Modal.Title>Delete info</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        정말 삭제 하시겠습니까?
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <button type='button' className='btn btn-primary btn-block' onClick={()=>this.deleteURL(id,url_id)}>Yes</button>
+                        <button type='button' className='btn btn-danger btn-block' onClick={this.confirmBoxOff}>No</button>
+                    </Modal.Footer>
+                </Modal>
             </div>
         );
     }

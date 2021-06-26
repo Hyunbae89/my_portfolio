@@ -19,6 +19,10 @@ export class PortfolioRest{
     static async getUrlList(id){
         return await axios.get('users/'+ id +'/urls', API_AUTH);
     }
+    static async getUrlPick(id){
+        return await axios.get('urls/'+ id , API_AUTH);
+    }
+
     static async postUrlPick(object){
         return await axios.post('urls/',object, API_AUTH);
     }
@@ -26,9 +30,21 @@ export class PortfolioRest{
         return await axios.post('users/'+ id +'/urls',object, API_AUTH);
     }
 
-    static async getUrlPick(id){
-        return await axios.get('urls/'+ id , API_AUTH);
+    static async patchUrlPick(id,object){
+        return await axios.put('urls/'+ id ,object, API_AUTH);
     }
+    static async patchUserToUrl(id,object){
+        return await axios.put('users/'+ id +'/urls',object, API_AUTH);
+    }
+
+    static async deleteUrlPick(id){
+        return await axios.delete('urls/'+ id , API_AUTH);
+    }
+    static async deleteUserToUrl(user_id, id){
+        return await axios.delete('users/'+ user_id +'/urls/'+id , API_AUTH);
+    }
+
+
 
 }
 export default PortfolioRest;
