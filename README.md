@@ -12,22 +12,22 @@
 
 # 개발 스펙 <a id="chapter-1"/>
 - Front-end
-  - <a href="https://ko.reactjs.org/" target="_blank"  rel="noopener" >React.js</a> , Javascript
+  - React.js, Javascript
 
 - Back-end
-  - [Node.js](https://nodejs.org/ko/) , Express.js , Axios
+  - Node.js , Express.js , Axios
 
 - Layout / UI
-  - [Bootstrap(v4.6.x)](https://getbootstrap.com/docs/4.6/getting-started/introduction/) , [animate.css](https://animate.style/) , CSS3
+  - Bootstrap(v4.6.x) , animate.css , CSS3
 
 - Database
-  - [AWS RDS](https://aws.amazon.com/ko/rds/?trkCampaign=acq_paid_search_brand&sc_channel=ps&sc_campaign=acquisition_KR&sc_publisher=Google&sc_category=Database&sc_country=KR&sc_geo=APAC&sc_outcome=acq&sc_detail=amazon%20relational%20database%20service&sc_content={adgroup}&sc_matchtype=e&sc_segment=477203253514&sc_medium=ACQ-P|PS-GO|Brand|Desktop|SU|Database|Solution|KR|EN|Sitelink&s_kwcid=AL!4422!3!477203253514!e!!g!!amazon%20relational%20database%20service&ef_id=CjwKCAjwoNuGBhA8EiwAFxomA9TSKHHzVsvyxKe-s745ruFJaQxxkudQ9zUBYREz2QGIAgPe16PvARoCGsgQAvD_BwE:G:s&s_kwcid=AL!4422!3!477203253514!e!!g!!amazon%20relational%20database%20service) , [MySQL](https://www.mysql.com/)
+  - AWS RDS , MySQL
 
 - IDE
-  - [Pycharm](https://www.jetbrains.com/ko-kr/pycharm/download/#section=windows)
+  - Pycharm
 
 - Tools
-  - [Github](https://github.com/) , [Sourcetree](https://www.sourcetreeapp.com/) , [HeidiSQL](https://www.heidisql.com/)
+  - Github , Sourcetree , HeidiSQL
 <br/>
 
 ```
