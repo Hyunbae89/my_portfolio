@@ -7,7 +7,7 @@
 
 * [개발 스펙](#chapter-1)
 * [Server part](#chapter-2)
-* [Client part](.client/README.md)
+* [Client part](../client/README.md)
 
 
 ## 개발 스펙 <a id="chapter-1"/>
