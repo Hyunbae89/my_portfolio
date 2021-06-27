@@ -12,7 +12,7 @@
 
 # 개발 스펙 <a id="chapter-1"/>
 - Front-end
-  - <a href="https://ko.reactjs.org/" target="_blank" >React.js</a> , Javascript
+  - <a href="https://ko.reactjs.org/" target="_blank"  rel="noopener" >React.js</a> , Javascript
 
 - Back-end
   - [Node.js](https://nodejs.org/ko/) , Express.js , Axios
