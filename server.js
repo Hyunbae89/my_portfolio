@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+//body-parser 는 POST 요청시 body data를 읽을 수 있는 구문으로 파싱해준다.
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -8,7 +9,9 @@ const config = require('./routes/config')
 
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({extended:false}));
+//false : node.js내 기본 QueryString 사용, true : npm qs 라이브러리 사용
+//qs 라이브러리가 추가적인 보안이 가능한 확장된 형태.
 
 const connection = mysql.createConnection(config);
 connection.connect();
@@ -30,6 +33,7 @@ app.get('/api/users',(req,res)=>{
        }
    )
 });
+
 app.get('/api/users/:id',(req,res)=>{
 
    connection.query(
@@ -39,15 +43,6 @@ app.get('/api/users/:id',(req,res)=>{
        }
    )
 });
-// app.get('/api/users/:username',(req,res)=>{
-//    console.log(req.params);
-//    connection.query(
-//        "SELECT * FROM USERS where name="+"'"+req.params.username+"'",
-//        (err,rows,fields)=>{
-//            res.send(rows[0]);
-//        }
-//    )
-// });
 
 
 app.post('/api/users',(req,res)=>{
@@ -70,10 +65,8 @@ app.post('/api/users',(req,res)=>{
            }else {
                res.send();
            }
-
        }
    )
-
 });
 
 app.post('/api/login',(req,res)=>{
@@ -149,7 +142,6 @@ app.put('/api/urls/:id',(req,res)=>{
         res.send(rows);
         }
     )
-
 });
 
 app.put('/api/users/:id/urls',(req,res)=>{
@@ -192,7 +184,6 @@ app.delete('/api/urls/:id',(req,res)=>{
         res.send(rows);
         }
     )
-
 });
 
 app.delete('/api/users/:user_id/urls/:id',(req,res)=>{
