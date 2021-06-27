@@ -77,9 +77,3 @@ Node.js 를 통해 MySQL database에 접근하여 필요한 Server side 프로�
 client 폴더내 Front-side와 API 통신을 주고받으며 상호 작동해야하기 때문에  
 한번에 server와 client를 작동하도록 스크립트를 작성하였습니다.
 server port :5000, client port :3000
-
-
-
-
-
-## Client part <a id="chapter-3"/>
