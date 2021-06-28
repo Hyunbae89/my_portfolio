@@ -69,6 +69,7 @@ export class URLPickerDetail extends React.Component{
 
     handleFormSubmit =(e)=>{
         e.preventDefault()
+        const {url} = this.props.match;
 
         const user_id = this.props.user_id;
         const {url_id,title,address} = this.state;
@@ -95,6 +96,7 @@ export class URLPickerDetail extends React.Component{
             api.patchUserToUrl(user_id, urlData).catch(err =>{
                 console.log(err)
             }).then(()=>{
+
                 this.props.history.goBack();
             })
 

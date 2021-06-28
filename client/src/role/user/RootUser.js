@@ -20,7 +20,9 @@ export class RootUser extends React.Component{
         this.state ={
             id:"",
             user_name: "",
-            sidebarCheck : false
+            sidebarCheck : false,
+            sidebar_enable_check : true
+
         }
         this.showSidebar = this.showSidebar.bind(this);
         this.OnclickScreen = this.OnclickScreen.bind(this);
@@ -46,14 +48,15 @@ export class RootUser extends React.Component{
     }
 
     componentDidUpdate() {
-        const {sidebarCheck} = this.state;
-        if(sidebarCheck === true){
-            document.getElementById('testpage').addEventListener('click',this.OnclickScreen);
+        const {sidebar_enable_check} = this.state;
+        if(sidebar_enable_check === true){
+            document.getElementById('james').addEventListener('click',this.OnclickScreen);
         }
     }
 
     showSidebar(click){
         const {sidebarCheck} = this.state;
+        this.setState({sidebar_enable_check: true});
 
         if(sidebarCheck === click){
             this.setState( {sidebarCheck : true})
@@ -62,18 +65,18 @@ export class RootUser extends React.Component{
         }
     }
     OnclickScreen(){
-        this.setState({sidebarCheck:false});
+        this.setState({sidebarCheck:false, sidebar_enable_check: false});
     }
 
     render() {
 
         const {url} = this.props.match;
-         const {id,user_name,sidebarCheck} = this.state;
+         const {id,user_name,sidebarCheck,sidebar_enable_check} = this.state;
 
         return(
-            <div >
+            <div id={"james"}>
                 <Header id={id} name={user_name} control={(click) => this.showSidebar(click)} reset={this.OnclickScreen} />
-                <Sidebar url={url} sidebarCheck={sidebarCheck}  />
+                <Sidebar url={url} sidebarCheck={sidebarCheck} sidebar_enable_check={sidebar_enable_check} />
 
                 <div id={'testpage'} className={'testscroll '}>
 

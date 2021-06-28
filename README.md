@@ -61,13 +61,14 @@ Node.js 를 통해 MySQL database에 접근하여 필요한 Server side 프로�
   "private": true,
   "scripts": {
     "client": "cd client && yarn start",
-    "server": "node server.js",
+    "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.7"
   },
   "devDependencies": {
     "concurrently": "^6.1.0"
@@ -76,4 +77,4 @@ Node.js 를 통해 MySQL database에 접근하여 필요한 Server side 프로�
 ```
 client 폴더내 Front-side와 API 통신을 주고받으며 상호 작동해야하기 때문에  
 한번에 server와 client를 작동하도록 스크립트를 작성하였습니다.
-server port :5000, client port :3000
+Dev 환경에서 server port :5000, client port :3000

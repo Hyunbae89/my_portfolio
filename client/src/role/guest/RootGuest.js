@@ -32,18 +32,18 @@ export class RootGuest extends React.Component{
         );
     }
     componentDidUpdate() {
-        const sidebar_enable = this.state.sidebar_enable_check;
-        if(sidebar_enable === true){
+        const {sidebar_enable_check} = this.state;
+        if(sidebar_enable_check === true){
             document.getElementById('james').addEventListener('click',this.OnclickScreen);
         }
     }
 
     showSidebar = (e) => {
 
-        const sidebar = this.state.setSidebar;
+        const {setSidebar} = this.state;
         this.setState({sidebar_enable_check: true});
 
-        if(sidebar === e){
+        if(setSidebar === e){
             this.setState( {setSidebar : true})
         }else{
             this.setState( {setSidebar : false})

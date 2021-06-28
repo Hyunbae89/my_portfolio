@@ -2,31 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ba34c63-e1c2-4845-8f9e-3d83a242eadc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/file/HyunBae.resume_new_KOREAN_2021.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/file/logo/CSS.3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/file/logo/HTML5_logo_and_wordmark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/file/logo/Javascript_badge.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/file/logo/bootstrap-seeklogo.com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/file/logo/django-seeklogo.com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/file/logo/jquery-seeklogo.com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/file/logo/node-node-js-seeklogo.com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/file/logo/python-seeklogo.com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/file/logo/react-seeklogo.com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/role/common/AboutMe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/SidebarData_guest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/data/SidebarData_guest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/SidebarData_user.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/data/SidebarData_user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/image/IMG_1233.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/file/IMG_1233.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/image/IMG_1234.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/file/IMG_1234.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/PDF_Viewer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/PDF_Viewer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/Start_new_User.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Start_new_User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URL_Picker_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URL_Picker_detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URL_Picker_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URL_Picker_list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/data/SidebarData_guest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/data/SidebarData_guest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/role/common/MainBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/common/MainBoard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/role/guest/RootGuest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/guest/RootGuest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/role/user/RootUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/user/RootUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routers/NestedRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routers/NestedRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +48,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/zxcv6487-pst-react-data-shared-components_james-523d7cf61aba" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -66,13 +60,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zxcv6\Desktop\my_portfolio\client\node_modules\react-file-viewer\src\components\drivers" />
+      <recent name="C:\Users\zxcv6\Desktop\my_portfolio\client" />
       <recent name="C:\Users\zxcv6\Desktop\my_portfolio\client\src\file\aboutME" />
       <recent name="C:\Users\zxcv6\Desktop\my_portfolio\client\src\file" />
       <recent name="C:\Users\zxcv6\Desktop\my_portfolio\client\src\app" />
-      <recent name="C:\Users\zxcv6\Desktop\my_portfolio\client\src\role\guest\template" />
-      <recent name="C:\Users\zxcv6\Desktop\my_portfolio\client\src\image" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zxcv6\Desktop\my_portfolio\client\src\app\URLPicker" />
       <recent name="C:\Users\zxcv6\Desktop\my_portfolio\client\src\file\logo" />
       <recent name="C:\Users\zxcv6\Desktop\my_portfolio\client\src\data" />
       <recent name="C:\Users\zxcv6\Desktop\my_portfolio\client\src\routers" />
@@ -119,6 +114,21 @@
       <workItem from="1623573537303" duration="10555000" />
       <workItem from="1623640386476" duration="6082000" />
       <workItem from="1623722839853" duration="17582000" />
+      <workItem from="1623896521520" duration="3215000" />
+      <workItem from="1623999648615" duration="12156000" />
+      <workItem from="1624067583251" duration="4741000" />
+      <workItem from="1624243489648" duration="20074000" />
+      <workItem from="1624331554472" duration="1202000" />
+      <workItem from="1624346291225" duration="10403000" />
+      <workItem from="1624430590538" duration="8434000" />
+      <workItem from="1624502169038" duration="19089000" />
+      <workItem from="1624587691581" duration="9221000" />
+      <workItem from="1624677093045" duration="19508000" />
+      <workItem from="1624717812236" duration="1795000" />
+      <workItem from="1624757293433" duration="6670000" />
+      <workItem from="1624850774791" duration="11184000" />
+      <workItem from="1624871600285" duration="1611000" />
+      <workItem from="1624884120301" duration="651000" />
     </task>
     <servers />
   </component>

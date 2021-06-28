@@ -270,3 +270,12 @@ body.dark, body.dark .fa-start{
   padding: 50px;
   height: 100%;
 }
+.qr-area{
+  width: 128px;
+  margin: auto;
+}
+.modal-title{
+  justifyContent: center;
+  alignItems: center;
+  margin: auto;
+}

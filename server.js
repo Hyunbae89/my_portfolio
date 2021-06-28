@@ -134,29 +134,29 @@ app.put('/api/urls/:id',(req,res)=>{
     let address = req.body.url_address;
     let date = req.body.create_date;
 
-    let params = [title,address,date,];
+    let params = [title,address,date];
 
     connection.query(sql, params,
         (err, rows) =>{
-        console.log(rows)
         res.send(rows);
         }
     )
 });
 
 app.put('/api/users/:id/urls',(req,res)=>{
-
-    let sql = 'UPDATE USER_TO_URL SET title =?, address=?, create_date=? WHERE id= '+req.params.id;
+    let sql = 'UPDATE USER_TO_URL SET title =?, address=?, create_date=? WHERE user_id=? AND url_id=? ';
 
     let title = req.body.url_title;
     let address = req.body.url_address;
     let date = req.body.create_date;
+    let user_id = req.params.id;
+    let url_id = req.body.urlId;
 
-    let params = [title,address,date];
+    let params = [title,address,date,user_id,url_id];
 
     connection.query(sql, params,
         (err, rows) =>{
-        console.log(rows)
+
         res.send(rows);
         }
     )
@@ -180,7 +180,6 @@ app.delete('/api/urls/:id',(req,res)=>{
 
     connection.query(sql, params,
         (err, rows) =>{
-        console.log(rows)
         res.send(rows);
         }
     )
@@ -189,12 +188,10 @@ app.delete('/api/urls/:id',(req,res)=>{
 app.delete('/api/users/:user_id/urls/:id',(req,res)=>{
 
     let sql = 'DELETE FROM USER_TO_URL WHERE id= ?';
-    console.log(req.params)
     let params = [req.params.id];
 
     connection.query(sql, params,
         (err, rows) =>{
-        console.log(rows)
         res.send(rows);
         }
     )

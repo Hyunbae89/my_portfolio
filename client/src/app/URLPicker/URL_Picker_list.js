@@ -2,8 +2,9 @@ import React from "react";
 import api from "../../lib/api";
 import {Modal,Dropdown} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEllipsisH, faPencilAlt, faTrashAlt} from "@fortawesome/free-solid-svg-icons";
+import {faEllipsisH, faPencilAlt, faTrashAlt, faQrcode} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
+import QRCode from 'qrcode.react';
 
 export class URLPickerList extends React.Component {
     constructor(props) {
@@ -12,8 +13,10 @@ export class URLPickerList extends React.Component {
             data: [],
             id:'',
             url_id: '',
+            address: '',
             create_date: '',
-            isView: false
+            isDeleteModal: false,
+            isQRModal: false
         }
     this.deleteURL = this.deleteURL.bind(this);
     }
@@ -61,30 +64,35 @@ export class URLPickerList extends React.Component {
             api.deleteUrlPick(urlId).catch(err=>{
                 console.log(err);
             }).then(()=>{
-                this.setState({id:'', url_id:'', isView:false})
+                this.setState({id:'', url_id:'', isDeleteModal:false, isQRModal:false})
                 this.props.history.push("'"+url+"'");
                 this.props.history.goBack();
             });
         })
     }
     confirmBoxOn = (id,urlId) =>{
-        this.setState({id:id, url_id:urlId, isView:true});
+        this.setState({id:id, url_id:urlId, isDeleteModal:true});
     }
     confirmBoxOff = () =>{
-        this.setState({id:'', url_id:'', isView:false});
+        this.setState({id:'', url_id:'', isDeleteModal:false});
+    }
+    showQRcode = (address) => {
+        this.setState({address: address, isQRModal : true});
+    }
+    hideQRcode = () => {
+        this.setState({address:'', isQRModal : false});
     }
 
     render() {
         const {url} = this.props.match;
-        const {data,id,url_id,isView} = this.state;
-        console.log(url)
+        const {data,id,url_id,address,isDeleteModal,isQRModal} = this.state;
 
         const list = data.map(
-            info => (
-                <div className="list-group-item list-group-item-action">
+            (info,index) => (
+                <div key={index} className="list-group-item list-group-item-action">
                     <div className='row'>
                         <div className="col-11">
-                        <a key={info.id} href={info.address} target="_blank" className="list-group-item-action" >
+                        <a href={info.address} target="_blank" className="list-group-item-action" >
                             <div className="row">
                                 <div className="col-8">
                                     {info.title}
@@ -102,12 +110,16 @@ export class URLPickerList extends React.Component {
                                   </Dropdown.Toggle>
 
                                   <Dropdown.Menu className="dropdown-menu-center">
-
+                                      <Dropdown.Item as="button" onClick={()=>this.showQRcode(info.address)}>
+                                        <FontAwesomeIcon className='url-delete-icon mr-3'  icon={faQrcode} />
+                                        <span>QR code 보기</span>
+                                    </Dropdown.Item>
+                                    <Dropdown.Divider />
                                     <Dropdown.Item as={Link} to={`${url}/${info.url_id}`}>
                                         <FontAwesomeIcon className='url-edit-icon mr-3'  icon={faPencilAlt} />
                                         <span>편집</span>
                                     </Dropdown.Item>
-                                      <Dropdown.Item as="button" key={info.id} onClick={()=>this.confirmBoxOn(info.id,info.url_id)}>
+                                      <Dropdown.Item as="button" onClick={()=>this.confirmBoxOn(info.id,info.url_id)}>
                                         <FontAwesomeIcon className='url-delete-icon mr-3'  icon={faTrashAlt} />
                                         <span>삭제</span>
                                     </Dropdown.Item>
@@ -126,7 +138,7 @@ export class URLPickerList extends React.Component {
                         새 URL을 만들려면 URL 추가하기 버튼을 클릭하세요.
                     </div>}
 
-                <Modal show={isView} size="lg" onHide={this.confirmBoxOff} animation={false} >
+                <Modal show={isDeleteModal} size="lg" onHide={this.confirmBoxOff} >
                     <Modal.Header closeButton>
                       <Modal.Title>Delete info</Modal.Title>
                     </Modal.Header>
@@ -134,8 +146,30 @@ export class URLPickerList extends React.Component {
                         정말 삭제 하시겠습니까?
                     </Modal.Body>
                     <Modal.Footer>
-                        <button type='button' className='btn btn-primary btn-block' onClick={()=>this.deleteURL(id,url_id)}>Yes</button>
-                        <button type='button' className='btn btn-danger btn-block' onClick={this.confirmBoxOff}>No</button>
+                        <div className="row">
+                            <div className='col-6'>
+                                <button type='button' className='btn btn-primary btn-block' onClick={()=>this.deleteURL(id,url_id)}>Yes</button>
+                            </div>
+                            <div className="col-6">
+                                <button type='button' className='btn btn-danger btn-block' onClick={this.confirmBoxOff}>No</button>
+                            </div>
+                        </div>
+                    </Modal.Footer>
+                </Modal>
+
+                <Modal show={isQRModal} size="sm" onHide={this.hideQRcode} >
+                    <Modal.Header closeButton>
+                      <Modal.Title>QR code</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <div className="row">
+                            <div className="qr-area">
+                                <QRCode value={address} />
+                            </div>
+                        </div>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <button type='button' className='btn btn-danger btn-block' onClick={this.hideQRcode}>Close</button>
                     </Modal.Footer>
                 </Modal>
             </div>
