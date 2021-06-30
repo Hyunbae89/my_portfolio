@@ -1,9 +1,6 @@
 import React from "react";
-import {Carousel,Image,Modal} from "react-bootstrap";
-import image1 from '../../file/aboutME/1.JPG';
-import image2 from '../../file/aboutME/2.JPG';
-import image3 from '../../file/aboutME/3.JPG';
-import image4 from '../../file/aboutME/4.JPG';
+import {Image} from "react-bootstrap";
+
 import image5 from '../../file/aboutME/5.JPG';
 
 import html from '../../file/logo/HTML5_logo_and_wordmark.svg';
@@ -15,7 +12,7 @@ import python from '../../file/logo/python-seeklogo.com.svg';
 import jquery from '../../file/logo/jquery-seeklogo.com.svg';
 import django from '../../file/logo/django-seeklogo.com.svg';
 import bootstrap from '../../file/logo/bootstrap-seeklogo.com.svg';
-import PDF_Viewer from "../../app/PDF_Viewer";
+import PDFViewer from "../../app/PDF_Viewer";
 
 export class AboutMe extends React.Component{
      constructor(props) {
@@ -84,11 +81,11 @@ export class AboutMe extends React.Component{
                               </div>
                           </div>
                           <div className="row pb-2 text-center border-top border-bottom">
-                              <div className="col-12">2017. ~ 2019.</div>
+                              <div className="col-12">2017. ~ 2019. [미국] </div>
                               <div className="col-12">Lento Medical Inc.</div>
                           </div>
                           <div className="row pb-2 text-center border-bottom" >
-                              <div className="col-12">2016. ~ 2017.</div>
+                              <div className="col-12">2016. ~ 2017. [미국]</div>
                               <div className="col-12">All Quality & Services Inc.</div>
                           </div>
                           <div className="row pb-2 text-center border-bottom" >
@@ -174,7 +171,7 @@ export class AboutMe extends React.Component{
 
               </div>
               <div className="row">
-                  <PDF_Viewer/>
+                  <PDFViewer/>
               </div>
               <div className="row">
                   <div className="componentBlank"/>

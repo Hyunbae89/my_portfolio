@@ -92,7 +92,7 @@ export class URLPickerList extends React.Component {
                 <div key={index} className="list-group-item list-group-item-action">
                     <div className='row'>
                         <div className="col-11">
-                        <a href={info.address} target="_blank" className="list-group-item-action" >
+                        <a href={info.address} target="_blank" rel="noopener noreferrer" className="list-group-item-action" >
                             <div className="row">
                                 <div className="col-8">
                                     {info.title}

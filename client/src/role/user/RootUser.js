@@ -8,7 +8,6 @@ import Sidebar from "../../app/Sidebar";
 import NotFound from "../../routers/NotFound";
 
 import {AboutMe} from "../common/AboutMe";
-import PDF_Viewer from "../../app/PDF_Viewer";
 import URLPicker from "../../app/URLPicker/URL_Picker_main";
 import {URLPickerCreate} from "../../app/URLPicker/URL_Picker_create";
 import {URLPickerDetail} from "../../app/URLPicker/URL_Picker_detail";
@@ -20,9 +19,7 @@ export class RootUser extends React.Component{
         this.state ={
             id:"",
             user_name: "",
-            sidebarCheck : false,
-            sidebar_enable_check : true
-
+            sidebarCheck : false
         }
         this.showSidebar = this.showSidebar.bind(this);
         this.OnclickScreen = this.OnclickScreen.bind(this);
@@ -48,47 +45,35 @@ export class RootUser extends React.Component{
     }
 
     componentDidUpdate() {
-        const {sidebar_enable_check} = this.state;
-        if(sidebar_enable_check === true){
+
             document.getElementById('james').addEventListener('click',this.OnclickScreen);
-        }
+
     }
 
-    showSidebar(click){
-        const {sidebarCheck} = this.state;
-        this.setState({sidebar_enable_check: true});
+    showSidebar(){
+        this.setState( preState=>({sidebarCheck : !preState.sidebarCheck}));
 
-        if(sidebarCheck === click){
-            this.setState( {sidebarCheck : true})
-        }else{
-            this.setState( {sidebarCheck : false})
-        }
     }
     OnclickScreen(){
-        this.setState({sidebarCheck:false, sidebar_enable_check: false});
+        this.setState({sidebarCheck : false});
     }
 
     render() {
 
+
         const {url} = this.props.match;
-         const {id,user_name,sidebarCheck,sidebar_enable_check} = this.state;
+        const {id,user_name,sidebarCheck} = this.state;
 
         return(
             <div id={"james"}>
-                <Header id={id} name={user_name} control={(click) => this.showSidebar(click)} reset={this.OnclickScreen} />
-                <Sidebar url={url} sidebarCheck={sidebarCheck} sidebar_enable_check={sidebar_enable_check} />
+                <Header id={id} name={user_name} control={this.showSidebar} reset={this.OnclickScreen} />
+                <Sidebar url={url} sidebarCheck={sidebarCheck} />
 
                 <div id={'testpage'} className={'testscroll '}>
 
                     <Switch>
                          <Route exact path={`${url}/about_me`}>
                             <AboutMe/>
-                        </Route>
-                        <Route exact path={`${url}/test2`}>
-                            <PDF_Viewer  />
-                        </Route>
-                         <Route exact path={`${url}/test3`}>
-                            <div>   test 3  </div>
                         </Route>
                         <Route
                             exact path={`${url}/url_picker`}

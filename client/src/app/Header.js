@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { faDragon, faAddressCard,faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -31,7 +31,7 @@ export default function Header(props){
                <div className='container-fluid '>
                    <div className="row w-100 text-center">
                        <div className="col-2 align-self-center">
-                           <Dropdown.Toggle bsPrefix='navbar-toggler bg-dark sidebar-icon' onClick={(e) => props.control(false)} >
+                           <Dropdown.Toggle bsPrefix='navbar-toggler w-75 bg-dark sidebar-icon' onClick={(e) => props.control()} >
                                <span className='navbar-toggler-icon'/>
                            </Dropdown.Toggle>
                        </div>

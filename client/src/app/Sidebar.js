@@ -5,7 +5,7 @@ import React from "react";
 export default function Sidebar(props){
 
     return(
-        <nav className={props.sidebarCheck && props.sidebar_enable_check ? 'nav-menu active':'nav-menu'}>
+        <nav className={props.sidebarCheck ? 'nav-menu active':'nav-menu'}>
             <ul className='nav-menu-items'>
                 {SidebarData_user.map((item, index) => {
                     return(

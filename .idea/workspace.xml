@@ -2,25 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ba34c63-e1c2-4845-8f9e-3d83a242eadc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/PDF_Viewer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/PDF_Viewer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Start_new_User.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Start_new_User.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URL_Picker_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URL_Picker_detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URL_Picker_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URL_Picker_list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/data/SidebarData_guest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/data/SidebarData_guest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URL_Picker_main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URL_Picker_main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/data/SidebarData_user.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/data/SidebarData_user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/role/common/AboutMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/common/AboutMe.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/role/common/MainBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/common/MainBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/role/guest/RootGuest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/guest/RootGuest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/role/user/RootUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/user/RootUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routers/RouteApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routers/RouteApp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +123,7 @@
       <workItem from="1624850774791" duration="11184000" />
       <workItem from="1624871600285" duration="1611000" />
       <workItem from="1624884120301" duration="651000" />
+      <workItem from="1625028732759" duration="9521000" />
     </task>
     <servers />
   </component>

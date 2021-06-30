@@ -7,50 +7,42 @@ export default function MainBoard(props){
         <div className='container'>
             <div className="text-center pt-4">
                 <div className={"jumbotron shadow"}>
-                    <h1 >Welcoming, {props.name}!!!</h1>
+                    <h1 >Welcoming, {props.name} !!!</h1>
                 </div>
             </div>
             <div className="row">
-                <div className='col-6 col-sm-6 col-md-12 col-lg-3'>
+                <div className='col-6 col-sm-6 col-md-12 col-lg-4'>
                     <Link to={`${props.url}/about_me`}  className={"btn btn-block"}>
                         <div className={'jumbotron about-me-color shadow'}>
-                            <h5 className="text-center text-white">
+                            <h4 className="text-center text-white">
                                 About Me
-                            </h5>
+                            </h4>
                         </div>
                     </Link>
 
                 </div>
 
-                <div className='col-6 col-sm-6 col-md-4 col-lg-3'>
-                    <Link to={`${props.url}/test2`} className={"btn btn-block"}>
-                        <div className={'jumbotron picture-color shadow'}>
-                            <h5 className="text-center text-dark">
-                                Picture
-                            </h5>
+                <div className='col-6 col-sm-6 col-md-4 col-lg-4'>
+                    <Link to={`${props.url}/url_picker`} className={"btn btn-block"}>
+                        <div className={'jumbotron url-picker-color shadow'}>
+                            <h4 className="text-center text-dark">
+                                URL Picker
+                            </h4>
                         </div>
                     </Link>
                 </div>
 
-                <div className='col-6 col-sm-6 col-md-4 col-lg-3'>
+                <div className='col-6 col-sm-6 col-md-4 col-lg-4'>
                     <Link to={`${props.url}/test3`} className={"btn btn-block"}>
                         <div className={'jumbotron quote-color shadow'}>
-                            <h5 className="text-center text-white">
+                            <h4 className="text-center text-white">
                                 Quote
-                            </h5>
+                            </h4>
                         </div>
                     </Link>
                 </div>
 
-                <div className='col-6 col-sm-6 col-md-4 col-lg-3'>
-                    <Link to={`${props.url}/url_picker`} className={"btn btn-block"}>
-                        <div className={'jumbotron test-color shadow'}>
-                            <h5 className="text-center text-white">
-                                URL Picker
-                            </h5>
-                        </div>
-                    </Link>
-                </div>
+
             </div>
         </div>
     );
