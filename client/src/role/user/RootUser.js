@@ -8,9 +8,11 @@ import Sidebar from "../../app/Sidebar";
 import NotFound from "../../routers/NotFound";
 
 import {AboutMe} from "../common/AboutMe";
-import URLPicker from "../../app/URLPicker/URL_Picker_main";
-import {URLPickerCreate} from "../../app/URLPicker/URL_Picker_create";
-import {URLPickerDetail} from "../../app/URLPicker/URL_Picker_detail";
+import URLPicker from "../../app/URLPicker/URLPickerMain";
+import {URLPickerCreate} from "../../app/URLPicker/URLPickerCreate";
+import {URLPickerDetail} from "../../app/URLPicker/URLPickerDetail";
+import QuoteView from "../../app/Quote/QuoteMain";
+import {QuoteCreate} from "../../app/Quote/QuoteCreate";
 
 
 export class RootUser extends React.Component{
@@ -86,6 +88,17 @@ export class RootUser extends React.Component{
                         <Route
                             exact path={`${url}/url_picker/:id`}
                             render={props => <URLPickerDetail user_id={id}  {...props} />} />
+
+                        <Route
+                            exact path={`${url}/quote`}
+                            render={props => <QuoteView user_id={id} {...props} />} />
+
+                        <Route
+                            exact path={`${url}/quote/add`}
+                            render={props => <QuoteCreate user_id={id} {...props} />} />
+                        <Route
+                            exact path={`${url}/quote/:id`}
+                            render={props => <QuoteCreate user_id={id} {...props} />} />
 
                         <Route exact path={`${url}`}>
                             <MainBoard url={url} name={user_name}/>

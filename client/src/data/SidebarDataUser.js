@@ -1,7 +1,7 @@
 import React from "react";
 import * as FaIcons from "react-icons/fa";
 
-export const SidebarData_user =[
+export const SidebarDataUser =[
     {
         title: "About Me",
         path: 'about_me',
@@ -11,6 +11,12 @@ export const SidebarData_user =[
     {
         title: "URL Picker",
         path: 'url_picker',
+        icon: <FaIcons.FaCartPlus className='mr-3'/>,
+        className: 'nav-text'
+    },
+    {
+        title: "Quote",
+        path: 'quote',
         icon: <FaIcons.FaCartPlus className='mr-3'/>,
         className: 'nav-text'
     }

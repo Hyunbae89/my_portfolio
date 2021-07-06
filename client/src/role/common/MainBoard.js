@@ -33,7 +33,7 @@ export default function MainBoard(props){
                 </div>
 
                 <div className='col-6 col-sm-6 col-md-4 col-lg-4'>
-                    <Link to={`${props.url}/test3`} className={"btn btn-block"}>
+                    <Link to={`${props.url}/quote`} className={"btn btn-block"}>
                         <div className={'jumbotron quote-color shadow'}>
                             <h4 className="text-center text-white">
                                 Quote

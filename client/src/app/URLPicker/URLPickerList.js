@@ -16,14 +16,15 @@ export class URLPickerList extends React.Component {
             address: '',
             create_date: '',
             isDeleteModal: false,
-            isQRModal: false
+            isQRModal: false,
+            completed: 0
         }
     this.deleteURL = this.deleteURL.bind(this);
     }
 
     componentDidMount() {
         const user_id = this.props.user_id;
-
+        this.timer = setInterval(this.progress,20);
         api.getUrlList(user_id).catch(error => {
             console.log(error)
         }).then(
@@ -83,6 +84,7 @@ export class URLPickerList extends React.Component {
         this.setState({address:'', isQRModal : false});
     }
 
+
     render() {
         const {url} = this.props.match;
         const {data,id,url_id,address,isDeleteModal,isQRModal} = this.state;
@@ -128,8 +130,7 @@ export class URLPickerList extends React.Component {
                             </Dropdown>
                         </div>
                     </div>
-                </div>)
-        )
+                </div>));
 
         return (
             <div className="list-group">

@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 const connection = mysql.createConnection(config);
 connection.connect();
 
-app.get('/api/user/:guest',(req,res)=>{
+app.get('/api/guest',(req,res)=>{
    connection.query(
        "SELECT * FROM GUEST",
        (err,rows,fields)=>{
@@ -29,7 +29,7 @@ app.get('/api/users',(req,res)=>{
    connection.query(
        "SELECT * FROM USER",
        (err,rows,fields)=>{
-           res.send(rows);
+           res.json(rows);
        }
    )
 });
@@ -89,6 +89,13 @@ app.get('/api/users/:id/urls',(req,res)=>{
    connection.query(
        "SELECT * FROM USER_TO_URL where user_id="+"'"+req.params.id+"'",
        (err,rows,fields)=>{
+           if(err){
+               console.log(err);
+           }else{
+               for(var i=0; i<rows.length; i++){
+                   console.log(rows[i].url_id);
+               }
+           }
            res.send(rows);
        }
    )
@@ -185,7 +192,7 @@ app.delete('/api/urls/:id',(req,res)=>{
     )
 });
 
-app.delete('/api/users/:user_id/urls/:id',(req,res)=>{
+app.delete('/api/users/:user-id/urls/:id',(req,res)=>{
 
     let sql = 'DELETE FROM USER_TO_URL WHERE id= ?';
     let params = [req.params.id];

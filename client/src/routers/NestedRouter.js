@@ -3,7 +3,7 @@ import {Route,Switch} from 'react-router-dom';
 import AuthRoute from "./AuthRoute";
 import {RootUser} from '../role/user/RootUser';
 import {RootGuest} from "../role/guest/RootGuest";
-import {Darkmode} from "../app/Dark_mode";
+import {Darkmode} from "../app/DarkMode";
 import {Footer} from "../app/Footer";
 import NotFound from "./NotFound";
 

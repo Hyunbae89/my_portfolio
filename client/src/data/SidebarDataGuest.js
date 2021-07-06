@@ -1,7 +1,7 @@
 import React from "react";
 import * as FaIcons from "react-icons/fa";
 
-export const SidebarData_guest =[
+export const SidebarDataGuest =[
     {
         title: "test1",
         path: '/guest/test1',

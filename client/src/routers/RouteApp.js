@@ -2,7 +2,7 @@ import React from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 import {Start} from '../app/Start';
-import {StartNewUser} from '../app/Start_new_User';
+import {StartNewUser} from '../app/StartNewUser';
 import NestedRouter from "./NestedRouter"
 
 

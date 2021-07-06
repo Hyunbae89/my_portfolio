@@ -12,7 +12,7 @@ import python from '../../file/logo/python-seeklogo.com.svg';
 import jquery from '../../file/logo/jquery-seeklogo.com.svg';
 import django from '../../file/logo/django-seeklogo.com.svg';
 import bootstrap from '../../file/logo/bootstrap-seeklogo.com.svg';
-import PDFViewer from "../../app/PDF_Viewer";
+import PDFViewer from "../../app/PDFViewer";
 
 export class AboutMe extends React.Component{
      constructor(props) {

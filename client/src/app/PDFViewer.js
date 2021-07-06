@@ -7,7 +7,7 @@ const type = "pdf";
 
 
 
-export const PDF_Viewer = () => {
+export const PDFViewer = () => {
 
 
     const [show, setShow] = useState(false);
@@ -18,6 +18,7 @@ export const PDF_Viewer = () => {
     const onError = e => {
           console.log(e, "error in file-viewer");
         };
+    console.log(file);
 
     return (
         <>
@@ -40,4 +41,4 @@ export const PDF_Viewer = () => {
     );
 }
 
-export default PDF_Viewer;
+export default PDFViewer;

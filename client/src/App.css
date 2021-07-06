@@ -260,11 +260,11 @@ body.dark, body.dark .fa-start{
 .componentBlank{
   height: 80px;
 }
-.url_add_input_container{
+.url_add_input_container, .quote_add_input_container{
   width : 400px;
   margin: auto;
 }
-.url_picker{
+.url_picker, .quote{
   width: 80%;
   margin: 0 auto;
   padding: 50px;

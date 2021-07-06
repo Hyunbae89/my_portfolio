@@ -1,4 +1,4 @@
-import {SidebarData_user} from "../data/SidebarData_user";
+import {SidebarDataUser} from "../data/SidebarDataUser";
 import {Link} from "react-router-dom";
 import React from "react";
 
@@ -7,7 +7,7 @@ export default function Sidebar(props){
     return(
         <nav className={props.sidebarCheck ? 'nav-menu active':'nav-menu'}>
             <ul className='nav-menu-items'>
-                {SidebarData_user.map((item, index) => {
+                {SidebarDataUser.map((item, index) => {
                     return(
                         <li key={index} className={item.className}>
                             <Link to={`${props.url}/`+item.path}>

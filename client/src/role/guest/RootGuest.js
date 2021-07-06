@@ -4,7 +4,7 @@ import {Route, Switch, Link} from "react-router-dom";
 import Header from "../../app/Header";
 import api from "../../lib/api";
 import {MainBoard} from "./template/MainBoard";
-import {SidebarData_guest} from "../../data/SidebarData_guest";
+import {SidebarDataGuest} from "../../data/SidebarDataGuest";
 import NotFound from "../../routers/NotFound";
 
 export class RootGuest extends React.Component{
@@ -66,7 +66,7 @@ export class RootGuest extends React.Component{
 
                 <nav className={setSidebar && sidebar_enable_check ? 'nav-menu active':'nav-menu'}>
                     <ul className='nav-menu-items'>
-                        {SidebarData_guest.map((item, index) => {
+                        {SidebarDataGuest.map((item, index) => {
                             return(
                                 <li key={index} className={item.className}>
                                     <Link to={item.path} >
