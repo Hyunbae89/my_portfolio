@@ -2,29 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ba34c63-e1c2-4845-8f9e-3d83a242eadc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteCreate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteDetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteMain.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Dark_mode.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/DarkMode.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/PDF_Viewer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/PDFViewer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Start_new_User.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/StartNewUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URL_Picker_create.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerCreate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URL_Picker_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URL_Picker_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URL_Picker_main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/data/SidebarData_guest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/data/SidebarDataGuest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/data/SidebarData_user.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/data/SidebarDataUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/role/common/AboutMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/common/AboutMe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/role/common/MainBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/common/MainBoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteCreate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/Start.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Start.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/StartNewUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/StartNewUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/lib/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/lib/consts.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/consts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/role/guest/RootGuest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/guest/RootGuest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/role/user/RootUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/user/RootUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routers/NestedRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routers/NestedRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routers/RouteApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routers/RouteApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +127,9 @@
       <workItem from="1625128404354" duration="7116000" />
       <workItem from="1625189210984" duration="16546000" />
       <workItem from="1625452462324" duration="4447000" />
-      <workItem from="1625544983582" duration="8377000" />
+      <workItem from="1625544983582" duration="11695000" />
+      <workItem from="1625576824798" duration="7471000" />
+      <workItem from="1625619381966" duration="18840000" />
     </task>
     <servers />
   </component>

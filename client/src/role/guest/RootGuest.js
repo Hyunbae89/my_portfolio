@@ -25,9 +25,12 @@ export class RootGuest extends React.Component{
             console.log(error)
         }).then(
             response => {
-                this.setState({
-                    guest_name: response.data.name
-                })
+                if(response){
+                    this.setState({
+                        guest_name: response.data.name
+                    })
+                }
+
             }
         );
     }

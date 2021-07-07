@@ -81,8 +81,9 @@ export class Start extends React.Component {
             api.postLogin(data).catch(error =>{
                 console.log(error)
             }).then(response =>{
-                let id = response.data.id;
-                if(response.data.id){
+                if((response.data)){
+                    let id = response.data.id;
+
                     this.props.check();
                     this.props.history.push('/'+id);
                 }else{

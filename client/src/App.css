@@ -279,3 +279,7 @@ body.dark, body.dark .fa-start{
   alignItems: center;
   margin: auto;
 }
+
+.quote-preview, .qoute-content{
+  min-height: 100px;
+}
