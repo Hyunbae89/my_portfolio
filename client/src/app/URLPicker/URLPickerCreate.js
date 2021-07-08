@@ -51,7 +51,7 @@ export class URLPickerCreate extends React.Component{
     }
 
     handleFormSubmit =(e)=>{
-        e.preventDefault()
+        e.preventDefault();
 
         const user_id = this.props.user_id;
         const {title,address} = this.state;

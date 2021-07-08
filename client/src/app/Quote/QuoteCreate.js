@@ -1,4 +1,6 @@
 import React from "react";
+import api from "../../lib/api";
+
 
 export class QuoteCreate extends React.Component{
     constructor(props) {
@@ -51,8 +53,49 @@ export class QuoteCreate extends React.Component{
         }
     }
 
+    getTime(){
+        const date = new Date();
+        return date.toISOString();
+    }
+    getSource(source){
+        const {selectValue} = this.state;
+        if(selectValue === "book") {
+            return source + " 중에서...";
+        }else{
+            return source;
+        }
+    }
+
     handleFormSubmit =(e)=>{
-        e.preventDefault()
+        e.preventDefault();
+
+        const userId = this.props.user_id;
+        const {content,source} = this.state;
+        const current_time = this.getTime();
+        const quote_source = this.getSource(source);
+
+
+        const data ={
+            content: content,
+            source: quote_source,
+            create_date: current_time
+        };
+
+        api.postQuote(data).catch(err=>{
+            console.log(err)
+        }).then(response =>{
+            if(response.data){
+                const quoteData ={
+                    quoteId: response.data.insertId
+                }
+
+                api.postUserToQuote(userId, quoteData).catch(err=>{
+                    console.log(err);
+                }).then(()=>{
+                    this.props.history.goBack();
+                })
+            }
+        })
     }
 
     render() {

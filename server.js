@@ -249,6 +249,20 @@ connection.connect();
 
     });
 
+    app.get('/api/users/:id/quotes', (req,res)=>{
+       let sql = "SELECT * FROM USER_TO_QUOTE where user_id=?";
+       let id = req.params.id;
+
+       connection.query(sql,[id], (err,rows)=>{
+           if(err){
+               console.log(err);
+           }else{
+               res.json(rows[0]);
+           }
+       })
+
+    });
+
     app.post('/api/quotes',(req,res)=>{
 
         let sql = 'INSERT INTO QUOTE VALUES (NULL, ?,?,?)';
@@ -295,7 +309,7 @@ connection.connect();
             if(err){
                 throw err;
             }else{
-                res.json(rows[0])
+                res.json(rows)
             }
         })
     })
@@ -304,22 +318,26 @@ connection.connect();
         let sql = 'DELETE FROM QUOTE WHERE id= ?';
         let params = [req.params.id];
 
-        connection.query(sql, params,
-            (err, rows) =>{
-            res.send(rows);
+        connection.query(sql, params, (err, rows) =>{
+            if(err){
+                throw err;
+            }else{
+                res.send(rows);
             }
-        )
+        })
     });
 
     app.delete('/api/users/:user-id/quotes/:id',(req,res)=>{
         let sql = 'DELETE FROM USER_TO_QUOTE WHERE id= ?';
         let params = [req.params.id];
 
-        connection.query(sql, params,
-            (err, rows) =>{
-            res.send(rows);
+        connection.query(sql, params, (err, rows) =>{
+            if(err){
+                throw err;
+            }else{
+                res.send(rows);
             }
-        )
+        })
     })
 
 

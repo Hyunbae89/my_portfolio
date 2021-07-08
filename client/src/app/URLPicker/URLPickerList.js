@@ -24,7 +24,7 @@ export class URLPickerList extends React.Component {
 
     componentDidMount() {
         const user_id = this.props.user_id;
-        this.timer = setInterval(this.progress,20);
+
         api.getUrlList(user_id).catch(error => {
             console.log(error)
         }).then(

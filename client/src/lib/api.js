@@ -60,6 +60,9 @@ export class PortfolioRest{
     static async getQuote(id){
         return await axios.get('/api/quotes/'+ id , API_AUTH);
     }
+    static async getUserToQuote(id){
+        return await axios.get('/api/users/'+ id +'/quotes/', API_AUTH);
+    }
 
     static async postQuote(object){
         return await axios.post('/api/quotes' , object , API_AUTH);

@@ -3,15 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9ba34c63-e1c2-4845-8f9e-3d83a242eadc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteCreate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Start.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Start.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/StartNewUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/StartNewUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerCreate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/lib/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/lib/consts.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/consts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/role/guest/RootGuest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/guest/RootGuest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +126,8 @@
       <workItem from="1625452462324" duration="4447000" />
       <workItem from="1625544983582" duration="11695000" />
       <workItem from="1625576824798" duration="7471000" />
-      <workItem from="1625619381966" duration="18840000" />
+      <workItem from="1625619381966" duration="19169000" />
+      <workItem from="1625706200424" duration="10062000" />
     </task>
     <servers />
   </component>
