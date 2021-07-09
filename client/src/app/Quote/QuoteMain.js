@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import {QuoteList} from "./QuoteList";
+import React from "react";
 
 export default function QuoteView(props){
     const url = props.match.url;
@@ -17,6 +18,9 @@ export default function QuoteView(props){
                 <div className="col-12">
                     <QuoteList  {...props}/>
                 </div>
+            </div>
+            <div className="row">
+                <div className="componentBlank"/>
             </div>
 
         </div>

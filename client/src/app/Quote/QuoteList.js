@@ -7,12 +7,13 @@ export class QuoteList extends React.Component{
         this.state={
             data:[],
             search:null,
+            compelted: 0
         }
     this.changeValue = this.changeValue.bind(this);
     }
 
     componentDidMount() {
-
+        this.timer =  setInterval(this.progress, 20);
         api.getQuoteList().catch(err=>{
             console.log(err);
         }).then(response=>{
@@ -21,10 +22,22 @@ export class QuoteList extends React.Component{
             })
         })
     }
+    componentWillUnmount() {
+        clearInterval(this.timer);
+    }
+    clickEvent(id){
+        const url = this.props.match.url;
+        this.props.history.push(`${url}/`+id);
+    }
 
     changeValue(e){
         const value = e.target.value;
         this.setState({search : value});
+    }
+
+    progress = () =>{
+        const {completed} =this.state;
+        this.setState({completed: completed >=100 ? 0 : completed + 1});
     }
 
     render() {
@@ -36,7 +49,7 @@ export class QuoteList extends React.Component{
                 return info
             }
         }).map((info,index)=>(
-            <blockquote key={index} className="blockquote rounded shadow about-me-color text-center py-4" >
+            <blockquote key={index} className="blockquote rounded shadow about-me-color text-center py-4" onClick={(e)=>this.clickEvent(info.id)}>
                 <pre >{info.content}</pre>
                 <footer className="blockquote-footer">{info.source}</footer>
             </blockquote>
@@ -49,8 +62,14 @@ export class QuoteList extends React.Component{
 
                 {data.length > 0 ?
                     quoteList
-                : ""
+                :
+                    <div className="d-flex justify-content-center">
+                        <div className="spinner-border" role="status">
+                            <span className="sr-only">Loading...</span>
+                        </div>
+                    </div>
                 }
+
             </div>
         );
 

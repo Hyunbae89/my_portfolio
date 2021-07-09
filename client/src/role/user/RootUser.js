@@ -13,6 +13,8 @@ import {URLPickerCreate} from "../../app/URLPicker/URLPickerCreate";
 import {URLPickerDetail} from "../../app/URLPicker/URLPickerDetail";
 import QuoteView from "../../app/Quote/QuoteMain";
 import {QuoteCreate} from "../../app/Quote/QuoteCreate";
+import {QuoteDetail} from "../../app/Quote/QuoteDetail";
+import {QuoteEdit} from "../../app/Quote/QuoteEdit";
 
 
 export class RootUser extends React.Component{
@@ -98,7 +100,10 @@ export class RootUser extends React.Component{
                             render={props => <QuoteCreate user_id={id} {...props} />} />
                         <Route
                             exact path={`${url}/quote/:id`}
-                            render={props => <QuoteCreate user_id={id} {...props} />} />
+                            render={props => <QuoteDetail user_id={id} {...props} />} />
+                        <Route
+                            exact path={`${url}/quote/:id/edit`}
+                            render={props => <QuoteEdit user_id={id} {...props} />} />
 
                         <Route exact path={`${url}`}>
                             <MainBoard url={url} name={user_name}/>
@@ -106,6 +111,7 @@ export class RootUser extends React.Component{
 
                         <Route component={NotFound} />
                     </Switch>
+
                     </div>
              </div>
 

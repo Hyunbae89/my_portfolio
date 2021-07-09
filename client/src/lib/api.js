@@ -63,6 +63,9 @@ export class PortfolioRest{
     static async getUserToQuote(id){
         return await axios.get('/api/users/'+ id +'/quotes/', API_AUTH);
     }
+    static async getQuoteToUser(id){
+        return await axios.get('/api/users/quotes/'+id, API_AUTH);
+    }
 
     static async postQuote(object){
         return await axios.post('/api/quotes' , object , API_AUTH);
@@ -72,14 +75,14 @@ export class PortfolioRest{
     }
 
     static async patchQuote(id,object){
-        return await axios.patch('/api/quotes/'+ id , object ,API_AUTH);
+        return await axios.put('/api/quotes/'+ id , object ,API_AUTH);
     }
 
     static async deleteQuote(id){
         return await axios.delete('/api/quotes/'+ id , API_AUTH);
     }
-    static async deleteUserToQuote(user_id,id){
-        return await axios.delete('/api/users/'+ user_id + '/quotes/'+ id , API_AUTH);
+    static async deleteUserToQuote(id){
+        return await axios.delete('/api/users/quotes/'+ id , API_AUTH);
     }
 
 

@@ -257,7 +257,30 @@ connection.connect();
            if(err){
                console.log(err);
            }else{
-               res.json(rows[0]);
+               res.json(rows);
+           }
+       })
+
+    });
+
+    app.get('/api/users/quotes/:id', (req,res)=>{
+       let sql = "SELECT * FROM USER_TO_QUOTE where quote_id=?";
+       let id = req.params.id;
+
+       connection.query(sql,[id], (err,rows)=>{
+           if(err){
+               console.log(err);
+           }else{
+               let id = rows[0].user_id;
+
+               let getUserSQL = "SELECT id, user_name FROM USER where id=?";
+               connection.query(getUserSQL,[id],(err,rows)=>{
+                   if(err){
+                       throw err;
+                   }else{
+                       res.json(rows[0]);
+                   }
+               })
            }
        })
 
@@ -298,7 +321,7 @@ connection.connect();
     });
 
     app.put('/api/quotes/:id',(req,res)=>{
-        let sql = 'UPDATE URL_PICKER SET content =?, source=?, create_date=? WHERE id=? ';
+        let sql = 'UPDATE QUOTE SET content =?, source=?, create_date=? WHERE id=? ';
         let content = req.body.content;
         let source = req.body.source;
         let date = req.body.create_date;
@@ -327,8 +350,8 @@ connection.connect();
         })
     });
 
-    app.delete('/api/users/:user-id/quotes/:id',(req,res)=>{
-        let sql = 'DELETE FROM USER_TO_QUOTE WHERE id= ?';
+    app.delete('/api/users/quotes/:id',(req,res)=>{
+        let sql = 'DELETE FROM USER_TO_QUOTE WHERE quote_id= ?';
         let params = [req.params.id];
 
         connection.query(sql, params, (err, rows) =>{

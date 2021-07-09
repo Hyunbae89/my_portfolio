@@ -3,17 +3,6 @@ import {Image} from "react-bootstrap";
 
 import image5 from '../../file/aboutME/5.JPG';
 
-import html from '../../file/logo/HTML5_logo_and_wordmark.svg';
-import css from '../../file/logo/CSS.3.svg';
-import javascript from '../../file/logo/Javascript_badge.svg';
-import react from '../../file/logo/react-seeklogo.com.svg';
-import nodejs from '../../file/logo/node-node-js-seeklogo.com.svg';
-import python from '../../file/logo/python-seeklogo.com.svg';
-import jquery from '../../file/logo/jquery-seeklogo.com.svg';
-import django from '../../file/logo/django-seeklogo.com.svg';
-import bootstrap from '../../file/logo/bootstrap-seeklogo.com.svg';
-import PDFViewer from "../../app/PDFViewer";
-
 export class AboutMe extends React.Component{
      constructor(props) {
          super(props);
@@ -105,80 +94,67 @@ export class AboutMe extends React.Component{
                   </div>
               </div>
 
-              <div className="row my-5">
+              <div className="row mt-5 mb-3">
                   <div className="col-12 text-center">
-                      <h4>Skills & Certipication</h4>
+                      <h4 >Skills & Certipication</h4>
                   </div>
-
               </div>
-              <div className="row text-center ">
-                  <div className="col-md-1"/>
-                  <div className='col-6 col-md-1 align-self-center'>
-                      <img src={html} className="w-100" alt="html"/>
-                  </div>
-                  <div className='col-6 col-md-1 '>
-                      <img src={css} className="w-75 " alt="css"/>
-                  </div>
-                  <div className='col-6 col-md-1 align-self-center'>
-                      <img src={javascript} className="w-100 " alt="javascript"/>
-                  </div>
-                  <div className='col-6 col-md-1'>
-                      <img src={python} className="w-100 h-100" alt="python"/>
-                  </div>
-                  <div className="col-md-1"/>
-                  <div className='col-6 col-md-1'>
-                      <img src={jquery} className="w-100 h-100" alt="jquery"/>
-                  </div>
-                  <div className='col-6 col-md-1'>
-                      <img src={nodejs} className="w-100 h-100" alt="nodejs"/>
-                  </div>
-                  <div className='col-6 col-md-1'>
-                      <img src={django} className="w-100 h-100" alt="django"/>
-                  </div>
-                  <div className='col-6 col-md-1'>
-                      <img src={react} className="w-100 h-100" alt="react"/>
-                  </div>
-                  <div className='col-6 col-md-1'>
-                      <img src={bootstrap} className="w-100 h-100" alt="bootstrap"/>
-                  </div>
-                  <div className="col-md-1"/>
 
-              </div>
               <div className="row my-3 text-center">
-                  <table className="table table-hover">
-                      <tbody>
-                      <tr>
-                          <td>워드프로세서 1급</td>
-                      </tr>
-                      <tr>
-                          <td>컴퓨터활용능력 2급</td>
-                      </tr>
-                      <tr>
-                          <td>정보기기운용기능사</td>
-                      </tr>
-                      <tr>
-                          <td>정보처리기능사</td>
-                      </tr>
-                      <tr>
-                          <td>전자기기기능사</td>
-                      </tr>
-                      <tr>
-                          <td>운전면허 2종 보통</td>
-                      </tr>
+                  <div className="col-12 col-md-8">
 
-                      </tbody>
-                  </table>
+                      <div className="alert alert-primary" role="alert">
+                           <h5 className="alert-heading">Dev Tools - Pycharm, Github, Sourcetree</h5>
+                      </div>
+                      <div className="alert alert-success" role="alert">
+                          <h5 className="alert-heading">능숙, 주력 기술</h5>
+                          <strong>HTML, CSS, Javascript, React, Bootstrap, Axios</strong>
+                      </div>
+                      <div className="alert alert-warning" role="alert">
+                          <h5 className="alert-heading">사용 경험 유, 주력 기술보단 약함</h5>
+                          <strong>Python, Django, Jquery, Redux, SASS Ajax, AWS, MySQL</strong>
+                      </div>
+                      <div className="alert alert-dark" role="alert">
+                          <h5 className="alert-heading">목표</h5>
+                          <strong>Back-end Skill</strong> <br/>
+                          <strong>Full-stack Developer</strong>
+                      </div>
 
+                  </div>
+                  <div className="col-12 col-md-4">
+                      <table className="table table-hover border">
+                          <thead className="thead-dark">
+                              <tr>
+                                  <th>자격증</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>워드프로세서 1급</td>
+                              </tr>
+                              <tr>
+                                  <td>컴퓨터활용능력 2급</td>
+                              </tr>
+                              <tr>
+                                  <td>정보기기운용기능사</td>
+                              </tr>
+                              <tr>
+                                  <td>정보처리기능사</td>
+                              </tr>
+                              <tr>
+                                  <td>전자기기기능사</td>
+                              </tr>
+                              <tr>
+                                  <td>운전면허 2종 보통</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
               </div>
-              <div className="row">
-                  <PDFViewer/>
-              </div>
+
               <div className="row">
                   <div className="componentBlank"/>
               </div>
-
-
-
 
           </div>
         );
