@@ -1,5 +1,5 @@
 import React from "react";
-import {Route, Switch} from "react-router-dom";
+import {Redirect, Route, Switch} from "react-router-dom";
 import api from "../../lib/api";
 
 import Header from "../../app/Header";
@@ -101,6 +101,9 @@ export class RootUser extends React.Component{
                         <Route
                             exact path={`${url}/quote/:id`}
                             render={props => <QuoteDetail user_id={id} {...props} />} />
+
+                        <Redirect exact from={`${url}/quote/:id/reload`} to={`${url}/quote/:id`} />
+
                         <Route
                             exact path={`${url}/quote/:id/edit`}
                             render={props => <QuoteEdit user_id={id} {...props} />} />

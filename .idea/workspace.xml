@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ba34c63-e1c2-4845-8f9e-3d83a242eadc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteEdit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/lib/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/role/common/AboutMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/common/AboutMe.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/role/user/RootUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/user/RootUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +125,9 @@
       <workItem from="1625706200424" duration="10062000" />
       <workItem from="1625753140060" duration="2884000" />
       <workItem from="1625798795889" duration="20500000" />
+      <workItem from="1625881649122" duration="4301000" />
+      <workItem from="1625904098473" duration="12520000" />
+      <workItem from="1625917877111" duration="100000" />
     </task>
     <servers />
   </component>
