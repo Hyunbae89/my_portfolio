@@ -12,14 +12,13 @@ export default function MainBoard(props){
             </div>
             <div className="row">
                 <div className='col-6 col-sm-6 col-md-12 col-lg-4'>
-                    <Link to={`${props.url}/about_me`}  className={"btn btn-block"}>
+                    <Link to={`${props.url}/about_me`} className={"btn btn-block"}>
                         <div className={'jumbotron about-me-color shadow'}>
-                            <h4 className="text-center text-white">
+                            <h4 className="text-center text-dark">
                                 About Me
                             </h4>
                         </div>
                     </Link>
-
                 </div>
 
                 <div className='col-6 col-sm-6 col-md-4 col-lg-4'>

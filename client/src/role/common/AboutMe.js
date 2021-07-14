@@ -1,7 +1,7 @@
 import React from "react";
 import {Image} from "react-bootstrap";
 
-import image5 from '../../file/aboutME/5.JPG';
+import myImage from '../../file/1.jpg';
 
 export class AboutMe extends React.Component{
      constructor(props) {
@@ -24,7 +24,7 @@ export class AboutMe extends React.Component{
                       <h4 className="text-center mb-5"><strong>"풀스택을 꿈꾸는 와룡선생"</strong></h4>
                   </div>
                   <div className="col-sm-12 col-md-6 py-5">
-                      <Image className="imageArea rounded-circle" src={image5} roundedCircle />
+                      <Image className="imageArea rounded-circle" src={myImage} roundedCircle />
                   </div>
               </div>
               <div className="row my-5">

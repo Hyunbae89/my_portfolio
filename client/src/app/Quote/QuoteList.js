@@ -42,11 +42,13 @@ export class QuoteList extends React.Component{
 
     render() {
         const {data,search} = this.state;
-        const quoteList = data.filter((info)=>{
+        const quoteList = data.filter((info) => {
             if(search === null){
                 return info
             }else if(info.content.toLowerCase().includes(search.toLowerCase()) || info.source.toLowerCase().includes(search.toLowerCase())){
                 return info
+            }else{
+                return false;
             }
         }).map((info,index)=>(
             <blockquote key={index} className="blockquote rounded shadow about-me-color text-center py-4" onClick={(e)=>this.clickEvent(info.id)}>

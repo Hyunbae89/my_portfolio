@@ -192,7 +192,7 @@ export class QuoteDetail extends React.Component{
                         <div className="card border-dark my-5">
                             <div className="card-header">
                                 <div className="row">
-                                    <h5 className="col-3">{userName}</h5>
+                                    <h5 className="col-3">작성자 : {userName}</h5>
                                     <h5 className="col-6 text-center "> {this.getDate(create_date)}</h5>
                                     <div className="col-3 text-right">
                                         {edit}
