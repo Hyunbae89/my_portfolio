@@ -10,7 +10,7 @@ export default function Header(props){
 
         if(props.id){
             return <Link to={'/'+props.id}  onClick={props.reset}>
-                        <button className='navbar-brand home'  >
+                        <button className='home'  >
                             <FontAwesomeIcon className="mr-3" icon={faDragon} />
                             <strong className='title' >James works </strong>
                         </button>
@@ -28,34 +28,32 @@ export default function Header(props){
     return(
         <header>
             <div className='navbar navbar-dark bg-dark'>
-               <div className='container-fluid '>
-                   <div className="row w-100 text-center">
-                       <div className="col-2 align-self-center">
-                           <Dropdown.Toggle bsPrefix='navbar-toggler w-75 bg-dark sidebar-icon' onClick={(e) => props.control()} >
-                               <span className='navbar-toggler-icon'/>
-                           </Dropdown.Toggle>
-                       </div>
-                       <div className="col-8">
-                           {home()}
-                       </div>
-                       <div className="col-2 align-self-center">
-                           <Dropdown>
-                                <Dropdown.Toggle bsPrefix='navbar-toggler bg-dark ' id="dropdown-basic">
-                                    <FontAwesomeIcon className='log-info-icon'  icon={faAddressCard} />
-                                  </Dropdown.Toggle>
-
-                                  <Dropdown.Menu className="dropdown-menu-center">
-                                      <Dropdown.ItemText className='text-center'>{"Hi, " + props.name}</Dropdown.ItemText>
-                                    <Dropdown.Item as={Link} to="/">
-                                        <FontAwesomeIcon className='log-out-icon mr-3'  icon={faSignOutAlt} />
-                                        <span>Sign out</span>
-                                    </Dropdown.Item>
-
-                                  </Dropdown.Menu>
-                            </Dropdown>
-                       </div>
+               <div className="d-flex justify-content-between w-100">
+                   <div className="align-self-center">
+                       <Dropdown.Toggle bsPrefix='navbar-toggler bg-dark btn btn-secondary ' onClick={(e) => props.control()} >
+                           <span className='navbar-toggler-icon'/>
+                       </Dropdown.Toggle>
                    </div>
-                </div>
+                   <div className="">
+                       {home()}
+                   </div>
+                   <div className="align-self-center">
+                       <Dropdown>
+                            <Dropdown.Toggle bsPrefix='navbar-toggler bg-dark btn btn-secondary ' id="dropdown-basic">
+                                <FontAwesomeIcon className='log-info-icon'  icon={faAddressCard} />
+                              </Dropdown.Toggle>
+
+                              <Dropdown.Menu className="dropdown-menu-center">
+                                  <Dropdown.ItemText className='text-center'>{"Hi, " + props.name}</Dropdown.ItemText>
+                                <Dropdown.Item as={Link} to="/">
+                                    <FontAwesomeIcon className='log-out-icon mr-3'  icon={faSignOutAlt} />
+                                    <span>Sign out</span>
+                                </Dropdown.Item>
+
+                              </Dropdown.Menu>
+                        </Dropdown>
+                   </div>
+               </div>
             </div>
         </header>
     );

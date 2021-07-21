@@ -4,19 +4,21 @@
     <list default="true" id="9ba34c63-e1c2-4845-8f9e-3d83a242eadc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/client/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/client/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteCreate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/lib/consts.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/consts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteEdit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/data/SidebarDataUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/data/SidebarDataUser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/role/common/AboutMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/common/AboutMe.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/role/common/MainBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/common/MainBoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/role/user/RootUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/user/RootUser.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +146,12 @@
       <workItem from="1625976832170" duration="6254000" />
       <workItem from="1626144875377" duration="7319000" />
       <workItem from="1626236287151" duration="4054000" />
+      <workItem from="1626330548669" duration="3081000" />
+      <workItem from="1626357271308" duration="1996000" />
+      <workItem from="1626395583865" duration="21495000" />
+      <workItem from="1626494012196" duration="3014000" />
+      <workItem from="1626673366685" duration="2227000" />
+      <workItem from="1626836147045" duration="9422000" />
     </task>
     <servers />
   </component>

@@ -71,7 +71,7 @@ export class RootUser extends React.Component{
         return(
             <div id={"james"}>
                 <Header id={id} name={user_name} control={this.showSidebar} reset={this.OnclickScreen} />
-                <Sidebar url={url} sidebarCheck={sidebarCheck} />
+                <Sidebar url={url} sidebarCheck={sidebarCheck} reset={this.OnclickScreen} />
 
                 <div id={'testpage'} className={'testscroll '}>
 
@@ -109,7 +109,7 @@ export class RootUser extends React.Component{
                             render={props => <QuoteEdit user_id={id} {...props} />} />
 
                         <Route exact path={`${url}`}>
-                            <MainBoard url={url} name={user_name}/>
+                            <MainBoard url={url} user_name={user_name} />
                         </Route>
 
                         <Route component={NotFound} />

@@ -91,45 +91,36 @@ export class URLPickerList extends React.Component {
 
         const list = data.map(
             (info,index) => (
-                <div key={index} className="list-group-item list-group-item-action">
-                    <div className='row'>
-                        <div className="col-11">
-                        <a href={info.address} target="_blank" rel="noopener noreferrer" className="list-group-item-action" >
-                            <div className="row">
-                                <div className="col-8">
-                                    {info.title}
-                                </div>
-                                <div className="col-4">
-                                    {this.getDate(info.create_date)}
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="col-1">
-                            <Dropdown>
-                                <Dropdown.Toggle bsPrefix='navbar-toggler ' id="dropdown-basic" >
-                                    <FontAwesomeIcon className='url-setting-icon'  icon={faEllipsisH} />
-                                  </Dropdown.Toggle>
+                <div key={index} className="list-group-item list-group-item-action d-flex justify-content-between">
 
-                                  <Dropdown.Menu className="dropdown-menu-center">
-                                      <Dropdown.Item as="button" onClick={()=>this.showQRcode(info.address)}>
-                                        <FontAwesomeIcon className='url-delete-icon mr-3'  icon={faQrcode} />
-                                        <span>QR code 보기</span>
-                                    </Dropdown.Item>
-                                    <Dropdown.Divider />
-                                    <Dropdown.Item as={Link} to={`${url}/${info.url_id}`}>
-                                        <FontAwesomeIcon className='url-edit-icon mr-3'  icon={faPencilAlt} />
-                                        <span>편집</span>
-                                    </Dropdown.Item>
-                                      <Dropdown.Item as="button" onClick={()=>this.confirmBoxOn(info.id,info.url_id)}>
-                                        <FontAwesomeIcon className='url-delete-icon mr-3'  icon={faTrashAlt} />
-                                        <span>삭제</span>
-                                    </Dropdown.Item>
+                    <a href={info.address} target="_blank" rel="noopener noreferrer" className="list-group-item-action align-self-center d-flex justify-content-around item-size" >
+                        <div className="align-self-center"> <h4>{info.title}</h4> </div>
+                        <div className="align-self-center"> {this.getDate(info.create_date)} </div>
+                    </a>
 
-                                  </Dropdown.Menu>
-                            </Dropdown>
-                        </div>
-                    </div>
+                    <Dropdown className="align-self-center">
+                        <Dropdown.Toggle bsPrefix='navbar-toggler item-size btn btn-secondary' id="dropdown-basic" >
+                            <FontAwesomeIcon className='url-setting-icon'  icon={faEllipsisH} />
+                          </Dropdown.Toggle>
+
+                          <Dropdown.Menu className="dropdown-menu-center">
+                              <Dropdown.Item as="button" onClick={()=>this.showQRcode(info.address)}>
+                                <FontAwesomeIcon className='url-delete-icon mr-3'  icon={faQrcode} />
+                                <span>QR code 보기</span>
+                            </Dropdown.Item>
+                            <Dropdown.Divider />
+                            <Dropdown.Item as={Link} to={`${url}/${info.url_id}`}>
+                                <FontAwesomeIcon className='url-edit-icon mr-3'  icon={faPencilAlt} />
+                                <span>편집</span>
+                            </Dropdown.Item>
+                              <Dropdown.Item as="button" onClick={()=>this.confirmBoxOn(info.id,info.url_id)}>
+                                <FontAwesomeIcon className='url-delete-icon mr-3'  icon={faTrashAlt} />
+                                <span>삭제</span>
+                            </Dropdown.Item>
+
+                          </Dropdown.Menu>
+                    </Dropdown>
+
                 </div>));
 
         return (

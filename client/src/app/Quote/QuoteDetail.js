@@ -150,7 +150,7 @@ export class QuoteDetail extends React.Component{
 
         const edit = (userId===quoteUserId) ?
             <Dropdown>
-                <Dropdown.Toggle bsPrefix='navbar-toggler ' id="dropdown-basic">
+                <Dropdown.Toggle bsPrefix='navbar-toggler btn btn-secondary' id="dropdown-basic">
                     <FontAwesomeIcon className='log-out-icon'  icon={faBars} />
                   </Dropdown.Toggle>
 
@@ -171,17 +171,15 @@ export class QuoteDetail extends React.Component{
         const detail = userName ?
             <div>
 
-                <div className="row mb-3">
-                    <div className="col-2">
-                        <button type='button' className="btn btn-secondary btn-block " disabled={this.state.firstCheck} onClick={this.previousIndex} >
+                <div className="row ">
+                    <div className="col-12 d-flex justify-content-between">
+                        <button type='button' className="btn btn-secondary " disabled={this.state.firstCheck} onClick={this.previousIndex} >
                             이전글
                         </button>
-                    </div>
-                    <div className="col-8 text-center">
+
                         <h3>{index+1}</h3>
-                    </div>
-                    <div className="col-2">
-                        <button type='button' className="btn btn-secondary btn-block " disabled={this.state.lastCheck} onClick={this.nextIndex} >
+
+                        <button type='button' className="btn btn-secondary " disabled={this.state.lastCheck} onClick={this.nextIndex} >
                             다음글
                         </button>
                     </div>
@@ -190,16 +188,12 @@ export class QuoteDetail extends React.Component{
                 <div className="row">
                     <div className='col-12'>
                         <div className="card border-dark my-5">
-                            <div className="card-header">
-                                <div className="row">
-                                    <h5 className="col-3">작성자 : {userName}</h5>
-                                    <h5 className="col-6 text-center "> {this.getDate(create_date)}</h5>
-                                    <div className="col-3 text-right">
-                                        {edit}
-                                    </div>
-                                </div>
+                            <div className="card-header d-flex justify-content-between">
+                                <h5 >작성자 : {userName}</h5>
+                                <h5 className="text-center "> {this.getDate(create_date)}</h5>
+                                <div className="text-right"> {edit} </div>
                             </div>
-                            <div className="card-body text-dark text-center">
+                            <div className="card-body text-center">
                                 <pre >{content}  </pre>
                                 <footer className="blockquote-footer">{source}</footer>
                             </div>

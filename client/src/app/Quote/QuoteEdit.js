@@ -56,6 +56,10 @@ export class QuoteEdit extends React.Component {
             return {source: e.target.value}
         });
     }
+    resize(e){
+        e.target.style.height = "auto";
+        e.target.style.height = (12 + e.target.scrollHeight) + "px";
+    }
 
     chooseValue = (e) => {
         const value = e.target.value;
@@ -125,7 +129,7 @@ export class QuoteEdit extends React.Component {
                     <h3 className="mb-3 font-weight-normal text-center">Quote</h3>
                     <div className="form-floating mb-2">
                         <label htmlFor="contentTextarea">Contents</label>
-                            <textarea  className="form-control qoute-content" name="content" value={this.state.content}  id="contentTextarea" placeholder="Please write your favorite quote." aria-label="content"
+                            <textarea  className="form-control qoute-content" name="content" value={this.state.content} onKeyDown={this.resize} onKeyUp={this.resize}  id="contentTextarea" placeholder="Please write your favorite quote." aria-label="content"
                                onChange={this.changeTextarea} aria-describedby="addon-wrapping-quote-content" required/>
                     </div>
                     <div className="form-group">
