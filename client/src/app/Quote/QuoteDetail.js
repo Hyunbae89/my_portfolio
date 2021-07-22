@@ -169,7 +169,7 @@ export class QuoteDetail extends React.Component{
             </Dropdown>
             : ""
         const detail = userName ?
-            <div>
+            <div className="container">
 
                 <div className="row ">
                     <div className="col-12 d-flex justify-content-between">
@@ -189,8 +189,8 @@ export class QuoteDetail extends React.Component{
                     <div className='col-12'>
                         <div className="card border-dark my-5">
                             <div className="card-header d-flex justify-content-between">
-                                <h5 >작성자 : {userName}</h5>
-                                <h5 className="text-center "> {this.getDate(create_date)}</h5>
+                                <h5 id="noneDark">작성자 : {userName}</h5>
+                                <h5 className="text-center " id="noneDark"> {this.getDate(create_date)}</h5>
                                 <div className="text-right"> {edit} </div>
                             </div>
                             <div className="card-body text-center">

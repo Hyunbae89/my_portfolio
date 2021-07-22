@@ -1,7 +1,7 @@
 import React from 'react';
 import api from "../../lib/api";
 
-export class URLPickerDetail extends React.Component{
+export class URLPickerEdit extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -113,48 +113,50 @@ export class URLPickerDetail extends React.Component{
         const{title, address}=this.state;
 
         return(
-            <div className="url_picker">
-                {title && address ?
-                    <form onSubmit={this.handleFormSubmit}>
-                        <h3 className="mb-3 font-weight-normal text-center">URL Picker</h3>
-                        <div className="input-group mb-2">
-                            <div className="input-group-prepend">
-                                <span className="input-group-text" id="addon-wrapping-url-title">URL Title</span>
-                            </div>
-                            <input type="text" className="form-control text-center" name="title"
-                                   value={this.state.title} id="input_title" placeholder="Title" aria-label="URL_title"
-                                   onChange={this.changeInputValue} aria-describedby="addon-wrapping-url-title"
-                                   required/>
-                        </div>
-                        <div className="input-group mb-2">
-                            <div className="input-group-prepend">
-                                <span className="input-group-text" id="addon-wrapping-url-address">URL Address</span>
-                            </div>
-                            <input type="text" className="form-control text-center" name="address"
-                                   value={this.state.address} id="input_address" placeholder="Address"
-                                   aria-label="URL_address"
-                                   onChange={this.changeInputValue} aria-describedby="addon-wrapping-url-address"
-                                   required/>
-                        </div>
-                        <div id="submit_user_area">
-                            <div className="row">
-                                <div className="col-4">
-                                    <button type='button' className="btn btn-danger btn-block" onClick={this.goBack}>
-                                        B a c k
-                                    </button>
+            <div className="container">
+                <div className="url_picker">
+                    {title && address ?
+                        <form onSubmit={this.handleFormSubmit}>
+                            <h3 className="mb-3 font-weight-normal text-center">URL Picker</h3>
+                            <div className="input-group mb-2">
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text" id="addon-wrapping-url-title">URL Title</span>
                                 </div>
-                                <div className="col-8">
-                                    <button type='submit' className="btn btn-warning btn-block">C h a n g e</button>
+                                <input type="text" className="form-control text-center" name="title"
+                                       value={this.state.title} id="input_title" placeholder="Title" aria-label="URL_title"
+                                       onChange={this.changeInputValue} aria-describedby="addon-wrapping-url-title"
+                                       required/>
+                            </div>
+                            <div className="input-group mb-2">
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text" id="addon-wrapping-url-address">URL Address</span>
+                                </div>
+                                <input type="text" className="form-control text-center" name="address"
+                                       value={this.state.address} id="input_address" placeholder="Address"
+                                       aria-label="URL_address"
+                                       onChange={this.changeInputValue} aria-describedby="addon-wrapping-url-address"
+                                       required/>
+                            </div>
+                            <div id="submit_user_area">
+                                <div className="row">
+                                    <div className="col-4">
+                                        <button type='button' className="btn btn-danger btn-block" onClick={this.goBack}>
+                                            B a c k
+                                        </button>
+                                    </div>
+                                    <div className="col-8">
+                                        <button type='submit' className="btn btn-warning btn-block text-white">C h a n g e</button>
+                                    </div>
                                 </div>
                             </div>
+                        </form> :
+                        <div className="d-flex justify-content-center">
+                            <div className="spinner-border" role="status">
+                                <span className="sr-only">Loading...</span>
+                            </div>
                         </div>
-                    </form> :
-                    <div className="d-flex justify-content-center">
-                        <div className="spinner-border" role="status">
-                            <span className="sr-only">Loading...</span>
-                        </div>
-                    </div>
-                }
+                    }
+                </div>
             </div>
         );
     }

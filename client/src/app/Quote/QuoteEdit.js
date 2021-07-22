@@ -124,57 +124,59 @@ export class QuoteEdit extends React.Component {
             <small className="text-muted">인용구를 입력하면 이곳에서 미리보기를 할 수 있습니다.</small>;
 
         return(
-            <div className="quote">
-                <form onSubmit={this.handleFormSubmit}>
-                    <h3 className="mb-3 font-weight-normal text-center">Quote</h3>
-                    <div className="form-floating mb-2">
-                        <label htmlFor="contentTextarea">Contents</label>
-                            <textarea  className="form-control qoute-content" name="content" value={this.state.content} onKeyDown={this.resize} onKeyUp={this.resize}  id="contentTextarea" placeholder="Please write your favorite quote." aria-label="content"
-                               onChange={this.changeTextarea} aria-describedby="addon-wrapping-quote-content" required/>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="formGroupExampleInput">Source</label>
-                        <div className="form-row">
-                            <div className="col-3">
-                                <select className="custom-select" id="formGroupExampleInput" onChange={this.chooseValue} defaultValue={'DEFAULT'}>
-                                    <option value="DEFAULT" disabled>Choose...</option>
-                                    <option value="person">Person</option>
-                                    <option value="book">Book</option>
-                                    <option value="unknown">Unknown</option>
-                                </select>
+            <div className="container">
+                <div className="quote">
+                    <form onSubmit={this.handleFormSubmit}>
+                        <h3 className="mb-3 font-weight-normal text-center">Quote</h3>
+                        <div className="form-floating mb-2">
+                            <label htmlFor="contentTextarea">Contents</label>
+                                <textarea  className="form-control qoute-content" name="content" value={this.state.content} onKeyDown={this.resize} onKeyUp={this.resize}  id="contentTextarea" placeholder="Please write your favorite quote." aria-label="content"
+                                   onChange={this.changeTextarea} aria-describedby="addon-wrapping-quote-content" required/>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="formGroupExampleInput">Source</label>
+                            <div className="form-row">
+                                <div className="col-3">
+                                    <select className="custom-select" id="formGroupExampleInput" onChange={this.chooseValue} defaultValue={'DEFAULT'}>
+                                        <option value="DEFAULT" disabled>Choose...</option>
+                                        <option value="person">Person</option>
+                                        <option value="book">Book</option>
+                                        <option value="unknown">Unknown</option>
+                                    </select>
+                                </div>
+                                <div className="col-9">
+                                    <input type="text" className="form-control" id="source-input" value={this.state.source} onChange={this.changeInput}
+                                   placeholder="Please choose and write the source of the quote." disabled  required/>
+                                </div>
                             </div>
-                            <div className="col-9">
-                                <input type="text" className="form-control" id="source-input" value={this.state.source} onChange={this.changeInput}
-                               placeholder="Please choose and write the source of the quote." disabled  required/>
+
+                        </div>
+
+                         <div id="submit_user_area">
+                            <div className="row">
+                                <div className="col-6">
+                                    <button type='button' className="btn btn-danger btn-block" onClick={this.goBack}>
+                                        B a c k
+                                    </button>
+                                </div>
+
+                                <div className="col-6">
+                                    <button type='submit' className="btn btn-success btn-block" >S u b m i t</button>
+                                </div>
                             </div>
                         </div>
 
-                    </div>
+                    </form>
 
-                     <div id="submit_user_area">
-                        <div className="row">
-                            <div className="col-6">
-                                <button type='button' className="btn btn-danger btn-block" onClick={this.goBack}>
-                                    B a c k
-                                </button>
-                            </div>
-
-                            <div className="col-6">
-                                <button type='submit' className="btn btn-success btn-block" >S u b m i t</button>
+                    <div className="row my-5">
+                            <div className="col-12 text-center">
+                                <blockquote className="blockquote rounded shadow url-picker-color py-4 quote-preview">
+                                    {quote}
+                                    {footer}
+                                </blockquote>
                             </div>
                         </div>
-                    </div>
-
-                </form>
-
-                <div className="row my-5">
-                        <div className="col-12 text-center">
-                            <blockquote className="blockquote rounded shadow url-picker-color py-4 quote-preview">
-                                {quote}
-                                {footer}
-                            </blockquote>
-                        </div>
-                    </div>
+                </div>
             </div>
         );
     }

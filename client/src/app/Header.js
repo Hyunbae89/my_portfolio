@@ -1,5 +1,5 @@
 import React from "react";
-import { faDragon, faAddressCard,faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import {faDragon, faAddressCard, faSignOutAlt, faInfoCircle} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Dropdown from 'react-bootstrap/Dropdown';
 import {Link} from 'react-router-dom';
@@ -9,7 +9,7 @@ export default function Header(props){
     function home() {
 
         if(props.id){
-            return <Link to={'/'+props.id}  onClick={props.reset}>
+            return <Link to={props.url}  onClick={props.reset}>
                         <button className='home'  >
                             <FontAwesomeIcon className="mr-3" icon={faDragon} />
                             <strong className='title' >James works </strong>
@@ -45,6 +45,10 @@ export default function Header(props){
 
                               <Dropdown.Menu className="dropdown-menu-center">
                                   <Dropdown.ItemText className='text-center'>{"Hi, " + props.name}</Dropdown.ItemText>
+                                  <Dropdown.Item as={Link} to={props.url+"/edit"}>
+                                    <FontAwesomeIcon className='log-out-icon mr-3'  icon={faInfoCircle} />
+                                    <span>User Info</span>
+                                </Dropdown.Item>
                                 <Dropdown.Item as={Link} to="/">
                                     <FontAwesomeIcon className='log-out-icon mr-3'  icon={faSignOutAlt} />
                                     <span>Sign out</span>

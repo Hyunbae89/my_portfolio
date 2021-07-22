@@ -91,7 +91,7 @@ export class URLPickerList extends React.Component {
 
         const list = data.map(
             (info,index) => (
-                <div key={index} className="list-group-item list-group-item-action d-flex justify-content-between">
+                <div key={index} className="list-group-item list-group-item-action d-flex shadow justify-content-between">
 
                     <a href={info.address} target="_blank" rel="noopener noreferrer" className="list-group-item-action align-self-center d-flex justify-content-around item-size" >
                         <div className="align-self-center"> <h4>{info.title}</h4> </div>

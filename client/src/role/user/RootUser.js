@@ -10,11 +10,12 @@ import NotFound from "../../routers/NotFound";
 import {AboutMe} from "../common/AboutMe";
 import URLPicker from "../../app/URLPicker/URLPickerMain";
 import {URLPickerCreate} from "../../app/URLPicker/URLPickerCreate";
-import {URLPickerDetail} from "../../app/URLPicker/URLPickerDetail";
+import {URLPickerEdit} from "../../app/URLPicker/URLPickerEdit";
 import QuoteView from "../../app/Quote/QuoteMain";
 import {QuoteCreate} from "../../app/Quote/QuoteCreate";
 import {QuoteDetail} from "../../app/Quote/QuoteDetail";
 import {QuoteEdit} from "../../app/Quote/QuoteEdit";
+import UserEdit from "./UserEdit";
 
 
 export class RootUser extends React.Component{
@@ -70,7 +71,7 @@ export class RootUser extends React.Component{
 
         return(
             <div id={"james"}>
-                <Header id={id} name={user_name} control={this.showSidebar} reset={this.OnclickScreen} />
+                <Header id={id} name={user_name} url={url} control={this.showSidebar} reset={this.OnclickScreen} />
                 <Sidebar url={url} sidebarCheck={sidebarCheck} reset={this.OnclickScreen} />
 
                 <div id={'testpage'} className={'testscroll '}>
@@ -79,6 +80,9 @@ export class RootUser extends React.Component{
                          <Route exact path={`${url}/about_me`}>
                             <AboutMe/>
                         </Route>
+                        <Route
+                            exact path={`${url}/edit`}
+                            render={props => <UserEdit user_id={id} name={user_name}  {...props} />} />
                         <Route
                             exact path={`${url}/url_picker`}
                             render={props => <URLPicker user_id={id} {...props} />} />
@@ -89,7 +93,7 @@ export class RootUser extends React.Component{
 
                         <Route
                             exact path={`${url}/url_picker/:id`}
-                            render={props => <URLPickerDetail user_id={id}  {...props} />} />
+                            render={props => <URLPickerEdit user_id={id}  {...props} />} />
 
                         <Route
                             exact path={`${url}/quote`}

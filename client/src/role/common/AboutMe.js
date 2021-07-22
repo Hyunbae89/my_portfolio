@@ -1,7 +1,11 @@
 import React from "react";
 import {Image} from "react-bootstrap";
+import {faComment, faFilePdf} from "@fortawesome/free-solid-svg-icons";
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import myImage from '../../file/1.jpg';
+
 
 export class AboutMe extends React.Component{
      constructor(props) {
@@ -17,17 +21,26 @@ export class AboutMe extends React.Component{
           <div className="container ">
 
               <div className="row my-5">
-                  <div className="col-sm-12 col-md-6 order-last order-md-first align-self-center">
+                  <div className="col-12 col-md-6 order-last order-md-first align-self-center">
                       <h3 className="text-center">전 현 배</h3>
                       <div className="pb-2 text-center">[ James ]</div>
                       <h4 className="text-center mb-4"><strong>"풀스택을 꿈꾸는 와룡선생"</strong></h4>
                       <div className="d-flex justify-content-around">
-                          <a className="btn btn-secondary" href="https://github.com/Hyunbae89" target="_blank" rel="noreferrer">Github</a>
-                          <a className="btn btn-warning text-white" href="https://open.kakao.com/o/sSpI4Apd" target="_blank" rel="noreferrer">카톡 오픈채팅</a>
-                          <button className="btn btn-success">이력서</button>
+                          <a className="btn btn-secondary shadow" href="https://github.com/Hyunbae89" target="_blank" rel="noreferrer">
+                              <FontAwesomeIcon icon={faGithub} size="2x" /><br/>
+                              Github
+                          </a>
+                          <a className="btn btn-warning text-white shadow" href="https://open.kakao.com/o/sSpI4Apd" target="_blank" rel="noreferrer">
+                              <FontAwesomeIcon icon={faComment} size="2x"  /><br/>
+                              카카오톡
+                          </a>
+                          <button className="btn btn-primary shadow">
+                              <FontAwesomeIcon icon={faFilePdf} size="2x" /><br/>
+                              이력서
+                          </button>
                       </div>
                   </div>
-                  <div className="col-sm-12 col-md-6 order-first order-md-last">
+                  <div className="col-12 col-md-6 order-first order-md-last">
                       <div className="imageBox">
                           <Image className="imageArea rounded-circle " src={myImage} roundedCircle />
                       </div>
@@ -35,8 +48,8 @@ export class AboutMe extends React.Component{
               </div>
               <div className="row my-5">
                   <div className='col-sm-12 col-md-7'>
-                      <div className="jumbotron shadow py-4">
-                          <dl className="row text-center">
+                      <div className="jumbotron shadow py-4" id="noneDark">
+                          <dl className="row text-center ">
                               <div className="col-12 pb-3">
                                   <h4><u>상세 정보</u></h4>
                               </div>
@@ -69,7 +82,7 @@ export class AboutMe extends React.Component{
                     </div>
                   </div>
                   <div className='col-sm-12 col-md-5 align-self-center'>
-                      <div className="jumbotron shadow py-4">
+                      <div className="jumbotron shadow py-4" id="noneDark">
                           <div className="row text-center">
                               <div className="col-12 pb-2">
                                   <h4><u>경력 사항</u></h4>
@@ -93,7 +106,7 @@ export class AboutMe extends React.Component{
 
               <div className="row my-5">
                   <div className="col-12 text-center">
-                      <blockquote className="blockquote rounded shadow about-me-color py-4 manual-quote">
+                      <blockquote className="blockquote rounded shadow about-me-color py-4 manual-quote" id="noneDark">
                           <div>우리들의 중요한 임무는 멀리 있는 희미한것을 보는게 아니라,<br/> 가까이 있는 분명한 것을 실천하는 것이다.</div>
                           <footer className="blockquote-footer">토머스 칼라일</footer>
                       </blockquote>
@@ -128,7 +141,7 @@ export class AboutMe extends React.Component{
 
                   </div>
                   <div className="col-12 col-md-4">
-                      <table className="table table-hover border">
+                      <table className="table table-hover border" id="dark">
                           <thead className="thead-dark">
                               <tr>
                                   <th>자격증</th>

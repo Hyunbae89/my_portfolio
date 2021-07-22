@@ -48,10 +48,15 @@ html{
   /*display: none;*/
   /*z-index: 9999;*/
 }
-
-body.dark, body.dark .fa-start{
+.userInfoBox{
+  height: 150px;
+}
+body.dark, body.dark #dark{
   background-color: #3e3e3e;
-  color: #999;
+  color: white;
+}
+#noneDark{
+  color: black;
 }
 
 .fa-dragon, .title, .log-info-icon, body.dark .logo{
@@ -132,48 +137,33 @@ pre {
 .mainIcon{
   font-size: 5rem;
   width: 100%;
-  margin: 0 auto;
-}
+  margin: 0.5rem auto;
 
-@media (max-width: 767px) {
-  /** Mobile **/
-   .nav-menu{
+}
+.nav-menu{
     background-color: #343a40 ;
     position: fixed;
     height: calc(100% - 70px);
     display: flex;
     justify-content: center;
+    top: 0;
     left: -100%;
-     top: 0;
     transition: 850ms;
-    width: 50%;
+    min-width: 350px;
     z-index: 1;
   }
-  .imageBox{
-    width: 250px;
-    height: 250px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .imageArea{
+.imageArea{
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  .fa-dragon, .title{
-    font-size: 1.8rem;
-  }
-
-  .url_picker, .quote{
+.url_picker, .quote{
     width: 100%;
     margin: 0 auto;
     padding: 2rem;
     height: 100%;
   }
-  .item-size{
-    height: 4rem;
-  }
-  pre{
+ pre{
     font-size: 1.1rem;
   }
   .blockquote-footer{
@@ -182,13 +172,12 @@ pre {
   .card-body{
     padding: 1rem 0.5rem ;
   }
-
   .qoute-content{
     overflow-y: hidden;
     padding-bottom: 0.5rem;
     resize: none;
   }
-  textarea.form-control{
+   textarea.form-control{
     height: 10rem;
   }
   .nav-text a{
@@ -199,90 +188,83 @@ pre {
   .manual-quote{
     font-size: 1.1rem;
   }
+  .mainBox{
+    display: block;
+    height: 100%;
+  }
+
+@media (max-width: 767px) {
+  /** Mobile **/
+  .container{
+    max-width: 680px;
+  }
+   .nav-menu{
+    min-width: 290px;
+  }
+  .imageBox{
+    width: 250px;
+    height: 250px;
+    margin: 2rem auto;
+    overflow: hidden;
+  }
+  .fa-dragon, .title{
+    font-size: 1.8rem;
+  }
+  .item-size{
+    height: 2rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-
+  /** Tablet 세로 **/
+  .imageBox{
+    width: 280px;
+    height: 280px;
+    margin: 2rem auto;
+    overflow: hidden;
+  }
+  .fa-dragon, .title{
+    font-size: 2rem;
+  }
+  .item-size{
+    height: 2rem;
+  }
+  .mainText{
+    font-size: 0.85rem;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-
+  /** Tablet 가로 **/
+  .imageBox{
+  width: 350px;
+  height: 350px;
+  margin: 2rem auto;
+  overflow: hidden;
+  }
+  .fa-dragon, .title{
+    font-size: 2.5rem;
+  }
+  .item-size{
+    height: 2rem;
+  }
 }
 
 @media (min-width: 1200px){
-
-}
-
-/*.nav-menu{*/
-/*    background-color: #343a40 ;*/
-/*    position: fixed;*/
-/*    height: calc(100% - 144px);*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    left: -100%;*/
-/*    transition: 850ms;*/
-/*    width: 35vw;*/
-/*    z-index: 1;*/
-/*  }*/
-/*  .imageArea{*/
-/*  display: inline-block;*/
-/*  margin: auto;*/
-/*    width: 100%;*/
-/*  !*height: 300px;*!*/
-/*  overflow: hidden;*/
-/*  object-fit: cover;*/
-/*}*/
-
-
-
-@media ( min-width: 768px) {
-  .nav-menu{
-    background-color: #343a40 ;
-    position: fixed;
-    height: calc(100% - 144px);
-    display: flex;
-    justify-content: center;
-    left: -100%;
-    transition: 850ms;
-    width: 25vw;
-    z-index: 1;
-  }
-  .imageArea{
-  display: inline-block;
-  width: 100%;
-  height: 360px;
+  /** Desktop **/
+  .imageBox{
+  width: 420px;
+  height: 420px;
+  margin: 2rem auto;
   overflow: hidden;
-  object-fit: cover;
-}
-}
-@media ( min-width: 992px) {
-  .nav-menu{
-   background-color: #343a40 ;
-    position: fixed;
-    height: calc(100% - 144px);
-    display: flex;
-    justify-content: center;
-    left: -100%;
-    transition: 850ms;
-    width: 20vw;
-    z-index: 1;
   }
-
-  /*.container{*/
-  /*  max-width: 80%;*/
-  /*}*/
-  .imageArea{
-    display: inline-block;
-    padding: 5px 40px;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    object-fit: cover;
-
+  .fa-dragon, .title{
+    font-size: 3rem;
+  }
+  .item-size{
+    height: 2.5rem;
+  }
 }
-}
-
-
 
 .logo{
   color: #343a40;
@@ -333,12 +315,7 @@ pre {
   width : 400px;
   margin: auto;
 }
-/*.url_picker, .quote{*/
-/*  width: 80%;*/
-/*  margin: 0 auto;*/
-/*  padding: 50px;*/
-/*  height: 100%;*/
-/*}*/
+
 .qr-area{
   width: 128px;
   margin: auto;
