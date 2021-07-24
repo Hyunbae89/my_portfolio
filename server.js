@@ -18,6 +18,52 @@ app.use(bodyParser.urlencoded({extended:false}));
 const connection = mysql.createConnection(config);
 connection.connect();
 
+app.get('/api/ratings',(req,res)=>{
+    connection.query(
+           "SELECT * FROM RATING",
+           (err,rows,fields)=>{
+               res.send(rows[0]);
+           }
+       )
+});
+
+app.get('/api/users/:id/rating',(req,res)=>{
+    let sql = "SELECT * FROM RATING where user_id=?";
+    let user_id = req.params.id;
+
+    connection.query(sql,[user_id],(err,rows)=>{
+        if(err){
+            throw err;
+        }else{
+            res.json(rows[0])
+        }
+    })
+});
+
+app.post('/api/users/:id/rating',(req,res)=>{
+    let selectSql = "SELECT * FROM RATING where user_id=?";
+    let user_id = req.params.id;
+
+    connection.query(selectSql,[user_id], (err,rows)=>{
+        if(rows.length===0){
+            let rating = req.body.rating;
+            let comment = req.body.rating_comment;
+            let date = req.body.create_date;
+            let params = [rating,comment,date, user_id];
+
+            let insertSql = 'INSERT INTO RATING VALUES (NULL, ?,?,?,?)';
+
+            connection.query(insertSql, params, (err,rows)=>{
+                if(err){
+                    throw err;
+                }else{
+                    res.json(rows[0]);
+                }
+            })
+        }
+    })
+});
+
 //**--------Guest--------**//
     app.get('/api/guest',(req,res)=>{
        connection.query(
@@ -101,6 +147,32 @@ connection.connect();
        )
     });
 
+    app.put('/api/users/:id',(req,res)=>{
+        let sql = 'UPDATE USER SET user_password =? WHERE id=? ';
+        let encryptedPassword = bcrypt.hashSync(req.body.user_password,10);
+        let params = [encryptedPassword, req.params.id];
+
+       connection.query(sql, params,(err,rows)=>{
+            if(err){
+                throw err;
+            }else{
+                res.json(rows)
+            }
+        })
+    });
+    app.delete('/api/users/:id',(req,res)=>{
+        let sql = 'DELETE FROM USER WHERE id= ?';
+        let params = [req.params.id];
+
+       connection.query(sql, params,(err,rows)=>{
+            if(err){
+                throw err;
+            }else{
+                res.json(rows)
+            }
+        })
+    });
+
 //**--------URL Picker--------**//
     app.get('/api/users/:id/urls',(req,res)=>{
 
@@ -110,11 +182,8 @@ connection.connect();
                if(err){
                    console.log(err);
                }else{
-                   for(var i=0; i<rows.length; i++){
-                       console.log(rows[i].url_id);
-                   }
+                   res.send(rows);
                }
-               res.send(rows);
            }
        )
     });

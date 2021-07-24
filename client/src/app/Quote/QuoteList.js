@@ -51,7 +51,7 @@ export class QuoteList extends React.Component{
                 return false;
             }
         }).map((info,index)=>(
-            <blockquote key={index} className="blockquote rounded shadow about-me-color text-center py-4" onClick={(e)=>this.clickEvent(info.id)}>
+            <blockquote key={index} className="blockquote rounded  shadow text-center py-4 quote-list" onClick={(e)=>this.clickEvent(info.id)}>
                 <pre >{info.content}</pre>
                 <footer className="blockquote-footer">{info.source}</footer>
             </blockquote>

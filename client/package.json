@@ -31,7 +31,8 @@
     "react-bootstrap": "^1.6.0",
     "react-router-dom": "^5.2.0",
     "react-file-viewer-extended": "^2.0.3",
-    "qrcode.react": "^1.0.1"
+    "qrcode.react": "^1.0.1",
+    "react-star-ratings": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -2,22 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ba34c63-e1c2-4845-8f9e-3d83a242eadc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/role/user/UserEdit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/client/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteCreate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteEdit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerCreate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerEdit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/Start.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Start.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/lib/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/role/common/AboutMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/common/AboutMe.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/role/common/MainBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/common/MainBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/role/user/RootUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/user/RootUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/role/user/UserEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/user/UserEdit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routers/RouteApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routers/RouteApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +47,10 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.14.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.20.16" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/file" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -151,7 +157,10 @@
       <workItem from="1626494012196" duration="3014000" />
       <workItem from="1626673366685" duration="2227000" />
       <workItem from="1626836147045" duration="9422000" />
-      <workItem from="1626926906444" duration="18165000" />
+      <workItem from="1626926906444" duration="18522000" />
+      <workItem from="1627023776532" duration="11589000" />
+      <workItem from="1627037709307" duration="10976000" />
+      <workItem from="1627107587443" duration="15633000" />
     </task>
     <servers />
   </component>

@@ -41,8 +41,8 @@ export class AboutMe extends React.Component{
                       </div>
                   </div>
                   <div className="col-12 col-md-6 order-first order-md-last">
-                      <div className="imageBox">
-                          <Image className="imageArea rounded-circle " src={myImage} roundedCircle />
+                      <div className="imageBox" onContextMenu={(e)=> {e.preventDefault(); return false;}}>
+                          <Image className="imageArea rounded-circle "  src={myImage} roundedCircle />
                       </div>
                   </div>
               </div>
@@ -106,7 +106,7 @@ export class AboutMe extends React.Component{
 
               <div className="row my-5">
                   <div className="col-12 text-center">
-                      <blockquote className="blockquote rounded shadow about-me-color py-4 manual-quote" id="noneDark">
+                      <blockquote className="blockquote rounded shadow bg-light py-4 manual-quote" id="noneDark">
                           <div>우리들의 중요한 임무는 멀리 있는 희미한것을 보는게 아니라,<br/> 가까이 있는 분명한 것을 실천하는 것이다.</div>
                           <footer className="blockquote-footer">토머스 칼라일</footer>
                       </blockquote>

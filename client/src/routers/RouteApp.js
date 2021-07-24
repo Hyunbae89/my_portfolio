@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {Start} from '../app/Start';
 import {StartNewUser} from '../app/StartNewUser';
 import NestedRouter from "./NestedRouter"
+import {Dashboard} from "../app/Dashboard";
 
 
 export default class RouteApp extends React.Component{
@@ -31,6 +32,10 @@ export default class RouteApp extends React.Component{
                     <Route
                         exact path='/accounts'
                         render={(props)=> <StartNewUser check={this.CheckValue} {...props}/> } />
+
+                    <Route
+                        exact path='/evaluation'
+                        render={()=> <Dashboard /> } />
 
                     <NestedRouter authenticated={authenticated}/>
                 </Switch>

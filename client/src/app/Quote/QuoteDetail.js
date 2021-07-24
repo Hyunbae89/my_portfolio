@@ -201,8 +201,8 @@ export class QuoteDetail extends React.Component{
                     </div>
                 </div>
                 <div className="row">
-                    <button type='button' className="btn btn-danger btn-block" onClick={this.goBack}>
-                        B a c k
+                    <button type='button' className="btn btn-danger btn-block " onClick={this.goBack}>
+                        리스트로 돌아가기
                     </button>
                 </div>
             </div>

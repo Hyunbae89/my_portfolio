@@ -13,14 +13,16 @@ export default function MainBoard(props){
                         {props.user_name}님, 환영합니다.
                     </h3><br/>
                     <p>
-                        이 웹사이트는 개인 포트폴리오 용도로 만들어졌습니다.
+                        이 웹사이트는 개인 포트폴리오 용도로 만들어졌습니다. <br/>
+                        사이트를 둘러보신 후 유저정보 페이지에서 사이트 평가 부탁드립니다.
                     </p>
                     <p>기술적 스펙을 확인 하고 싶다면, <br/>
                         <a href="https://github.com/Hyunbae89/my_portfolio#readme" target="_blank" rel="noreferrer">여기</a>를 눌러주세요.
                     </p>
+
                 </div>
             </section>
-            <div className='container' id="darkMode">
+            <div className='container' >
                 <div className="row">
                     <div className='col-12 col-md-4 py-2'>
                         <div className="mainBox border text-center py-3 shadow" >

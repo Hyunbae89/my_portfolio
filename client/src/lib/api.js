@@ -7,6 +7,16 @@ export class PortfolioRest{
         return await axios.get('/api/guest' , API_AUTH);
     }
 
+    static async getRatings(){
+        return await axios.get('/api/ratings' , API_AUTH);
+    }
+    static async getRating(id){
+        return await axios.get('/api/users/'+id+'/rating' , API_AUTH);
+    }
+    static async postRating(id,object){
+        return await axios.post('/api/users/'+id+'/rating' , object , API_AUTH);
+    }
+
 
 //--------------------------------------------------------------------- User
 
@@ -18,6 +28,12 @@ export class PortfolioRest{
     }
     static async postLogin(object){
         return await axios.post('/api/login' , object , API_AUTH);
+    }
+    static async patchUser(id,object) {
+        return await axios.put('/api/users/'+ id , object , API_AUTH);
+    }
+    static async deleteUser(id) {
+        return await axios.delete('/api/users/'+ id , API_AUTH);
     }
 
 

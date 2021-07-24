@@ -18,6 +18,11 @@ html{
   padding: 15px;
   margin: auto;
 }
+.icon-ani:hover{
+  -webkit-animation: shake  1s;
+    animation: shake  1s;
+  --animate-delay: 0.5s;
+}
 
 .layer{
   position:absolute;
@@ -55,7 +60,13 @@ body.dark, body.dark #dark{
   background-color: #3e3e3e;
   color: white;
 }
-#noneDark{
+
+#noneDark, body.dark .quote-list{
+  background-color: rgba(248,249,250,1);
+  color: black;
+}
+body.dark .quote-list:hover {
+  background-color: rgba(248,249,250,0.75);
   color: black;
 }
 
@@ -295,15 +306,6 @@ pre {
   animation-duration: 2s; /* don't forget to set a duration! */
 }
 
-.about-me-color{
-  background-color: #c7d1ff;
-}
-.url-picker-color{
-  background-color: #fff2ff;
-  }
-.quote-color{
-  background-color: #181934;
-}
 .test-color{
   background-color: #77767c;
 }
@@ -325,7 +327,15 @@ pre {
   alignItems: center;
   margin: auto;
 }
-
+.quote-list{
+  background-color: rgba(243, 243, 243, 0.5);
+}
+.quote-list:hover{
+ background-color: rgba(202, 203, 203, 0.5);
+}
 .quote-preview, .qoute-content{
   min-height: 100px;
+}
+.delete-user{
+  cursor: not-allowed;
 }

@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import { faDragon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import api from "../lib/api";
-
+const special_key="James";
 
 export class Start extends React.Component {
     constructor(props) {
@@ -12,6 +12,8 @@ export class Start extends React.Component {
             name:'',
             password:'',
             guest_check: false,
+            secret_01: false,
+            secret_02:false
 
         };
         this.guestCheck = this.guestCheck.bind(this);
@@ -92,13 +94,37 @@ export class Start extends React.Component {
             })
         }
     }
+    openSecret01=(e)=>{
+        e.preventDefault();
+        this.setState(prevState => ({
+          secret_01: !prevState.secret_01
+        }));
+    }
+    openSecret02=(e)=>{
+        e.preventDefault();
+        this.setState(prevState => ({
+          secret_02: !prevState.secret_02
+        }));
+    }
+
 
     render() {
+        const {secret_01, secret_02} = this.state;
+
+        if(secret_01 && secret_02){
+            const answer = prompt("Secret Code를 입력하시오.","");
+            if(answer === special_key){
+                this.props.history.push('/evaluation');
+            }else{
+                alert("잘못 입력 하셨습니다.")
+            }
+        }
+
 
         return(
             <div className="layer">
                 <form className="text-center form-signin " onSubmit={this.handleFormSubmit}>
-                    <FontAwesomeIcon className="fa-start mb-2" icon={faDragon} />
+                    <FontAwesomeIcon className="fa-start mb-2 icon-ani " onClick={this.openSecret01} icon={faDragon} />
                     <h3 className="mb-3 font-weight-normal">Welcome in</h3>
 
                     <div className="input-group mb-2">
@@ -140,7 +166,7 @@ export class Start extends React.Component {
 
                     </div>
 
-                    <p className="mt-5 mb-3 text-muted">© Hyunbae Jeon</p>
+                    <p className="mt-5 mb-3 text-muted" onClick={this.openSecret02}>© Hyunbae Jeon</p>
                 </form>
             </div>
         );
