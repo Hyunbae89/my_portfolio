@@ -42,11 +42,10 @@ export class StartNewUser extends React.Component {
             console.log(error)
         }).then(
             response => {
-                if((response.data)){
+                if(response.data){
                     let id = response.data.insertId;
-
                         this.props.check();
-                        this.props.history.push('/user/'+id);
+                        this.props.history.push('/'+id);
                 }else{
                     alert("이미 사용자가 있습니다.")
                 }

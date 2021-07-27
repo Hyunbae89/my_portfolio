@@ -22,7 +22,7 @@ app.get('/api/ratings',(req,res)=>{
     connection.query(
            "SELECT * FROM RATING",
            (err,rows,fields)=>{
-               res.send(rows[0]);
+               res.send(rows);
            }
        )
 });
@@ -156,7 +156,7 @@ app.post('/api/users/:id/rating',(req,res)=>{
             if(err){
                 throw err;
             }else{
-                res.json(rows)
+                res.json(rows[0])
             }
         })
     });

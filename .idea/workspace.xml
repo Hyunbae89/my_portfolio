@@ -2,24 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ba34c63-e1c2-4845-8f9e-3d83a242eadc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/client/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/Quote/QuoteList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Quote/QuoteList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/Start.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/Start.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/URLPicker/URLPickerMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/lib/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/role/common/AboutMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/common/AboutMe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/role/common/MainBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/common/MainBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/role/user/UserEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/role/user/UserEdit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routers/RouteApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routers/RouteApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/lib/consts.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/consts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,9 +25,10 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/client" />
   </component>
   <component name="ProjectId" id="1sVpFG5jH6em8lOAejyRMpOFOKP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -51,7 +41,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.14.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.20.16" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/file" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -161,6 +151,10 @@
       <workItem from="1627023776532" duration="11589000" />
       <workItem from="1627037709307" duration="10976000" />
       <workItem from="1627107587443" duration="15633000" />
+      <workItem from="1627278029094" duration="8429000" />
+      <workItem from="1627293867085" duration="1209000" />
+      <workItem from="1627298261035" duration="4772000" />
+      <workItem from="1627362510722" duration="3241000" />
     </task>
     <servers />
   </component>
