@@ -23,7 +23,7 @@ export default function MainBoard(props){
                 </div>
             </section>
             <div className='container' >
-                <div className="row">
+                <div className="row my-4">
                     <div className='col-12 col-md-4 py-2'>
                         <div className="mainBox border text-center py-3 shadow" >
                             <FontAwesomeIcon  icon={faUserTie} className="mainIcon" />
@@ -70,9 +70,10 @@ export default function MainBoard(props){
                             </Link>
                         </div>
                     </div>
-
-
                 </div>
+                <div className="row">
+                  <div className="componentBlank"/>
+              </div>
             </div>
         </div>
     );

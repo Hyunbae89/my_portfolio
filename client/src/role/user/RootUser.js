@@ -77,9 +77,9 @@ export class RootUser extends React.Component{
                 <div id={'testpage'} className={'testscroll '}>
 
                     <Switch>
-                         <Route exact path={`${url}/about_me`}>
-                            <AboutMe/>
-                        </Route>
+                         <Route
+                             exact path={`${url}/about_me`}
+                             render={props => <AboutMe {...props}/>} />
                         <Route
                             exact path={`${url}/edit`}
                             render={props => <UserEdit user_id={id} name={user_name}  {...props} />} />

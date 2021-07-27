@@ -16,7 +16,9 @@ export class AboutMe extends React.Component{
          }
      }
 
+
     render() {
+
         return(
           <div className="container ">
 
@@ -34,10 +36,10 @@ export class AboutMe extends React.Component{
                               <FontAwesomeIcon icon={faComment} size="2x"  /><br/>
                               카카오톡
                           </a>
-                          <button className="btn btn-primary shadow">
+                          <a className="btn btn-primary shadow" href="https://drive.google.com/file/d/17IlN_3RK_nt94LaPSNNKCIxnC3TBoA37/view?usp=sharing" target="_blank" rel="noreferrer">
                               <FontAwesomeIcon icon={faFilePdf} size="2x" /><br/>
                               이력서
-                          </button>
+                          </a>
                       </div>
                   </div>
                   <div className="col-12 col-md-6 order-first order-md-last">
@@ -46,7 +48,7 @@ export class AboutMe extends React.Component{
                       </div>
                   </div>
               </div>
-              <div className="row my-5">
+              <div className="row my-3">
                   <div className='col-sm-12 col-md-7'>
                       <div className="jumbotron shadow py-4" id="noneDark">
                           <dl className="row text-center ">
@@ -104,16 +106,16 @@ export class AboutMe extends React.Component{
                   </div>
               </div>
 
-              <div className="row my-5">
+              <div className="row">
                   <div className="col-12 text-center">
-                      <blockquote className="blockquote rounded shadow bg-light py-4 manual-quote" id="noneDark">
+                      <blockquote className="blockquote rounded shadow bg-light py-4 " id="noneDark">
                           <div>우리들의 중요한 임무는 멀리 있는 희미한것을 보는게 아니라,<br/> 가까이 있는 분명한 것을 실천하는 것이다.</div>
                           <footer className="blockquote-footer">토머스 칼라일</footer>
                       </blockquote>
                   </div>
               </div>
 
-              <div className="row mt-5 mb-3">
+              <div className="row mt-3 mb-3">
                   <div className="col-12 text-center">
                       <h4 >Skills & Certipication</h4>
                   </div>
@@ -127,16 +129,16 @@ export class AboutMe extends React.Component{
                       </div>
                       <div className="alert alert-success" role="alert">
                           <h5 className="alert-heading">능숙, 주력 기술</h5>
-                          <strong>HTML, CSS, Javascript, React, Bootstrap, Axios</strong>
+                          <strong className="about-me-text">HTML, CSS, Javascript, React, Bootstrap, Axios</strong>
                       </div>
                       <div className="alert alert-warning" role="alert">
                           <h5 className="alert-heading">사용 경험 유, 주력 기술보단 약함</h5>
-                          <strong>Python, Django, Jquery, Redux, SASS, Ajax, AWS, MySQL</strong>
+                          <strong className="about-me-text">Python, Django, Jquery, Redux, SASS, Ajax, AWS, MySQL</strong>
                       </div>
                       <div className="alert alert-dark" role="alert">
                           <h5 className="alert-heading">목표</h5>
-                          <strong>Back-end Skill</strong> <br/>
-                          <strong>Full-stack Developer</strong>
+                          <strong className="about-me-text">Back-end Skill</strong> <br/>
+                          <strong className="about-me-text">Full-stack Developer</strong>
                       </div>
 
                   </div>

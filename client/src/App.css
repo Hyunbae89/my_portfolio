@@ -90,6 +90,12 @@ body.dark .quote-list:hover {
   border: 0;
 }
 
+#testpage{
+  position: fixed;
+  width: 100%;
+    height: calc(100% - 144px);
+}
+
 .footer{
   background-color: #e9ecef;
   position: fixed;
@@ -133,7 +139,9 @@ pre {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0 8px;
+  padding: 0 1.5rem;
+  font-size: 2rem;
+  width: 100%;
   border-radius: 4px;
 }
 
@@ -158,9 +166,11 @@ pre {
     display: flex;
     justify-content: center;
     top: 0;
+    width: 35%;
+    max-width: 350px;
     left: -100%;
     transition: 850ms;
-    min-width: 350px;
+    min-width: 150px;
     z-index: 1;
   }
 .imageArea{
@@ -174,9 +184,9 @@ pre {
     padding: 2rem;
     height: 100%;
   }
- pre{
-    font-size: 1.1rem;
-  }
+ /*pre{*/
+ /*   font-size: 1.1rem;*/
+ /* }*/
   .blockquote-footer{
     font-size: 0.95rem;
   }
@@ -191,14 +201,8 @@ pre {
    textarea.form-control{
     height: 10rem;
   }
-  .nav-text a{
-    font-size: 2rem;
-    width: 100%;
-    padding: 0 1.5rem;
-  }
-  .manual-quote{
-    font-size: 1.1rem;
-  }
+
+
   .mainBox{
     display: block;
     height: 100%;
@@ -206,23 +210,49 @@ pre {
 
 @media (max-width: 767px) {
   /** Mobile **/
+  html{
+  font-size: 12px;
+}
   .container{
     max-width: 680px;
   }
-   .nav-menu{
-    min-width: 290px;
+  #testpage, .nav-menu{
+    height: calc(100% - 3rem);
   }
+  .footer{
+    height: 3rem;
+  }
+  #toggle_mode{
+    bottom: 3.5rem;
+  }
+  .fa-dragon, .title{
+    font-size: 2rem;
+  }
+  .header-icon{
+    font-size: 2.2rem;
+  }
+ .nav-menu{
+  width: 60%;
+   max-width: 210px;
+  }
+ .blockquote{
+   font-size: 1.1rem;
+ }
   .imageBox{
     width: 250px;
     height: 250px;
     margin: 2rem auto;
     overflow: hidden;
   }
-  .fa-dragon, .title{
-    font-size: 1.8rem;
-  }
   .item-size{
     height: 2rem;
+  }
+  .mainBox{
+    width: 85%;
+    margin: 0 auto;
+  }
+  .nav-text a {
+    font-size: 1.5rem;
   }
 }
 
@@ -263,6 +293,9 @@ pre {
 
 @media (min-width: 1200px){
   /** Desktop **/
+  html{
+  font-size: 17px;
+}
   .imageBox{
   width: 420px;
   height: 420px;
@@ -286,11 +319,7 @@ pre {
   font-size: medium;
 }
 
-#testpage{
-  position: fixed;
-  width: 100%;
-    height: calc(100% - 144px);
-}
+
 
 .testsize {
  padding: 20px;

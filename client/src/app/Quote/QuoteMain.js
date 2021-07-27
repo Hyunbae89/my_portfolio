@@ -16,7 +16,7 @@ export default function QuoteView(props){
                     </div>
                 </div>
             </div>
-            <div className="row">
+            <div className="row my-3">
                 <div className="col-12">
                     <QuoteList  {...props}/>
                 </div>

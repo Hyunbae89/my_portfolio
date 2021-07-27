@@ -5,6 +5,7 @@ import {Start} from '../app/Start';
 import {StartNewUser} from '../app/StartNewUser';
 import NestedRouter from "./NestedRouter"
 import {Dashboard} from "../app/Dashboard";
+import ScrollToTop from "./ScrollToTop";
 
 
 export default class RouteApp extends React.Component{
@@ -24,6 +25,7 @@ export default class RouteApp extends React.Component{
 
         return (
             <Router>
+                <ScrollToTop />
                 <Switch>
                     <Route
                         exact path='/'

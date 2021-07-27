@@ -1,5 +1,5 @@
 import React from "react";
-import {faDragon, faAddressCard, faSignOutAlt, faInfoCircle} from "@fortawesome/free-solid-svg-icons";
+import {faDragon, faAddressCard, faSignOutAlt, faInfoCircle, faBars} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Dropdown from 'react-bootstrap/Dropdown';
 import {Link} from 'react-router-dom';
@@ -31,16 +31,16 @@ export default function Header(props){
                <div className="d-flex justify-content-between w-100">
                    <div className="align-self-center">
                        <Dropdown.Toggle bsPrefix='navbar-toggler bg-dark btn btn-secondary ' onClick={(e) => props.control()} >
-                           <span className='navbar-toggler-icon'/>
+                           <FontAwesomeIcon className='log-info-icon header-icon'  icon={faBars} />
                        </Dropdown.Toggle>
                    </div>
-                   <div className="">
+                   <div className="align-self-center">
                        {home()}
                    </div>
                    <div className="align-self-center">
                        <Dropdown>
                             <Dropdown.Toggle bsPrefix='navbar-toggler bg-dark btn btn-secondary ' id="dropdown-basic">
-                                <FontAwesomeIcon className='log-info-icon'  icon={faAddressCard} />
+                                <FontAwesomeIcon className='log-info-icon header-icon'  icon={faAddressCard} />
                               </Dropdown.Toggle>
 
                               <Dropdown.Menu className="dropdown-menu-center">
