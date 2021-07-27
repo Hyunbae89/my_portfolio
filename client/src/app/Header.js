@@ -26,7 +26,7 @@ export default function Header(props){
     }
 
     return(
-        <header>
+        <header className="page-header">
             <div className='navbar navbar-dark bg-dark'>
                <div className="d-flex justify-content-between w-100">
                    <div className="align-self-center">

@@ -49,7 +49,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.14.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.20.16" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../my_portfolio_client" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -163,6 +163,8 @@
       <workItem from="1627293867085" duration="1209000" />
       <workItem from="1627298261035" duration="4772000" />
       <workItem from="1627362510722" duration="14130000" />
+      <workItem from="1627381462557" duration="668000" />
+      <workItem from="1627383145860" duration="139000" />
     </task>
     <servers />
   </component>
