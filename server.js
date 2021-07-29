@@ -113,7 +113,7 @@ app.post('/api/users/:id/rating',(req,res)=>{
                     if(err){
                         console.log(err) ;
                     }else{
-                        res.json(rows[0]);
+                        res.json(rows);
                     }
                })
             }else{
@@ -137,6 +137,7 @@ app.post('/api/users/:id/rating',(req,res)=>{
             }else{
                 bcrypt.compare(req.body.password, rows[0].user_password).then(function (result){
                     if(result){
+
                         res.json(rows[0])
                     }else{
                         res.json();
