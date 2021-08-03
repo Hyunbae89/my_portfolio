@@ -1,13 +1,18 @@
-# React, Node.js, MySQL을 활용한 Web Site Portfolio.
+이 프로젝트는 개인 포토폴리오용으로 만들어졌습니다. <br/>
+React를 사용하여 Front-end 웹사이트를 개발, Node.js(express.js)를 사용하여 Back-end 서버를 구현하고, <br/>
+MySQL을 데이터베이스로 사용 및 Axois를 사용하여 RESTfull API 통신 설계하였습니다. <br/>
+그래서 최종적으로 Client의 요청을 Server에서 처리하도록 구현하였습니다. <br/>
+웹사이트 둘러보기 : [ [James Works](https://jamesworks.netlify.app/) ]
 
-* My Portfolio Web Site -> </> [웹 호스팅 준비중...]
 
+# Table of Contents
 
-## Table of Contents
+### * [개발 스펙](#chapter-1)
+### * [Server part](#chapter-2)
+### * [Client part](client/README.md)
+### * [Server repository](https://github.com/Hyunbae89/my_portfolio_server#readme)
+### * [Client repository](https://github.com/Hyunbae89/my_portfolio_client#readme)
 
-* [개발 스펙](#chapter-1)
-* [Server part](#chapter-2)
-* [Client part](client/README.md)
 
 
 ## 개발 스펙 <a id="chapter-1"/>
@@ -28,13 +33,16 @@
 
 - Tools
   - Github , Sourcetree , HeidiSQL
+  
+- Deploy
+  - Netlify, Heroku
 <br/>
+    
+>Bootstrap과 CSS를 활용하여 Page Layout, UI를 구성. <br/>
+> AWS RDS(Amazon Web service Relational Databases)를 통해 host 생성 후 데이터베이스 연결 <br/> (개발환경에선 JSON 형태로 저장후 사용, 배포 환경에서는 env 형태로 변경  * 보안이슈)<br/>
+> HeidiSQL 프로그램을 사용하여 데이터베이스 테이블 구성, 값 확인  
+> Netlify를 통한 Client side 배포, Heroku를 통한 Server side 배포
 
-```
-React를 통해서 Front-end 전반적인 개발을 진행하였고,    
-Bootstrap과 CSS를 활용하여 Page Layout, UI를 구성하였습니다.  
-Node.js 를 통해 MySQL database에 접근하여 필요한 Server side 프로그래밍도 진행하였습니다.
-```
 
 
 ## Server part <a id="chapter-2"/>
@@ -75,6 +83,8 @@ Node.js 를 통해 MySQL database에 접근하여 필요한 Server side 프로�
   }
 }
 ```
-client 폴더내 Front-side와 API 통신을 주고받으며 상호 작동해야하기 때문에  
-한번에 server와 client를 작동하도록 스크립트를 작성하였습니다.
-Dev 환경에서 server port :5000, client port :3000
+> local 환경에서 개발시, server와 함께 동작해야 하기때문에 해당 스크립트 작성 후 개발 진행. <br/>
+> server.js 코드를 변경하면 자동으로 서버를 재시작하는 nodemon 사용. <br/>
+> client : localhost:3000  ,  server : localhost:5000 <br/>
+
+서버 개발환경 구축할때 참고한 강의 : [Node.js Express 서버 개발환경 구축하기](https://youtu.be/YO9CqrnxbFU)
