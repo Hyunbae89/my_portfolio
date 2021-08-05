@@ -7,11 +7,11 @@ MySQL을 데이터베이스로 사용 및 Axois를 사용하여 RESTfull API 통
 
 # Table of Contents
 
-### * [개발 스펙](#chapter-1)
-### * [Server part](#chapter-2)
-### * [Client part](client/README.md)
-### * [Server repository](https://github.com/Hyunbae89/my_portfolio_server#readme)
-### * [Client repository](https://github.com/Hyunbae89/my_portfolio_client#readme)
+ * [개발 스펙](#chapter-1)
+ * [Server part](#chapter-2)
+ * [Client part](client/README.md)
+ * [Server repository](https://github.com/Hyunbae89/my_portfolio_server#readme)
+ * [Client repository](https://github.com/Hyunbae89/my_portfolio_client#readme)
 
 
 

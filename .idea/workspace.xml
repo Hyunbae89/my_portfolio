@@ -4,6 +4,7 @@
     <list default="true" id="9ba34c63-e1c2-4845-8f9e-3d83a242eadc" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/client/src/routers/ScrollToTop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/client/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
@@ -171,7 +172,8 @@
       <workItem from="1627556662464" duration="896000" />
       <workItem from="1627559518635" duration="9000" />
       <workItem from="1627560887013" duration="993000" />
-      <workItem from="1627973388265" duration="6382000" />
+      <workItem from="1627973388265" duration="6425000" />
+      <workItem from="1628146198179" duration="10635000" />
     </task>
     <servers />
   </component>
