@@ -30,9 +30,11 @@ export default function Header(props){
             <div className='navbar navbar-dark bg-dark'>
                <div className="d-flex justify-content-between w-100">
                    <div className="align-self-center">
+
                        <Dropdown.Toggle bsPrefix='navbar-toggler bg-dark btn btn-secondary ' onClick={(e) => props.control()} >
-                           <FontAwesomeIcon className='log-info-icon header-icon'  icon={faBars} />
+                            <FontAwesomeIcon className='log-info-icon header-icon'  icon={faBars} />
                        </Dropdown.Toggle>
+
                    </div>
                    <div className="align-self-center">
                        {home()}
@@ -45,15 +47,16 @@ export default function Header(props){
 
                               <Dropdown.Menu className="dropdown-menu-center">
                                   <Dropdown.ItemText className='text-center'>{"Hi, " + props.name}</Dropdown.ItemText>
-                                  <Dropdown.Item as={Link} to={props.url+"/edit"}>
-                                    <FontAwesomeIcon className='log-out-icon mr-3'  icon={faInfoCircle} />
-                                    <span>User Info</span>
-                                </Dropdown.Item>
+                                  {props.id ?
+                                      <Dropdown.Item as={Link} to={props.url+"/edit"}>
+                                        <FontAwesomeIcon className='log-out-icon mr-3'  icon={faInfoCircle} />
+                                        <span>User Info</span>
+                                      </Dropdown.Item>:''
+                                      }
                                 <Dropdown.Item as={Link} to="/">
                                     <FontAwesomeIcon className='log-out-icon mr-3'  icon={faSignOutAlt} />
                                     <span>Sign out</span>
                                 </Dropdown.Item>
-
                               </Dropdown.Menu>
                         </Dropdown>
                    </div>
