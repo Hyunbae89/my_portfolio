@@ -11,12 +11,8 @@ export class RootGuest extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            guest_name: "",
-            setSidebar : false,
-            sidebar_enable_check : true
+            guest_name: ""
         }
-        this.showSidebar = this.showSidebar.bind(this);
-        this.OnclickScreen = this.OnclickScreen.bind(this);
     }
 
     componentDidMount() {
@@ -34,30 +30,7 @@ export class RootGuest extends React.Component{
             }
         );
     }
-    componentDidUpdate() {
-        const {sidebar_enable_check} = this.state;
-        if(sidebar_enable_check === true){
-            document.getElementById('james').addEventListener('click',this.OnclickScreen);
-        }
-    }
-
-    showSidebar = (e) => {
-
-        const {setSidebar} = this.state;
-        this.setState({sidebar_enable_check: true});
-
-        if(setSidebar === e){
-            this.setState( {setSidebar : true})
-        }else{
-            this.setState( {setSidebar : false})
-        }
-    }
-    OnclickScreen = () =>{
-        this.setState({setSidebar:false, sidebar_enable_check: false});
-    }
-
-
-
+    
     render() {
         const {guest_name}  = this.state;
         const {url} = this.props.match
